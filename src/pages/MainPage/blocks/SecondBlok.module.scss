@@ -1,61 +1,33 @@
 .secondBlok {
   width: 100%;
   height: 199px;
-  background-image: url("../../../assets/img/mainPage/paral.svg");
+  background-image: url("../../../assets/img/mainPage/prallax1.svg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  background-attachment: fixed;
 
-  .box {
-    height: 199px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .container {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0px 80px;
 
-    h2 {
-      width: 846px;
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 130%;
-      text-transform: uppercase;
-      color: #e9e9eb;
+    .box {
+      height: 199px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        width: 846px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #e9e9eb;
+      }
     }
-  }
-
-  .parallaxContainer {
-    position: relative;
-    height: 500px;
-  }
-
-  .parallaxText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-    h2 {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 400;
-      font-size: 32px;
-      line-height: 130%;
-      text-transform: uppercase;
-      color: #e9e9eb;
-    }
-  }
-
-  .parallaxBg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 199px;
-    background-image: url("../../../assets/img/mainPage/paral2.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
   }
 }

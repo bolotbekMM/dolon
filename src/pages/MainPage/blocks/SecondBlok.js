@@ -1,36 +1,26 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import css from "./SecondBlok.module.scss";
 
 const SecondBlok = () => {
-  const [offset, setOffset] = useState(0);
+  const parallaxRef = useRef(null);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
+    const parallaxHandler = () => {
+      if (parallaxRef.current) {
+        const { top } = parallaxRef.current.getBoundingClientRect();
+        console.log(top / 100);
+        const move = top / 5;
+        parallaxRef.current.style.backgroundPositionY = `calc(50% + ${move}px)`;
+      }
     };
+
+    window.addEventListener("scroll", parallaxHandler);
+    return () => window.removeEventListener("scroll", parallaxHandler);
   }, []);
 
-  const handleScroll = () => {
-    setOffset(window.pageYOffset);
-  };
   return (
-    // <div className={css.secondBlok}>
-    //     <div className={css.parallaxContainer}>
-    //       <div className={css.parallaxText}>
-    //         <h2>
-    //           Экосистема, основанная на облачных технологиях (Industry 4.0.)
-    //         </h2>
-    //       </div>
-    //       <div
-    //         className={css.parallaxBg}
-    //         style={{ transform: `translateY(${offset * 0.5}px)` }}
-    //       />
-    //     </div>
-    //   </div>
-
-    <div className={css.secondBlok}>
-      <div className="container">
+    <div className={css.secondBlok} ref={parallaxRef}>
+      <div className={css.container}>
         <div className={css.box}>
           <h2>
             Экосистема, основанная на облачных <br />

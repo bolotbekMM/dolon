@@ -1,5 +1,6 @@
 import React from "react";
 import FirstBlok from "./blocks/FirstBlok";
+import FourthBlok from "./blocks/FourthBlok";
 import SecondBlok from "./blocks/SecondBlok";
 import ThirdBlok from "./blocks/ThirdBlok";
 
@@ -9,6 +10,7 @@ const MainPage = () => {
       <FirstBlok />
       <SecondBlok />
       <ThirdBlok />
+      <FourthBlok />
     </div>
   );
 };
