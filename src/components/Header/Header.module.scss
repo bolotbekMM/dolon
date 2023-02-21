@@ -1,0 +1,36 @@
+.header {
+  width: 100%;
+  height: 128px;
+  transition: height 0.1s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  
+  .mainPart {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+}
+.toUp {
+  width: 100%;
+  height: 17px;
+  transition: height 0.1s ease-in-out;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  .mainPart {
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+  }
+}

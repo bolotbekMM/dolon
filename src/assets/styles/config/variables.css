@@ -1,0 +1,67 @@
+:root {
+  /* App Block-sizes */
+  --container-width: 1600px;
+  --check-block-height: 28px;
+
+  /* App Colors */
+  --dark-color: #444444;
+  --white-color: #fff;
+  --red-color: #d62c54;
+  --turquoise-color: #00ccdb;
+  --dark-blue-color: #2a2349;
+  --light-silver-color: #fafafa;
+  --light-aqua-color: #e6fcfa;
+  --gray-5: #e0e0e0;
+  --gray-4: #bdbdbd;
+  --gray-3: #828282;
+  --gray-2: #D0D9DE;
+  --dark-silver: #706d7a;
+  --gray-color: #e0e0e0;
+
+  /* App Font-Size */
+  --fs-1: 24px;
+  --fs-2: 20px;
+  --fs-3: 16px;
+  --fs-4: 14px;
+  --fs-5: 12px;
+
+  /* App Fonts */
+  --main-font: 'Inter';
+  --second-font: 'Source Sans Pro';
+}
+
+@media screen and (max-width: 1680px) {
+  :root {
+    --container-width: 1336px;
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  :root {
+    --container-width: 80%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  :root {
+    --container-width: 90%;
+  }
+}
+
+/* @media screen and (max-width: 768px) {
+  :root {
+    --container-width: 90%;
+  }
+} */
+
+@media screen and (max-width: 576px) {
+  :root {
+    --container-width: 95%;
+
+    --fs-1: 22px;
+    --fs-2: 18px;
+    --fs-3: 13px;
+    --fs-4: 12px;
+    --fs-5: 10px;
+  }
+}

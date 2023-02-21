@@ -1,0 +1,129 @@
+.menuModal {
+  position: absolute;
+  width: 100%;
+  top: 133px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10px;
+
+  .box {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #f5f5f7;
+    padding: 80px 185px 80px 160px;
+
+    box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.1),
+      0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.04);
+
+    .modules {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-column-gap: 54px;
+      grid-row-gap: 54px;
+
+      li {
+        height: 43.82px;
+        width: 100%;
+        display: inline-block;
+        cursor: pointer;
+
+        .innerBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          display: inline-block;
+          p {
+            position: relative;
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 300;
+            font-size: 24px;
+            line-height: 130%;
+            color: #171717;
+            margin-bottom: 4px;
+          }
+          .underline {
+            width: 0px;
+            border: 1px;
+            border-radius: 15px;
+            // transform: translateX();
+            transition: width 0.3s ease-in-out;
+          }
+        }
+        :hover {
+          .underline {
+            width: 100%;
+            border: 1px solid #171717;
+          }
+        }
+      }
+    }
+    .contactBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .phoneNumbers {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        li {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 130%;
+          /* identical to box height, or 23px */
+
+          display: flex;
+          align-items: center;
+
+          /* Almost black */
+
+          color: #171717;
+
+          opacity: 0.8;
+        }
+      }
+
+      .line {
+        border-bottom: 1px solid #000000;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          /* identical to box height, or 18px */
+
+          letter-spacing: 0.001em;
+
+          /* Almost black */
+
+          color: #171717;
+
+          opacity: 0.8;
+          p {
+            margin-bottom: 8px;
+          }
+          .phone,
+          .email {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

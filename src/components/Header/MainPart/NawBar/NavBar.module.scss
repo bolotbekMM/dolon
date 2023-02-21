@@ -1,0 +1,92 @@
+.navBar {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+
+  li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    p {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #171717;
+      }
+
+  }
+
+  
+
+  @media (max-width: 768px) {
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 24px;
+    gap: 20px;
+
+    width: 320px;
+    height: 100vh;
+
+    top: 48px;
+    left: 0px;
+
+    background-color: var(--dark-blue-color);
+  }
+  @media (max-width: 400px) {
+    height: 100vh;
+    width: 105vw;
+    justify-content: flex-start;
+  }
+
+  .linkTo {
+    display: flex;
+    align-items: center;
+    min-width: 87px;
+    padding: 0 24px;
+    height: 100%;
+
+    border-top: 4px solid var(--dark-blue-color);
+
+    font: 400 14px/120% "Inter";
+    font-style: normal;
+    color: var(--light-silver-color);
+
+    @media (max-width: 768px) {
+      border-top: 0px;
+    }
+  }
+
+  .activePathName {
+    display: flex;
+    align-items: center;
+    min-width: 87px;
+    height: 100%;
+    padding: 0 24px;
+
+    border-top: 4px solid var(--turquoise-color);
+    background: var(--white-color);
+
+    font: 400 14px/120% "Inter";
+    color: var(--dark-color);
+
+    @media (max-width: 768px) {
+      height: 40px;
+      width: 320px;
+      border-top: 0px;
+
+      justify-content: center;
+    }
+    @media (max-width: 400px) {
+      width: 105vw;
+    }
+  }
+}

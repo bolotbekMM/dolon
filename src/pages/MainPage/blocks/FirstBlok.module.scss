@@ -1,0 +1,30 @@
+.firstBlok {
+  width: 100%;
+  background: #e9e9eb;
+
+  .box {
+    height: 702px;
+    padding-top: 150px;
+    padding-bottom: 153px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    .title {
+      display: flex;
+
+      h1 {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 64px;
+        line-height: 130%;
+        color: #171717;
+      }
+    }
+    .animation {
+      display: flex;
+    }
+  }
+}

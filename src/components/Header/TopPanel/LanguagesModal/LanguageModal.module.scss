@@ -1,0 +1,92 @@
+.languageBtn {
+  position: relative;
+  top: 3px;
+  left: -145px;
+  height: 100%;
+
+  .box {
+    position: absolute;
+    z-index: 101;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 12px 4px;
+
+    position: absolute;
+    width: 256px;
+    // height: 100%;
+    // left: 0px;
+    top: 0px;
+
+    /* Glass */
+
+    background: rgba(255, 255, 255, 0.9);
+    /* Glass */
+
+    backdrop-filter: blur(87.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 8px;
+
+    .radioBtn {
+      width: 100%;
+
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px;
+      gap: 8px;
+
+      width: 248px;
+      height: 40px;
+      border-radius: 8px;
+
+      cursor: pointer;
+
+      .radioBtnLable {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        // padding: 8px;
+        gap: 9.5px;
+
+        span {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.001em;
+
+          color: #1d1d1f;
+        }
+      }
+
+      .radioBtnInput {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        border: 2px solid #898989;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .radioBtnInput:checked::before {
+        content: "";
+        display: block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #171717;
+      }
+    }
+  }
+}
