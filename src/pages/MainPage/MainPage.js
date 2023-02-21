@@ -14,11 +14,12 @@ const MainPage = () => {
       <FirstBlok />
       <SecondBlok />
       <ThirdBlok />
+      <FourthBlok />
       <Unigue />
       <Inface />
       <Slider />
       <Carousel />
-      <FourthBlok />
+      
     </div>
   );
 };
