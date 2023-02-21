@@ -48,17 +48,23 @@
             margin-bottom: 4px;
           }
           .underline {
-            width: 0px;
-            border: 1px;
-            border-radius: 15px;
-            // transform: translateX();
+            width: 0%;
+            border-bottom: 2px solid black;
+
             transition: width 0.3s ease-in-out;
+            -webkit-transition: width 0.3s ease-in-out; /* Safari and Chrome */
+            -moz-transition: width 0.3s ease-in-out; /* Firefox 4 */
+            -o-transition: width 0.3s ease-in-out; /* Opera */
+          }
+          :after {
+            content: "";
+            width: 0;
           }
         }
         :hover {
           .underline {
             width: 100%;
-            border: 1px solid #171717;
+            // border-bottom: 2px solid black;
           }
         }
       }
