@@ -1,0 +1,27 @@
+.unigue{
+    display: flex;
+    justify-content: center;
+    padding: 120px 80px;
+    max-width: 1280px;
+}
+.unigueContainer{
+    margin: 0 auto;
+}
+.unigueTitle{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 130%;
+    /* identical to box height, or 73px */
+    margin-bottom: 80px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.unigueCards{
+    gap: 8px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+}

@@ -2,6 +2,10 @@ import React from "react";
 import FirstBlok from "./blocks/FirstBlok";
 import SecondBlok from "./blocks/SecondBlok";
 import ThirdBlok from "./blocks/ThirdBlok";
+import Unigue from './blocks/unigue/index';
+import Inface from './blocks/inface/index';
+import Slider from "./blocks/slider";
+import Carousel from "./blocks/ticker";
 
 const MainPage = () => {
   return (
@@ -9,6 +13,10 @@ const MainPage = () => {
       <FirstBlok />
       <SecondBlok />
       <ThirdBlok />
+      <Unigue />
+      <Inface />
+      <Slider />
+      <Carousel />
     </div>
   );
 };
