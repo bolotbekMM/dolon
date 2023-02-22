@@ -9,7 +9,7 @@ function Carousel() {
     return (
         <>
             <div className={classes.tickerWrap}>
-                <HorizontalTicker duration={10000} >
+                <HorizontalTicker duration={15000} >
                         <li className={classes.ticker}>
                             казахмыс
                         </li>
