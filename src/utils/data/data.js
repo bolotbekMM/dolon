@@ -6,48 +6,56 @@ export const moduleContent = [
     text: "Мониторинг",
     icon: null,
     pathName: "/monitoring",
+    description: "Мониторинг рабочих процессов в режиме онлайн"
   },
   {
     id: generateRandomId(),
     text: "Файловый менеджер",
     icon: null,
     pathName: "/fileManager",
+    description:"Файлообменник Dolon",
   },
   {
     id: generateRandomId(),
     text: "Геология",
     icon: null,
     pathName: "/geology",
+    description:"Мониторинг рабочих процессов в режиме онлайн",
   },
   {
     id: generateRandomId(),
     text: "Маркшейдерия",
     icon: null,
     pathName: "/marksheideria",
+    description:"Мощный набор 3D инструментов",
   },
   {
     id: generateRandomId(),
     text: "Бурение",
     icon: null,
     pathName: "/drilling",
+    description:"Организация буровых работ",
   },
   {
     id: generateRandomId(),
     text: "Поисковые маршруты",
     icon: null,
     pathName: "/searchRoutes",
+    description:"Продвинутый набор инструментов разведки",
   },
   {
     id: generateRandomId(),
     text: "Лаборатория",
     icon: null,
     pathName: "/laboratory",
+    description:"Автоматизация работы лаборатории",
   },
   {
     id: generateRandomId(),
     text: "Керносклад",
     icon: null,
     pathName: "/kernosklad",
+    description:"Учет и организация хранилища керна",
   },
 ];
 
