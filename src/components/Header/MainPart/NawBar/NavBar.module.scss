@@ -4,7 +4,7 @@
   flex-direction: row;
   gap: 40px;
 
-  .link{
+  .link {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,18 +12,18 @@
     cursor: pointer;
 
     p {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 130%;
-        text-transform: uppercase;
-        color: #171717;
-      }
-
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 130%;
+      text-transform: uppercase;
+      color: #171717;
+    }
+    img {
+      transition: transform 0.5s ease;
+    }
   }
-
-  
 
   @media (max-width: 768px) {
     position: absolute;

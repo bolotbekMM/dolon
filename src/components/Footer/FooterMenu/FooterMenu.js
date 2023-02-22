@@ -1,27 +1,28 @@
 import React from "react";
 import css from "./FooterMenu.module.scss";
-import iconDown from "../../../assets/icons/headerIcons/downPol.svg";
-import { contactData, moduleContent } from "../../../utils/data/data";
+import {
+  contactData,
+  moduleContent,
+  navBarContent,
+} from "../../../utils/data/data";
+import { Link } from "react-router-dom";
 
 const FooterMenu = () => {
-  const navBarContent = [
-    { text: "Экосистема", icon: iconDown, pathName: "/ekosystems" },
-    { text: "Новости", icon: null, pathName: "/news" },
-    { text: "О компании", icon: null, pathName: "/aboutUs" },
-    { text: "Контакты", icon: iconDown, pathName: "/contacts" },
-  ];
-
   return (
     <div className={css.menuFooter}>
       <div className="container">
         <div className={css.box}>
           <div className={css.cont}>
             <ul className={css.navBar}>
-              <h5>Главная</h5>
+              <Link to="/">
+                <h5>Главная</h5>
+              </Link>
               {navBarContent.map((item, index) => {
                 return (
                   <li key={index}>
-                    <p>{item.text}</p>
+                    <Link to={item.pathName}>
+                      <p>{item.text}</p>
+                    </Link>
                   </li>
                 );
               })}
@@ -34,7 +35,9 @@ const FooterMenu = () => {
               {moduleContent.map((item, index) => {
                 return (
                   <li key={index}>
-                    <p>{item.text}</p>
+                    <Link to={item.pathName}>
+                      <p>{item.text}</p>
+                    </Link>
                   </li>
                 );
               })}

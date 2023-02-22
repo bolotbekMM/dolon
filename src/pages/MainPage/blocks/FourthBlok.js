@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./FourthBlok.module.scss";
-import pc from "../../../assets/img/mainPage/pc1.svg";
+import pc from "../../../assets/img/mainPage/pc.svg";
 
 const FourthBlok = () => {
   return (

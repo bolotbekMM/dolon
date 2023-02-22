@@ -1,15 +1,8 @@
 import React, { useState, useEffect } from "react";
 import css from "./NavBar.module.scss";
-import iconDown from "../../../../assets/icons/headerIcons/downPol.svg";
 import MenuModal from "./MenuModal/MenuModal";
-import { Link } from "react-router-dom";
-
-const navBarContent = [
-  { text: "Экосистема", icon: iconDown, pathName: "/ecosystem" },
-  { text: "Новости", icon: null, pathName: "/news" },
-  { text: "О компании", icon: null, pathName: "/aboutUs" },
-  { text: "Контакты", icon: iconDown, pathName: "/contacts" },
-];
+import { NavLink } from "react-router-dom";
+import { navBarContent } from "../../../../utils/data/data";
 
 const NavBar = () => {
   const [hovered, setHovered] = useState(false);
@@ -32,7 +25,13 @@ const NavBar = () => {
 
   function iconShowFunc(params) {
     if (params) {
-      return <img src={params} alt="Icon" />;
+      return (
+        <img
+          src={params}
+          alt="Icon"
+          style={hovered ? { transform: "rotate(180deg)" } : null}
+        />
+      );
     }
   }
 
@@ -51,16 +50,22 @@ const NavBar = () => {
 
   return (
     <>
-      <ul className={css.navBar}>
+      <div className={css.navBar}>
         {navBarContent.map((item, index) => {
           return (
-            <Link to={item.pathName} key={index} className={css.link} onMouseEnter={() => handleMouseEnter(item)}>
+            <NavLink
+              to={item.pathName}
+              key={index}
+              className={css.link}
+              onClick={() => setHovered(false)}
+              onMouseEnter={() => handleMouseEnter(item)}
+            >
               <p>{item.text}</p>
               {iconShowFunc(item.icon)}
-            </Link>
+            </NavLink>
           );
         })}
-      </ul>
+      </div>
       {hovered && <MenuModal handleMouseLeave={handleMouseLeave} />}
     </>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { contactData, moduleContent } from "../../../../../utils/data/data";
 import css from "./MenuModal.module.scss";
 
@@ -7,18 +7,23 @@ const MenuModal = ({ handleMouseLeave }) => {
   return (
     <div className={css.menuModal}>
       <div className={css.box} onMouseLeave={handleMouseLeave}>
-        <ul className={css.modules}>
+        <div className={css.modules}>
           {moduleContent.map((item, index) => {
             return (
-              <Link key={index} to={item.pathName} className={css.link}>
+              <NavLink
+                className={css.link}
+                to={item.pathName}
+                onClick={handleMouseLeave}
+                key={index}
+              >
                 <div className={css.innerBox}>
                   <p>{item.text}</p>
                   <div className={css.underline}></div>
                 </div>
-              </Link>
+              </NavLink>
             );
           })}
-        </ul>
+        </div>
         <div className={css.contactBlock}>
           <ul className={css.phoneNumbers}>
             {contactData.map((item, index) => {
