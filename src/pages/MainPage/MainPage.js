@@ -15,12 +15,10 @@ const MainPage = () => {
       <SecondBlok />
       <ThirdBlok />
       <FourthBlok />
-      <FourthBlok />
       <Unigue />
       <Inface />
       <Slider />
       <Carousel />
-      
     </div>
   );
 };

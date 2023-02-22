@@ -6,7 +6,7 @@ const EcoHead = () => {
     <div className={css.ecosystems}>
       <div className={css.box}>
         <div className={css.contetnt}>
-          <h2>Технология бережливого майнинга</h2>
+          <h2>Lean Mining Technology</h2>
         </div>
         <div className={css.emptyBox}></div>
       </div>
