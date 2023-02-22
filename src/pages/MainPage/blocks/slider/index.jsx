@@ -55,7 +55,7 @@ export default function Slider() {
       >
         {
             sliderData.map((elem) => {
-                return  <SwiperSlide>
+                return  <SwiperSlide key={elem.title}>
                             <div className="sliderItem">
                                 <div className="sliderContent">
                                     <p className="sliderTitle">

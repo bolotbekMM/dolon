@@ -10,11 +10,13 @@
     "nice-react-ticker": "^2.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-draggable": "^4.4.5",
     "react-infinite-ticker": "^2.1.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "sass": "^1.58.1",
     "scss": "^0.2.4",
+    "smtpjs": "^0.0.1",
     "swiper": "^9.0.5",
     "web-vitals": "^2.1.4"
   },

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { contactData, moduleContent } from "../../../../../utils/data/data";
 import css from "./MenuModal.module.scss";
 
@@ -9,12 +10,12 @@ const MenuModal = ({ handleMouseLeave }) => {
         <ul className={css.modules}>
           {moduleContent.map((item, index) => {
             return (
-              <li key={index}>
+              <Link key={index} to={item.pathName} className={css.link}>
                 <div className={css.innerBox}>
                   <p>{item.text}</p>
                   <div className={css.underline}></div>
                 </div>
-              </li>
+              </Link>
             );
           })}
         </ul>
