@@ -1,27 +1,19 @@
-.slideshow {
-    margin-top: calc(50vh - 25vh);
-    padding-bottom: 4vw;
-  }
-  
-  .slide {
-    width: 23vw;
-    margin-right: 4vw;
-    text-align: center;
-    height: 50vh;
-    background-color: red;
-    border-radius: 6px;
-    color: #fff;
-    font-family: 'Helvetica Neue', helvetica, arial;
-    font-size: 24px;
-    line-height: 50vh;
-    
-    $numItems: 10;
-    $eachDeg: 100deg / $numItems;
-    $color: blue;
-    
-    @for $idx from 1 through $numItems {
-      &:nth-child(#{$idx}) {
-        background-color: adjust-hue($color, $eachDeg * $idx);
-      }
-    }
-  }
+.tickerWrap{
+  width: 100%;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin: 80px 0;
+}
+.ticker{
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 130%;
+  /* or 62px */
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  padding: 12px;
+  /* Almost black */
+
+  color: #171717;
+}
