@@ -1,6 +1,6 @@
 
 import Baner from './blocks/baner/index';
-import Hero from './blocks/hero/index';
+import Hero from '../../components/hero/index';
 import "./monitoring.scss"
 import Feedback from './../../components/feedback/index';
 

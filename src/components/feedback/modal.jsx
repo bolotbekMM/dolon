@@ -1,8 +1,9 @@
 import classes from "./feedback.module.scss"
 import { useState } from 'react';
 import classNames from "classnames";
+import { toast } from 'react-toastify';
 
-function FeedbackModal() {
+function FeedbackModal({ close }) {
 
     const [form, setForm] = useState({
         fio: "",
@@ -18,7 +19,7 @@ function FeedbackModal() {
         Password: "A9335968659627466661A4D9EFE3E639310D",
         Port: "2525",
         Host: "smtp.elasticemail.com",
-        To: 'ermekov.x@gmail.com',
+        To: 'info@dolon.tech',
         From: form.email,
         Subject: "Monitoring",
         Body: `
@@ -48,6 +49,7 @@ function FeedbackModal() {
         if(form.fio.length > 3 && form.phone.length > 7 && form.email.length > 7 && validateEmail(form.email)) return true;
         return false
     }
+
 
     return (
         <>
@@ -98,13 +100,17 @@ function FeedbackModal() {
                             </label>
                             <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder="Напишите примечание" rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
-                        <button disabled={correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
+                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
                             if (window.Email) {
                                 console.log(window.Email);
                                 window.Email.send(config).then((mess) => {
                                     console.log(mess);
                                 }).catch(err => {
                                     console.log(err);
+                                }).finally((data) => {
+                                    console.log(data);
+                                    close(false)
+                                    toast.success("Мы свяжемся с вами в ближайшее время", "Спасибо!")
                                 })
                             }
                         }}>
