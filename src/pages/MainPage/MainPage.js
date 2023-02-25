@@ -7,6 +7,8 @@ import Unigue from "./blocks/unigue/index";
 import Inface from "./blocks/inface/index";
 import Slider from "./blocks/slider";
 import Carousel from "./blocks/ticker";
+import Feedback from './../../components/feedback/index';
+
 
 const MainPage = () => {
   return (
@@ -19,6 +21,7 @@ const MainPage = () => {
       <Inface />
       <Slider />
       <Carousel />
+       <Feedback />
     </div>
   );
 };

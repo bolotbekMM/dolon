@@ -2,8 +2,9 @@ import classes from "./feedback.module.scss"
 import { useState } from 'react';
 import classNames from "classnames";
 import { toast } from 'react-toastify';
+import UISelect from './../UISelect/index';
 
-function FeedbackModal({ close }) {
+function FeedbackModal({ close, subject="Monitoring" }) {
 
     const [form, setForm] = useState({
         fio: "",
@@ -21,7 +22,7 @@ function FeedbackModal({ close }) {
         Host: "smtp.elasticemail.com",
         To: 'info@dolon.tech',
         From: form.email,
-        Subject: "Monitoring",
+        Subject: subject,
         Body: `
             ФИО: ${form.fio},
             Phone: ${form.phone},
@@ -69,11 +70,11 @@ function FeedbackModal({ close }) {
                             </label>
                             <input type="text" name="fio" onInput={onInput} value={form.fio} id="fio" placeholder="Введите ФИО*" className={classes.formgroupInput} />
                         </div>
-                        <div className={classes.formgroup}>
+                        <div className={classNames(classes.formgroup, classes.formgroupPhone)}>
                             <label htmlFor="phone" className={classes.formgroupLabel}>
                                 Номер телефона
                             </label>
-                            {/* <input type="text" name="phone" onInput={onInput} value={form.} id="phone" className={classes.formgroupSelect} /> */}
+                            <UISelect />
                             <input type="text" name="phone" onInput={onInput} value={form.phone} placeholder="(___) ___ ___ " id="phone" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
