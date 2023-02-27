@@ -1,8 +1,10 @@
 .unigue{
     display: flex;
     justify-content: center;
-    padding: 120px 80px;
-    max-width: 1280px;
+    padding: 120px 0;
+    max-width: calc(100% - 48px);
+    width: 1360px;
+    margin: 0 auto;
 }
 .unigueContainer{
     margin: 0 auto;
