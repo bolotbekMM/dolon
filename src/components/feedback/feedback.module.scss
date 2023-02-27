@@ -15,7 +15,7 @@
 .feedbackContainer{
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    max-width: calc(100% - 24px);
 }
 .feedbackTitle{
     font-family: 'Inter';

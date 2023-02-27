@@ -46,6 +46,7 @@
 
 .swiper-pagination {
     top: 0 !important;
+    height: 92px;
 }
 .pagItem{
     font-family: 'Inter';
@@ -67,6 +68,10 @@
     display: grid;
     max-width: 1200px;
     grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: 3fr 5fr;
+    }
 }   
 .sliderContent{
     padding-right: 60px;

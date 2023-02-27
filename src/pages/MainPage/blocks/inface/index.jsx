@@ -13,7 +13,6 @@ function Inface() {
             src={interfaceImg}
             alt="Not found"
             className={classes.infaceImg}
-            height={1180}
           />
         </div>
       </div>
