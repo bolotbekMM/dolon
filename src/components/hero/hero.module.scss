@@ -6,7 +6,7 @@
     position: relative;
 }
 .heroContainer{
-
+    width: 100%;
 }
 .heroTitle{
     font-family: 'Inter';
@@ -16,10 +16,14 @@
     line-height: 130%;
     /* identical to box height, or 73px */
     padding: 0 120px;
-
+    width: 100%;
     /* Almost black */
 
     color: #171717;
+    @media screen and (max-width: 768px) {
+        font-size: 36px;
+        padding: 0 12px;
+    }
 }
 .heroTitleText{
 
@@ -35,6 +39,9 @@
     z-index: 2;
     @media screen and (max-width: 768px) {
         grid-template-columns: 1fr;
+        max-width: calc(100%);
+        padding: 0 12px;
+        margin-top: 40px;
     }
 }
 .heroUl{

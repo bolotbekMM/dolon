@@ -32,6 +32,9 @@
     /* Almost black */
 
     color: #171717;
+    @media screen and (max-width: 768px) {
+        font-size: 28px;
+    }
 }
 .feedbackBtn{
     padding: 32px 40px;
@@ -60,6 +63,12 @@
     /* Grey */
     cursor: pointer;
     color: #DDDDDF;
+
+    @media screen and (max-width: 768px) {
+        font-size: 18px;
+        padding: 18px 40px;
+    }
+
 }
 
 .feedmodal{
@@ -72,9 +81,17 @@
     border-radius: 16px;
     position: absolute;
     z-index: 99;
+    @media screen and (max-width: 768px) {
+        width: 100vw;
+        max-width: calc(100vw - 24px);
+    }
 }
 .feedmodalContainer{
     padding: 24px;
+    @media screen and (max-width: 768px) {
+        padding: 24px 12px;
+        width: 100%;
+    }
 }
 .feedmodalTitle{
     margin-bottom: 80px;
@@ -88,20 +105,36 @@
     /* identical to box height, or 42px */
 
     text-transform: uppercase;
+    @media screen and (max-width: 768px) {
+        font-size: 22px;
+    }
 }
 .feedmodalForm{
     display: flex;
     flex-direction: column;
     gap: 40px;
+    @media screen and (max-width: 768px) {
+        width: calc(100% - 24px);
+        gap: 12px 0;
+    }
 }
 .formgroup{
     display: grid;
     // width: 100%;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }
 .formgroupPhone{
     grid-template-columns: 3fr 1fr 3fr;
+    @media screen and (max-width: 768px) {
+        
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 .formgroupLabel{
     font-family: 'Roboto';
@@ -109,6 +142,9 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
+    @media screen and (max-width: 768px) {
+        margin-right: 12px;
+    }
 }
 .formgroupInput{
     background: rgba(255, 255, 255, 0.75);
@@ -116,6 +152,10 @@
     border-radius: 8px;
     padding: 8px 18px;
     height: 43px;
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin-top: 8px;
+    }
 }
 .formgroupTextarea{
     border: 1px solid #DDDDDF;
