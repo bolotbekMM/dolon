@@ -30,7 +30,7 @@ function Feedback() {
                     </button>
                 </div>
                 {
-                    modal && <FeedbackModal />
+                    modal && <FeedbackModal close={setModal}/>
                             
                 }
             </div>

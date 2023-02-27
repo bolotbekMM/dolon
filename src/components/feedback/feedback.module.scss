@@ -91,6 +91,9 @@
     grid-template-columns: 1fr 1fr;
     align-items: center;
 }
+.formgroupPhone{
+    grid-template-columns: 3fr 1fr 3fr;
+}
 .formgroupLabel{
     font-family: 'Roboto';
     font-style: normal;
@@ -103,6 +106,7 @@
     border: 1px solid #DDDDDF;
     border-radius: 8px;
     padding: 8px 18px;
+    height: 43px;
 }
 .formgroupTextarea{
     border: 1px solid #DDDDDF;

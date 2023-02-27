@@ -1,0 +1,92 @@
+.uiselect{
+    width: 165px;
+    height: 40px;
+    position: relative;
+    /* Neutral / White */
+
+    background: #FFFFFF;
+    /* Grey */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #DDDDDF;
+    border-radius: 6px;
+    margin-right: 4px;
+}
+.uiselectContainer{
+    display: flex;
+    align-items: center;
+    color: #535354;
+    opacity: 0.8;
+    width: 100%;
+    height: 100%;
+    .listItem{
+        margin: 0;
+    }
+}
+.uiselectMain{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-left: 16px;
+}
+.uiselectIcon{
+    color: #535354;
+    position: absolute;
+    right: 8px;
+    top: 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.list{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    /* Glass */
+    overflow: auto;
+    max-height: 320px;
+    backdrop-filter: blur(87.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 8px;
+}
+.listContainer{
+    padding: 8px 0;
+}
+.listItem{
+    display: flex;
+    background: #ffffff;
+    border-radius: 8px;
+    height: 40px;
+    align-items: center;
+    width: 100%;
+    padding: 0 16px;
+    cursor: pointer;
+    margin-bottom: 4px;
+    &:hover{
+        background: #7AA7FF;
+    }
+}
+.listItemImgWrap{
+    margin-right: 16px;
+    width: 24px;
+    height: 24px;
+}
+.listItemImg{
+    width: 24px;
+    height: auto;    
+}
+.listItemCode{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+}
+
+.currentValue{
+    background-color: #fff !important;
+}

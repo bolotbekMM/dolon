@@ -1,8 +1,10 @@
 import classes from "./feedback.module.scss"
 import { useState } from 'react';
 import classNames from "classnames";
+import { toast } from 'react-toastify';
+import UISelect from './../UISelect/index';
 
-function FeedbackModal() {
+function FeedbackModal({ close, subject="Monitoring" }) {
 
     const [form, setForm] = useState({
         fio: "",
@@ -18,9 +20,9 @@ function FeedbackModal() {
         Password: "A9335968659627466661A4D9EFE3E639310D",
         Port: "2525",
         Host: "smtp.elasticemail.com",
-        To: 'ermekov.x@gmail.com',
+        To: 'info@dolon.tech',
         From: form.email,
-        Subject: "Monitoring",
+        Subject: subject,
         Body: `
             ФИО: ${form.fio},
             Phone: ${form.phone},
@@ -49,6 +51,7 @@ function FeedbackModal() {
         return false
     }
 
+
     return (
         <>
             <div className={classes.feedmodal} onClick={(e) => {
@@ -67,11 +70,11 @@ function FeedbackModal() {
                             </label>
                             <input type="text" name="fio" onInput={onInput} value={form.fio} id="fio" placeholder="Введите ФИО*" className={classes.formgroupInput} />
                         </div>
-                        <div className={classes.formgroup}>
+                        <div className={classNames(classes.formgroup, classes.formgroupPhone)}>
                             <label htmlFor="phone" className={classes.formgroupLabel}>
                                 Номер телефона
                             </label>
-                            {/* <input type="text" name="phone" onInput={onInput} value={form.} id="phone" className={classes.formgroupSelect} /> */}
+                            <UISelect />
                             <input type="text" name="phone" onInput={onInput} value={form.phone} placeholder="(___) ___ ___ " id="phone" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
@@ -98,13 +101,17 @@ function FeedbackModal() {
                             </label>
                             <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder="Напишите примечание" rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
-                        <button disabled={correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
+                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
                             if (window.Email) {
                                 console.log(window.Email);
                                 window.Email.send(config).then((mess) => {
                                     console.log(mess);
                                 }).catch(err => {
                                     console.log(err);
+                                }).finally((data) => {
+                                    console.log(data);
+                                    close(false)
+                                    toast.success("Мы свяжемся с вами в ближайшее время", "Спасибо!")
                                 })
                             }
                         }}>
