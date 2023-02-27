@@ -14,13 +14,13 @@ function App() {
       <ToastContainer />
       <Router>
         <ScrollToTop />
-        {/* <Header /> */}
+        <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
           <Route path="/ecosystems" element={<EcoSystems />} />
           <Route path="/monitoring" element={<Manitoring />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </Router>
     </div>
   );
