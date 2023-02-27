@@ -23,7 +23,7 @@ const NavBar = () => {
       } else {
         setHovered(false);
       }
-    }, 1000);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
