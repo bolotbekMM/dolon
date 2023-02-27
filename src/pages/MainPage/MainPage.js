@@ -21,7 +21,7 @@ const MainPage = () => {
       <Inface />
       <Slider />
       <Carousel />
-       <Feedback />
+      <Feedback question={true} text="Если вам интересен продукт свяжитесь с нами, и мы организуем вам онлайн презентацию" />
     </div>
   );
 };

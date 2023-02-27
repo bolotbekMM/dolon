@@ -1,8 +1,16 @@
 .feedback{
     display: flex;
     justify-content: center;
-    padding-bottom: 220px;
     position: relative;
+    
+    align-items: center;
+    height: 560px;
+}
+
+.feedbackBlock{
+    height: 756px;
+    margin: 120px 0;
+    background-color: #F5F5F7;
 }
 .feedbackContainer{
     display: flex;
@@ -136,4 +144,28 @@
 
 .feedmodalBtnActive{
     background-color: #171717;
+}
+.feedbackBtnQuestion{
+    background: #FFFFFF;
+/* Almost black */
+    margin-top: 40px;
+    border: 1px solid #171717;
+    text-align: center;
+    justify-content: center;    
+    color: #171717;
+}
+.feedbackText{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 130%;
+    /* or 31px */
+
+    letter-spacing: 0.01em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    /* Almost black */
+    max-width: 740px;
+    color: #171717;
 }

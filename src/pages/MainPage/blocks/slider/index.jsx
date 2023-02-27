@@ -62,7 +62,7 @@ export default function Slider() {
   };
 
   return (
-    <div className="slider container">
+    <div className="slider">
       <Swiper
         pagination={pagination}
         modules={[Pagination]}
@@ -71,7 +71,7 @@ export default function Slider() {
         
         
       >
-        {
+        { 
             sliderData.map((elem) => {
                 return  <SwiperSlide key={elem.title}>
                             <div className="sliderItem">
