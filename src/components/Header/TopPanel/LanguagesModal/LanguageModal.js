@@ -1,41 +1,46 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import css from "./LanguageModal.module.scss";
-import RU from "../../../../assets/icons/headerIcons/RuFlag.svg";
-import Eng from "../../../../assets/icons/headerIcons/EngFlag.svg";
 
-const LanguageModal = ({ langName, onLanguageChange }) => {
-  const languages = [
-    { id: 11, name: "Русский", icon: RU },
-    { id: 12, name: "English", icon: Eng },
-  ];
+const LanguageModal = ({
+  languages,
+  selectedLanguage,
+  onLanguageChange,
+  onCloseModalFunc,
+}) => {
+  const [timer, setTimer] = useState(null);
 
-  const selectedLangId = languages.find(
-    (language) => language.name === langName
-  );
+  useEffect(() => {
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [timer]);
 
-  const [selectedLanguageId, setSelectedLanguageId] = useState(
-    selectedLangId.id
-  );
+  const handleMouseEnter = () => {
+    clearTimeout(timer);
+  };
 
-  function onLanguageItemClick(e, languageId) {
-    setSelectedLanguageId(languageId);
-    const selectedLanguage = languages.find(
-      (language) => language.id === languageId
+  const handleMouseLeave = () => {
+    setTimer(
+      setTimeout(() => {
+        onCloseModalFunc();
+      }, 2000)
     );
-    onLanguageChange(selectedLanguage.name);
-  }
-
+  };
   return (
     <div className={css.languageBtn}>
-      <div className={css.box}>
+      <div
+        className={css.box}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
         {languages.map((language) => {
           return (
             <div
-              key={language.id}
+              key={language.lang}
               className={css.radioBtn}
-              onClick={(e) => onLanguageItemClick(e, language.id)}
+              onClick={() => onLanguageChange(language)}
               style={
-                language.id === selectedLanguageId
+                language.lang === selectedLanguage.lang
                   ? { background: "#f5f5f7" }
                   : { background: "none" }
               }
@@ -47,10 +52,11 @@ const LanguageModal = ({ langName, onLanguageChange }) => {
 
               <input
                 type="radio"
-                name={language.name}
+                name={language.lang}
+                value={language.name}
                 className={css.radioBtnInput}
-                checked={language.id === selectedLanguageId}
-                onChange={() => setSelectedLanguageId(language.id)}
+                checked={language.lang === selectedLanguage.lang}
+                onChange={() => onLanguageChange(language)}
               />
             </div>
           );

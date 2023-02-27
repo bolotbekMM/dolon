@@ -1,9 +1,11 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { NavLink } from "react-router-dom";
 import { contactData, moduleContent } from "../../../../../utils/data/data";
 import css from "./MenuModal.module.scss";
 
 const MenuModal = ({ handleMouseLeave }) => {
+  const { t, i18n } = useTranslation();
   return (
     <div className={css.menuModal}>
       <div className={css.box} onMouseLeave={handleMouseLeave}>
@@ -17,7 +19,7 @@ const MenuModal = ({ handleMouseLeave }) => {
                 key={index}
               >
                 <div className={css.innerBox}>
-                  <p>{item.text}</p>
+                  <p>{t(item.text)}</p>
                   <div className={css.underline}></div>
                 </div>
               </NavLink>

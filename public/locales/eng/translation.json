@@ -1,0 +1,100 @@
+{
+  "NavBar": {
+    "eco": "Ecosystems",
+    "news": "News",
+    "about": "About Us",
+    "contacts": "Contacts"
+  },
+  "Glob": {
+    "Main": "Main Page",
+    "Contacts": "Contacts"
+  },
+  "Modules": {
+    "Modules": "Modules",
+    "monitoring": "Monitoring",
+    "fileManager": "File Manager",
+    "geology": "Geology",
+    "marksheideria": "Marksheideria",
+    "drilling": "Drilling",
+    "searchRoutes": "Search Routes",
+    "laboratory": "Laboratory",
+    "kernosklad": "Kernosklad"
+  },
+  "ModuleDescriptions": {
+    "monitoring": "Online workflow monitoring",
+    "fileManager": "File hosting Dolon",
+    "geology": "Online workflow monitoring",
+    "marksheideria": "Powerful set of 3D tools",
+    "drilling": "Organization of drilling operations",
+    "searchRoutes": "Advanced Reconnaissance Toolkit",
+    "laboratory": "Laboratory work automation",
+    "kernosklad": "Accounting and organization of core storage"
+  },
+  "ContactsKyrgyzstan": {
+    "country": "Kyrgyz Republic, Bishkek",
+    "adress": "st. Akhunbaeva 165"
+  },
+  "ContactsKazahstan": {
+    "country": "Republic of Kazakhstan, Almaty",
+    "adress": "st. Timiryazev, 42, room 15/1, office. 7"
+  },
+  "DolonDescription": "Dolon - geological and mining ecocloud system",
+  "MainParallaxText": "Cloud-based ecosystem (Industry 4.0.)",
+  "EcoParallaxText": "Dolon solution family",
+  "ThirdBlockDolonDescription": {
+    "1": "The Dolon cloud ecosystem is a comprehensive solution for mining and geological professionals to work with a data array.",
+    "2": "The system is web-oriented and cross-platform, which allows you to work through the browser of any device, without the need to install complex software.",
+    "3": "Work with data streams is carried out from any place and area of ​​work of the company, without requiring attachment to a specific workplace. This allows you to receive information and reports in real time and allows all departments of the company to work in harmony, with up-to-date information and a single database."
+  },
+  "ConvenientInterface": "CONVENIENT INTERFACE",
+  "UniqueBlock": "THE UNIQUENESS OF THE DOLON ECOSYSTEM",
+  "Uniques": {
+    "1": "Cross-platfom",
+    "2": "Single database",
+    "3": "Ecosystem",
+    "4": "iot internet of things",
+    "5": "Low system resource requirements",
+    "6": "Decreased time to fix problems",
+    "7": "Cost optimization",
+    "8": "High reliability"
+  },
+  "SliderBlocks": {
+    "1": "Web-oriented and cross-platform",
+    "2": "Flexibility",
+    "3": "Single database",
+    "4": "No hidden costs"
+  },
+  "SlideBlockWebOrientDesc": {
+    "1": "English Dolon — это кроссплатформенное решение на основе веб-технологий, которое обладает рядом ключевых преимуществ по сравнению с традиционными десктопными приложениями.",
+    "2": "English С Dolon вы можете получить доступ к системе из любого места, где есть подключение к Интернету, без необходимости устанавливать приложение на ваше устройство. Это делает его быстрым и удобным в использовании, а также безопасным для вашего устройства.",
+    "3": "English Кроме того, Dolon можно использовать на различных устройствах, включая персональные компьютеры и мобильные устройства, такие как планшеты и смартфоны, независимо от операционной системы.",
+    "4": "English Эти особенности делают Dolon идеальным выбором для предприятий, стремящихся оптимизировать свою деятельность и повысить производительность."
+  },
+  "SlideBlockFlexDesc": {
+    "1": "English Dolon — это кроссплатформенное решение на основе веб-технологий, которое обладает рядом ключевых преимуществ по сравнению с традиционными десктопными приложениями.",
+    "2": "English С Dolon вы можете получить доступ к системе из любого места, где есть подключение к Интернету, без необходимости устанавливать приложение на ваше устройство. Это делает его быстрым и удобным в использовании, а также безопасным для вашего устройства.",
+    "3": "English Кроме того, Dolon можно использовать на различных устройствах, включая персональные компьютеры и мобильные устройства, такие как планшеты и смартфоны, независимо от операционной системы.",
+    "4": "English Эти особенности делают Dolon идеальным выбором для предприятий, стремящихся оптимизировать свою деятельность и повысить производительность."
+  },
+  "SlideBlockSingleDesc": {
+    "1": "English Dolon — это кроссплатформенное решение на основе веб-технологий, которое обладает рядом ключевых преимуществ по сравнению с традиционными десктопными приложениями.",
+    "2": "English С Dolon вы можете получить доступ к системе из любого места, где есть подключение к Интернету, без необходимости устанавливать приложение на ваше устройство. Это делает его быстрым и удобным в использовании, а также безопасным для вашего устройства.",
+    "3": "English Кроме того, Dolon можно использовать на различных устройствах, включая персональные компьютеры и мобильные устройства, такие как планшеты и смартфоны, независимо от операционной системы.",
+    "4": "English Эти особенности делают Dolon идеальным выбором для предприятий, стремящихся оптимизировать свою деятельность и повысить производительность."
+  },
+  "SlideBlockNoHidenDesc": {
+    "1": "English Dolon — это кроссплатформенное решение на основе веб-технологий, которое обладает рядом ключевых преимуществ по сравнению с традиционными десктопными приложениями.",
+    "2": "English С Dolon вы можете получить доступ к системе из любого места, где есть подключение к Интернету, без необходимости устанавливать приложение на ваше устройство. Это делает его быстрым и удобным в использовании, а также безопасным для вашего устройства.",
+    "3": "English Кроме того, Dolon можно использовать на различных устройствах, включая персональные компьютеры и мобильные устройства, такие как планшеты и смартфоны, независимо от операционной системы.",
+    "4": "English Эти особенности делают Dolon идеальным выбором для предприятий, стремящихся оптимизировать свою деятельность и повысить производительность."
+  },
+  "EcoContent": {
+    "1": "Dolon is revolutionizing the data flow of the mining and exploration industry by seamlessly integrating data across multiple departments and work areas. The cloud technologies used by the platform allow specialists to work with a single database and have access to them from almost any device. This concept has led to the creation of a unique Dolon ecosystem, where all solutions are integrated with each other and work as a single mechanism.",
+    "2": "The system is web-based and cross-platform, which makes it easy to access and use on any device.",
+    "3": "The flexibility built into the very core of Dolon allows you to customize and adapt the system to your specific production tasks and needs.",
+    "4": "By using robust open source solutions, you are not dependent on specific DBMS like SQL, Oracle, etc.",
+    "5": "Server licenses are not tied to specific devices, so you can access Dolon from anywhere in the world and work site.",
+    "6": "If you suddenly find yourself without a connection, Dolon's offline mode will allow you to work even without access to a single database."
+  },
+  "EcoPlashka": "With unique capabilities, Dolon simplifies information flow for exploration and mining companies around the world, giving users the freedom, flexibility and teamwork"
+}

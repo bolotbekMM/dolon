@@ -14,24 +14,42 @@ import "./slider.scss";
 
 // import required modules
 import { Pagination } from "swiper";
+import { useTranslation } from "react-i18next";
 
 export default function Slider() {
+  const { t, i18n } = useTranslation();
 
     let sliderData = [
         {
-            title: "web-ориентированность и кроссплатформенность ",
+            title: t("SliderBlocks.1"),
+            Descriptions1 : t("SlideBlockWebOrientDesc.1"),
+            Descriptions2 : t("SlideBlockWebOrientDesc.2"),
+            Descriptions3 : t("SlideBlockWebOrientDesc.3"),
+            Descriptions4 : t("SlideBlockWebOrientDesc.4"),
             img: slider1
         },
         {
-            title: "гибкость",
+            title: t("SliderBlocks.2"),
+            Descriptions1 : t("SlideBlockFlexDesc.1"),
+            Descriptions2 : t("SlideBlockFlexDesc.2"),
+            Descriptions3 : t("SlideBlockFlexDesc.3"),
+            Descriptions4 : t("SlideBlockFlexDesc.4"),
             img: slider2
         },
         {
-            title: "Единая база данных ",
+            title: t("SliderBlocks.3"),
+            Descriptions1 : t("SlideBlockSingleDesc.1"),
+            Descriptions2 : t("SlideBlockSingleDesc.2"),
+            Descriptions3 : t("SlideBlockSingleDesc.3"),
+            Descriptions4 : t("SlideBlockSingleDesc.4"),
             img: slider3
         },
         {
-            title: "Отсутствие скрытых затрат",
+            title: t("SliderBlocks.4"),
+            Descriptions1 : t("SlideBlockNoHidenDesc.1"),
+            Descriptions2 : t("SlideBlockNoHidenDesc.2"),
+            Descriptions3 : t("SlideBlockNoHidenDesc.3"),
+            Descriptions4 : t("SlideBlockNoHidenDesc.4"),
             img: slider4
         }
     ]
@@ -65,30 +83,16 @@ export default function Slider() {
                                     </p>
                                     <div className="text">
                                         <p className="paragraph">
-                                        Dolon — это кроссплатформенное решение на основе 
-                                        веб-технологий, которое обладает рядом ключевых 
-                                        преимуществ по сравнению 
-                                        с традиционными десктопными приложениями.
+                                          {elem.Descriptions1}
                                         </p>
                                         <p className="paragraph">
-                                        С Dolon вы можете получить доступ к системе из любого места, 
-                                        где есть подключение к Интернету, без необходимости 
-                                        устанавливать приложение на ваше устройство. Это делает 
-                                        его быстрым и удобным в использовании, а также 
-                                        безопасным для вашего устройства.
+                                          {elem.Descriptions2}
                                         </p>
                                         <p className="paragraph">
-                                        Кроме того, Dolon можно использовать на 
-                                        различных устройствах, включая персональные 
-                                        компьютеры и мобильные устройства, 
-                                        такие как планшеты и смартфоны, 
-                                        независимо от операционной системы.
+                                          {elem.Descriptions3}
                                         </p>
                                         <p className="paragraph">
-                                        Эти особенности делают Dolon идеальным 
-                                        выбором для предприятий, стремящихся 
-                                        оптимизировать свою деятельность и 
-                                        повысить производительность.
+                                          {elem.Descriptions4}
                                         </p>
                                     </div>
                                 </div>

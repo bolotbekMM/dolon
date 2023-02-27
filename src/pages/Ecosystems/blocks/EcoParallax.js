@@ -1,13 +1,13 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import bgImage from "../../../assets/img/ecosystems/ecoParallax2.svg";
 import Parallax from "../../../components/Parallax/Parallax";
 
-const ecoParallaxText = { text: "Семейство решений dolon" };
-
 const EcoParallax = () => {
+  const { t } = useTranslation();
   return (
     <>
-      <Parallax content={ecoParallaxText.text} img={bgImage} />
+      <Parallax content={t("EcoParallaxText")} img={bgImage} />
     </>
   );
 };

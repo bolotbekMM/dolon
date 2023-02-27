@@ -1,15 +1,13 @@
 import React from "react";
 import Parallax from "../../../components/Parallax/Parallax";
 import bgImage from "../../../assets/img/mainPage/prallax1.svg";
-
-const mainParallaxText = {
-  text: "Экосистема, основанная на облачных технологиях (Industry 4.0.)",
-};
+import { useTranslation } from "react-i18next";
 
 const SecondBlok = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
-      <Parallax content={mainParallaxText.text} img={bgImage} />
+      <Parallax content={t("MainParallaxText")} img={bgImage} />
     </>
   );
 };

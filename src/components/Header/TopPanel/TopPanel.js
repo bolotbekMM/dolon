@@ -1,20 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import css from "./TopPanel.module.scss";
 import youtube from "../../../assets/icons/headerIcons/youtube.svg";
 import linkedIn from "../../../assets/icons/headerIcons/linkedIn.svg";
 import down from "../../../assets/icons/headerIcons/down.svg";
 import LanguageModal from "./LanguagesModal/LanguageModal";
+import RU from "../../../assets/icons/headerIcons/RuFlag.svg";
+import Eng from "../../../assets/icons/headerIcons/EngFlag.svg";
+
+import { useTranslation } from "react-i18next";
 
 const TopPanel = () => {
+  const { t, i18n } = useTranslation();
+  const languages = [
+    { name: "Русский", lang: "ru", icon: RU },
+    { name: "English", lang: "eng", icon: Eng },
+  ];
   const [showLanguageModal, setShowLanguageModal] = useState(false);
-  const [langName, setLangName] = useState("Русский");
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  
+  useEffect(() => {
+    i18n.changeLanguage(selectedLanguage.lang);
+  }, [selectedLanguage]);
 
-  function onLanguageChange(newLangName) {
-    setLangName(newLangName);
+  function onLanguageChange(props) {
+    setSelectedLanguage(props);
+    i18n.changeLanguage(selectedLanguage.lang);
     setShowLanguageModal(false);
   }
 
-  function onClickFunc() {
+  function onCloseModalFunc() {
     setShowLanguageModal((prev) => !prev);
   }
 
@@ -33,8 +47,8 @@ const TopPanel = () => {
             </div>
           </div>
           <div className={css.languagePart}>
-            <button onClick={onClickFunc} className={css.languageBtn}>
-              <span>{langName}</span>
+            <button onClick={onCloseModalFunc} className={css.languageBtn}>
+              <span>{selectedLanguage.name}</span>
               <img
                 src={down}
                 alt="down"
@@ -45,8 +59,10 @@ const TopPanel = () => {
             </button>
             {showLanguageModal && (
               <LanguageModal
-                langName={langName}
+                languages={languages}
+                selectedLanguage={selectedLanguage}
                 onLanguageChange={onLanguageChange}
+                onCloseModalFunc={onCloseModalFunc}
               />
             )}
           </div>

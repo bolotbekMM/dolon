@@ -1,25 +1,34 @@
 import React from "react";
-import { ecoInfo, ecoInfoBlocks } from "../../../utils/data/data";
+import { useTranslation } from "react-i18next";
 import css from "./EcoContent.module.scss";
 
 const EcoContent = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div className={css.ecoContent}>
       <div className="container">
         <div className={css.box}>
           <div className={css.firstBox}>
-            <p>{ecoInfo.text}</p>
+            <p>{t("EcoContent.1")}</p>
           </div>
           <div className={css.secondBox}>
             <div className={css.line}></div>
             <ul>
-              {ecoInfoBlocks.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <p>{item.text}</p>
-                  </li>
-                );
-              })}
+              <li>
+                <p>{t("EcoContent.2")}</p>
+              </li>
+              <li>
+                <p>{t("EcoContent.3")}</p>
+              </li>
+              <li>
+                <p>{t("EcoContent.4")}</p>
+              </li>
+              <li>
+                <p>{t("EcoContent.5")}</p>
+              </li>
+              <li>
+                <p>{t("EcoContent.6")}</p>
+              </li>
             </ul>
           </div>
         </div>

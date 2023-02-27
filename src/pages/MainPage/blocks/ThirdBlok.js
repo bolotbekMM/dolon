@@ -1,29 +1,17 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import css from "./ThirdBlok.module.scss";
 
 const ThirdBlok = () => {
+  const { t, i18n } = useTranslation();
   return (
     <section className={css.bgImage}>
       <div className={css.thirdBlok}>
         <div className="container">
           <div className={css.box}>
-            <p>
-              Облачная экосистема Dolon – это комплексное решение для
-              специалистов горнорудной и геологической отрасли по работе с
-              массивом данных.
-            </p>
-            <p>
-              Система является web-ориентированной и кроссплатформенной, что
-              позволяет работать через браузер любого устройства, без
-              необходимости установки сложного ПО.
-            </p>
-            <p>
-              Работа с потоками данных производятся из любого места и участка
-              работ компании, не требуя привязанности к определенному рабочему
-              месту. Это позволяет получать информацию и отчеты в реальном
-              времени и дает возможность всем отделам компании работать
-              согласованно, с актуальной информацией и единой базой данных.
-            </p>
+            <p>{t("ThirdBlockDolonDescription.1")}</p>
+            <p>{t("ThirdBlockDolonDescription.2")}</p>
+            <p>{t("ThirdBlockDolonDescription.3")}</p>
           </div>
         </div>
       </div>

@@ -1,16 +1,14 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import css from "./EcoPlashka.module.scss";
 
-const ecoPlashkaText = {
-  text: `Благодаря уникальным возможностям, Dolon упрощает работу с информационными потоками для геологоразведочных и горнодобывающих компаний во всем мире, предоставляя пользователям свободу, гибкость и возможность командного взаимодействия`,
-};
-
 const EcoPlashka = () => {
+  const { t } = useTranslation();
   return (
     <div className={css.ecoPlashka}>
       <div className="container">
         <div className={css.box}>
-          <p>{ecoPlashkaText.text}</p>
+          <p>{t("EcoPlashka")}</p>
         </div>
       </div>
     </div>

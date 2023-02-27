@@ -4,89 +4,84 @@ import RU from "../../assets/icons/headerIcons/RuFlag.svg";
 import Eng from "../../assets/icons/headerIcons/EngFlag.svg";
 
 export const navBarContent = [
-  { text: "Экосистема", icon: iconDown, pathName: "/ecosystems" },
-  { text: "Новости", icon: null, pathName: "/news" },
-  { text: "О компании", icon: null, pathName: "/aboutUs" },
-  { text: "Контакты", icon: iconDown, pathName: "/contacts" },
+  { text: "NavBar.eco", icon: iconDown, pathName: "/ecosystems" },
+  { text: "NavBar.news", icon: null, pathName: "/news" },
+  { text: "NavBar.about", icon: null, pathName: "/aboutUs" },
+  { text: "NavBar.contacts", icon: iconDown, pathName: "/contacts" },
 ];
 
 export const moduleContent = [
   {
     id: generateRandomId(),
-    text: "Мониторинг",
+    text: "Modules.monitoring",
     icon: null,
     pathName: "/monitoring",
-    description: "Мониторинг рабочих процессов в режиме онлайн",
+    description: "ModuleDescriptions.monitoring",
   },
   {
     id: generateRandomId(),
-    text: "Файловый менеджер",
+    text: "Modules.fileManager",
     icon: null,
     pathName: "/fileManager",
-    description: "Файлообменник Dolon",
+    description: "ModuleDescriptions.fileManager",
   },
   {
     id: generateRandomId(),
-    text: "Геология",
+    text: "Modules.geology",
     icon: null,
     pathName: "/geology",
-    description: "Мониторинг рабочих процессов в режиме онлайн",
+    description: "ModuleDescriptions.geology",
   },
   {
     id: generateRandomId(),
-    text: "Маркшейдерия",
+    text: "Modules.marksheideria",
     icon: null,
     pathName: "/marksheideria",
-    description: "Мощный набор 3D инструментов",
+    description: "ModuleDescriptions.marksheideria",
   },
   {
     id: generateRandomId(),
-    text: "Бурение",
+    text: "Modules.drilling",
     icon: null,
     pathName: "/drilling",
-    description: "Организация буровых работ",
+    description: "ModuleDescriptions.drilling",
   },
   {
     id: generateRandomId(),
-    text: "Поисковые маршруты",
+    text: "Modules.searchRoutes",
     icon: null,
     pathName: "/searchRoutes",
-    description: "Продвинутый набор инструментов разведки",
+    description: "ModuleDescriptions.searchRoutes",
   },
   {
     id: generateRandomId(),
-    text: "Лаборатория",
+    text: "Modules.laboratory",
     icon: null,
     pathName: "/laboratory",
-    description: "Автоматизация работы лаборатории",
+    description: "ModuleDescriptions.laboratory",
   },
   {
     id: generateRandomId(),
-    text: "Керносклад",
+    text: "Modules.kernosklad",
     icon: null,
     pathName: "/kernosklad",
-    description: "Учет и организация хранилища керна",
+    description: "ModuleDescriptions.kernosklad",
   },
 ];
 
 export const contactData = [
   {
-    country: "Республика Казахстан, г. Алматы",
-    adress: "ул. Тимирязева, 42, к. 15/1, оф. 7",
+    country: "ContactsKazahstan.country",
+    adress: "ContactsKazahstan.adress",
     phone: "+7 771 225 98 34",
     email: "alexandr.m@dolon.tech",
   },
   {
-    country: "Кыргызская Республика, г. Бишкек",
-    adress: "ул. Ахунбаева 165",
+    country: "ContactsKyrgyzstan.country",
+    adress: "ContactsKyrgyzstan.adress",
     phone: "+996 700 173 295",
     email: "satar.t@dolon.tech",
   },
-];
-
-export const languages = [
-  { id: 11, name: "Русский", icon: RU },
-  { id: 12, name: "English", icon: Eng },
 ];
 
 export const ecoInfo = {
