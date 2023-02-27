@@ -2,11 +2,16 @@ import React from "react";
 import css from "./KernoSklad.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/kernosklad/KernoBanner.png";
+import { useTranslation } from "react-i18next";
 
 const KernoSklad = () => {
-  let title = "КЕРНОСКЛАД";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"KernoSklad"} banner={banner} title={title}>
+    <ReModule
+      module={"KernoSklad"}
+      banner={banner}
+      title={t("Modules.kernosklad")}
+    >
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>

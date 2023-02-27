@@ -20,6 +20,9 @@ const ReModule = ({ module, banner, title, children }) => {
         </div>
       </div>
       <div className={css.content}>{children}</div>
+      <div className={css.shadowEllipsBox}>
+        <div className={css.shadowEllips}></div>
+      </div>
       <Feedback />
     </div>
   );

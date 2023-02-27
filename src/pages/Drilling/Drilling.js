@@ -3,11 +3,12 @@ import css from "./Drilling.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/drilling/drillingBanner.png";
 import image from "../../assets/img/drilling/drillingImg.png";
+import { useTranslation } from "react-i18next";
 
 const Drilling = () => {
-  let title = "БУРЕНИЕ";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"Drilling"} banner={banner} title={title}>
+    <ReModule module={"Drilling"} banner={banner} title={t("Modules.drilling")}>
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>

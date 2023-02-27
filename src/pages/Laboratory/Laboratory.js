@@ -3,11 +3,16 @@ import css from "./Laboratory.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/laboratory/laboratoryBanner.png";
 import image from "../../assets/img/laboratory/labImg.png";
+import { useTranslation } from "react-i18next";
 
 const Laboratory = () => {
-  let title = "лаборатория";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"Drilling"} banner={banner} title={title}>
+    <ReModule
+      module={"Drilling"}
+      banner={banner}
+      title={t("Modules.laboratory")}
+    >
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>

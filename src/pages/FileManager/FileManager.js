@@ -3,11 +3,16 @@ import css from "./FileManager.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/searchingRoutes/SearchingRoutes.png";
 import fileManagerImage from "../../assets/img/fileManager/fileManagerImage.svg";
+import { useTranslation } from "react-i18next";
 
 const FileManager = () => {
-  let title = "ФАЙЛОВЫЙ МЕНЕДЖЕР";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"FileManager"} banner={banner} title={title}>
+    <ReModule
+      module={"FileManager"}
+      banner={banner}
+      title={t("Modules.fileManager")}
+    >
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>

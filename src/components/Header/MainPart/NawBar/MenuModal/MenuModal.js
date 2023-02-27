@@ -41,8 +41,8 @@ const MenuModal = ({ handleMouseLeave }) => {
             {contactData.map((item, index) => {
               return (
                 <li key={index}>
-                  <p>{item.country}</p>
-                  <p>{item.adress}</p>
+                  <p>{t(item.country)}</p>
+                  <p>{t(item.adress)}</p>
                   <p className={css.phone}>{item.phone}</p>
                   <p className={css.email}>{item.email}</p>
                 </li>

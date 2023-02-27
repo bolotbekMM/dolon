@@ -1,6 +1,6 @@
 {
   "NavBar": {
-    "eco": "Ecosystems",
+    "eco": "Ecosystem",
     "news": "News",
     "about": "About Us",
     "contacts": "Contacts"
@@ -96,5 +96,11 @@
     "5": "Server licenses are not tied to specific devices, so you can access Dolon from anywhere in the world and work site.",
     "6": "If you suddenly find yourself without a connection, Dolon's offline mode will allow you to work even without access to a single database."
   },
-  "EcoPlashka": "With unique capabilities, Dolon simplifies information flow for exploration and mining companies around the world, giving users the freedom, flexibility and teamwork"
+  "EcoPlashka": "With unique capabilities, Dolon simplifies information flow for exploration and mining companies around the world, giving users the freedom, flexibility and teamwork",
+  "contuctUs": {
+    "contuctUs": "СВЯЖИТЕСЬ С НАМИ",
+    "interesting": "Если вам интересен продукт свяжитесь с нами, и мы организуем вам онлайн презентацию",
+    "onlinePresentation": "Запросить онлайн презентцию",
+    "askQuestion": "задать вопрос"
+  }
 }

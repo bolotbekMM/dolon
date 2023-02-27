@@ -3,11 +3,16 @@ import css from "./Manitoring.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/manitoring/manitoringBanner.png";
 import monitoringImg from "../../assets/img/manitoring/manitoringImage.svg";
+import { useTranslation } from "react-i18next";
 
 const Manitoring = () => {
-  let title = "МОНИТОРИНГ";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"Manitoring"} banner={banner} title={title}>
+    <ReModule
+      module={"Manitoring"}
+      banner={banner}
+      title={t("Modules.monitoring")}
+    >
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>

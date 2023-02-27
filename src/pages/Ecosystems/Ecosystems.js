@@ -1,11 +1,10 @@
 import React from "react";
-import Hero from "../../components/hero";
+import Feedback from "../../components/feedback";
 import EcoContent from "./blocks/EcoContent";
 import EcoHead from "./blocks/EcoHead";
 import EcoModules from "./blocks/EcoModules";
 import EcoParallax from "./blocks/EcoParallax";
 import EcoPlashka from "./blocks/EcoPlashka";
-import failmenager from "../../assets/img/mainPage/failmenager.png";
 
 const Ecosystems = () => {
   return (
@@ -15,6 +14,11 @@ const Ecosystems = () => {
       <EcoParallax />
       <EcoModules />
       <EcoPlashka />
+      <Feedback
+        block={true}
+        question={true}
+        text="Если вы хотите получить более подробную информацию свяжитесь с нами"
+      />
     </>
   );
 };

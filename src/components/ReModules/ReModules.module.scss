@@ -37,5 +37,21 @@
     width: 100%;
     background: #29292c;
     min-height: 660px;
+    z-index: 2;
+  }
+  .shadowEllipsBox {
+    position: relative;
+    width: 100%;
+
+    .shadowEllips {
+      position: absolute;
+      top: -400px;
+      width: 100%;
+      height: 482px;
+      background: linear-gradient(249.29deg, #7aa7ff -4.9%, #67d4b4 92.72%);
+      filter: blur(87.5px);
+      z-index: 1;
+      border-radius: 50%;
+    }
   }
 }

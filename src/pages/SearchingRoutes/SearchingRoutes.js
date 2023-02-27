@@ -2,11 +2,16 @@ import React from "react";
 import css from "./SearchingRoutes.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/searchingRoutes/SearchingRoutes.png";
+import { useTranslation } from "react-i18next";
 
 const SearchingRoutes = () => {
-  let title = "ПОИСКОВЫЕ МАРШРУТЫ";
+  const { t, i18n } = useTranslation();
   return (
-    <ReModule module={"SearchingRoutes"} banner={banner} title={title}>
+    <ReModule
+      module={"SearchingRoutes"}
+      banner={banner}
+      title={t("Modules.searchRoutes")}
+    >
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>
