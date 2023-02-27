@@ -98,9 +98,12 @@
   },
   "EcoPlashka": "With unique capabilities, Dolon simplifies information flow for exploration and mining companies around the world, giving users the freedom, flexibility and teamwork",
   "contuctUs": {
-    "contuctUs": "СВЯЖИТЕСЬ С НАМИ",
-    "interesting": "Если вам интересен продукт свяжитесь с нами, и мы организуем вам онлайн презентацию",
-    "onlinePresentation": "Запросить онлайн презентцию",
-    "askQuestion": "задать вопрос"
+    "contuctUs": "CONTACT US",
+    "mainContuctUsText":"IF YOU ARE INTERESTED IN THE PRODUCT PLEASE CONTACT US AND WE WILL ORGANIZE YOU AN ONLINE PRESENTATION",
+    "ecoContuctUsText":"If you would like more information, please contact us.",
+    "interesting": "If you are interested in the product, please contact us and we will arrange an online presentation for you.",
+    "onlinePresentation": "request an online presentation",
+    "moreInfo":"Get more information",
+    "askQuestion": "Ask a Question"
   }
 }

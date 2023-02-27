@@ -7,10 +7,11 @@ import Unigue from "./blocks/unigue/index";
 import Inface from "./blocks/inface/index";
 import Slider from "./blocks/slider";
 import Carousel from "./blocks/ticker";
-import Feedback from './../../components/feedback/index';
-
+import Feedback from "./../../components/feedback/index";
+import { useTranslation } from "react-i18next";
 
 const MainPage = () => {
+  const { t, i18n } = useTranslation();
   return (
     <div>
       <FirstBlok />
@@ -21,7 +22,11 @@ const MainPage = () => {
       <Inface />
       <Slider />
       <Carousel />
-      <Feedback block={true} question={true} text="Если вам интересен продукт свяжитесь с нами, и мы организуем вам онлайн презентацию" />
+      <Feedback
+        block={true}
+        question={true}
+        text={t("contuctUs.mainContuctUsText")}
+      />
     </div>
   );
 };

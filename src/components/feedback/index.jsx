@@ -34,7 +34,7 @@ function Feedback({ text, question, block = false }) {
                 setModal(!modal);
               }}
             >
-              Получить более подробную информацию
+              {t("contuctUs.moreInfo")}
             </button>
             {!!question && (
               <button
@@ -72,7 +72,7 @@ function Feedback({ text, question, block = false }) {
               setModal(!modal);
             }}
           >
-            Получить более подробную информацию
+            {t("contuctUs.moreInfo")}
           </button>
           {!!question && (
             <button

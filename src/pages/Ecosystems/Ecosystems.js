@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from "react-i18next";
 import Feedback from "../../components/feedback";
 import EcoContent from "./blocks/EcoContent";
 import EcoHead from "./blocks/EcoHead";
@@ -7,6 +8,7 @@ import EcoParallax from "./blocks/EcoParallax";
 import EcoPlashka from "./blocks/EcoPlashka";
 
 const Ecosystems = () => {
+  const { t, i18n } = useTranslation();
   return (
     <>
       <EcoHead />
@@ -17,7 +19,7 @@ const Ecosystems = () => {
       <Feedback
         block={true}
         question={true}
-        text="Если вы хотите получить более подробную информацию свяжитесь с нами"
+        text={t("contuctUs.ecoContuctUsText")}
       />
     </>
   );
