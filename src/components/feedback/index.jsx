@@ -34,7 +34,7 @@ function Feedback({ text, question, block = false }) {
                 setModal(!modal);
               }}
             >
-              {t("contuctUs.moreInfo")}
+              {t("contuctUs.onlinePresentation")}
             </button>
             {!!question && (
               <button
