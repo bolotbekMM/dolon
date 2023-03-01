@@ -85,13 +85,14 @@
           font-size: 14px;
           line-height: 130%;
           color: #29292c;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
 
-          p {
-            margin-bottom: 20px;
-          }
           .phone,
           .email {
             cursor: pointer;
+            color: #29292c;
           }
         }
       }

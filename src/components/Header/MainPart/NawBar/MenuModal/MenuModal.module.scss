@@ -26,7 +26,8 @@
       grid-column-gap: 54px;
       grid-row-gap: 54px;
 
-      li, .link{
+      li,
+      .link {
         height: 43.82px;
         width: 100%;
         display: inline-block;
@@ -97,6 +98,9 @@
           color: #171717;
 
           opacity: 0.8;
+          .phone {
+            color: #171717;
+          }
         }
       }
 

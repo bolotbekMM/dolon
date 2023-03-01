@@ -12,29 +12,19 @@ const Drilling = () => {
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>
-            <p>
-              Если вы занимаетесь управлением буровыми работами, вы знаете, как
-              важно отслеживать все детали. Именно тут на помощь приходит модуль
-              «Бурение»- продвинутый инструмент, который помогает вам быть в
-              курсе происходящего и предлагает следующие инструменты:
-            </p>
+            <p>{t("moduleDrillingTexts.1")}</p>
             <div className={css.line}></div>
             <ul>
-              <li>Данные о буровых рейсах;</li>
-              <li>Затраченное время на основную работу и простои;</li>
-              <li>Учет по ДВС и генераторам;</li>
-              <li>Учет по расходу топлива;</li>
-              <li>Заявки на запчасти;</li>
-              <li>Фотодокументация</li>
+              <li>{t("moduleDrillingTexts.2")}</li>
+              <li>{t("moduleDrillingTexts.3")}</li>
+              <li>{t("moduleDrillingTexts.4")}</li>
+              <li>{t("moduleDrillingTexts.5")}</li>
+              <li>{t("moduleDrillingTexts.6")}</li>
+              <li>{t("moduleDrillingTexts.7")}</li>
             </ul>
           </div>
           <div className={css.box2}>
-            <p>
-              Вместе с модулем «Бурение» так же эффективно можно использовать
-              возможности Dashboard и отчетные формы Dolon. В связке эти два
-              модуля позволят постоянно быть в курсе событий и принимать
-              своевременные решения, где бы вы ни находились
-            </p>
+            <p>{t("moduleDrillingTexts.8")}</p>
             <img src={image} alt="image" />
           </div>
         </div>

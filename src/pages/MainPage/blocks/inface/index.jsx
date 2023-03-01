@@ -9,8 +9,7 @@ function Inface() {
       <div className={classes.inface}>
         <h2 className={classes.infaceTitle}>{t("ConvenientInterface")}</h2>
         <p className={classes.infaceContentt}>
-          Программа имеет простой и удобный интерфейс и не требует обучения
-          специальным навыкам и знаниям.
+        {t("ConvenientInterfaceDesc")}
         </p>
         <div className={classes.infaceImgWrap}>
           <img

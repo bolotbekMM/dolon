@@ -3,9 +3,11 @@ import { IoIosArrowDown} from "react-icons/io"
 import flag from "../../assets/img/mainPage/Flag.png"
 import { useState } from "react";
 import classNames from "classnames";
+import { useTranslation } from "react-i18next";
 
 
 function UISelect() {
+    const { t, i18n } = useTranslation();
 
     const [ hide, setHide ] = useState({
         hide: true,
@@ -21,7 +23,7 @@ function UISelect() {
                 }}>
                     {
                         !hide.value ? <div className={classes.uiselectMain}>
-                            Код страны
+                           {t("form.countryCode")}
                         </div> : <>
                             <div className={classNames(classes.listItem, classes.currentValue)}>
                                 <div className={classes.listItemImgWrap}>

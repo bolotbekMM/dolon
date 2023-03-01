@@ -31,7 +31,9 @@ const MenuModal = ({ handleMouseLeave }) => {
             {contactData.map((item, index) => {
               return (
                 <li key={index}>
-                  <p className={css.phone}>{item.phone}</p>
+                  <a className={css.phone} href={`tel:${item.phone}`}>
+                    {item.phone}
+                  </a>
                 </li>
               );
             })}

@@ -32,8 +32,7 @@ export default function Slider() {
       title: t("SliderBlocks.2"),
       Descriptions1: t("SlideBlockFlexDesc.1"),
       Descriptions2: t("SlideBlockFlexDesc.2"),
-      Descriptions3: t("SlideBlockFlexDesc.3"),
-      Descriptions4: t("SlideBlockFlexDesc.4"),
+
       img: slider2,
     },
     {
@@ -47,9 +46,8 @@ export default function Slider() {
     {
       title: t("SliderBlocks.4"),
       Descriptions1: t("SlideBlockNoHidenDesc.1"),
-      Descriptions2: t("SlideBlockNoHidenDesc.2"),
-      Descriptions3: t("SlideBlockNoHidenDesc.3"),
-      Descriptions4: t("SlideBlockNoHidenDesc.4"),
+      Descriptions2: t("SlideBlockNoHidenDesc.4"),
+
       img: slider4,
     },
   ];

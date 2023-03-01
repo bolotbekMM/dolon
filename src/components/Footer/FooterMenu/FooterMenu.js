@@ -54,8 +54,12 @@ const FooterMenu = () => {
                   <li key={index}>
                     <p>{t(item.country)}</p>
                     <p>{t(item.adress)}</p>
-                    <p className={css.phone}>{item.phone}</p>
-                    <p className={css.email}>{item.email}</p>
+                    <a className={css.phone} href={`tel:${item.phone}`}>
+                      {item.phone}
+                    </a>
+                    <a className={css.email} href={`mailto:${item.email}`}>
+                      {item.email}
+                    </a>
                   </li>
                 );
               })}

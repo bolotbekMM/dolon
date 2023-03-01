@@ -16,29 +16,22 @@ const Marksheideriya = () => {
       <div className="container">
         <div className={css.module}>
           <div className={css.box1}>
-            <p>
-              Обратите внимание на модуль «Маркшейдерия», предлагаемый нашей
-              системой. Это мощный набор инструментов и функций для расчета и
-              анализа данных, включая расчет объема каркаса, булевые операции и
-              сверку проектных и фактических объемов. Эти инструменты могут
-              помочь пользователям точно оценить размер и форму ресурсов, а
-              также влияние различных сценариев на эти ресурсы.
-            </p>
+            <p>{t("moduleMarksheideriyaTexts.1")}</p>
             <img src={image} alt="not found" />
           </div>
           <div className={css.box2}>
             <ul>
-              <li>● Набор функции по работе с полилиниями</li>
-              <li>● Булевые операции над каркасами</li>
-              <li>● Валидация и исправления каркасов</li>
-              <li>● Инструменты редактирования каркасов</li>
-              <li>● Инструменты разрезов</li>
-              <li>● Размерные стили</li>
-              <li>● Инструменты привязки к объектам</li>
-              <li>● Инструменты по работе с облаком точек</li>
-              <li>● Построение проектной выработки по сечению</li>
-              <li>● Установка атрибутов на геологические объекты</li>
-              <li>● Установка фильтров и легенд</li>
+              <li>{t("moduleMarksheideriyaTexts.2")}</li>
+              <li>{t("moduleMarksheideriyaTexts.3")}</li>
+              <li>{t("moduleMarksheideriyaTexts.4")}</li>
+              <li>{t("moduleMarksheideriyaTexts.5")}</li>
+              <li>{t("moduleMarksheideriyaTexts.6")}</li>
+              <li>{t("moduleMarksheideriyaTexts.7")}</li>
+              <li>{t("moduleMarksheideriyaTexts.8")}</li>
+              <li>{t("moduleMarksheideriyaTexts.9")}</li>
+              <li>{t("moduleMarksheideriyaTexts.10")}</li>
+              <li>{t("moduleMarksheideriyaTexts.11")}</li>
+              <li>{t("moduleMarksheideriyaTexts.12")}</li>
             </ul>
           </div>
         </div>

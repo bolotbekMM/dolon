@@ -13,11 +13,11 @@ const TopPanel = () => {
   const { t, i18n } = useTranslation();
   const languages = [
     { name: "Русский", lang: "ru", icon: RU },
-    { name: "English", lang: "eng", icon: Eng },
+    { name: "English", lang: "en", icon: Eng },
   ];
   const [showLanguageModal, setShowLanguageModal] = useState(false);
   const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
-  
+
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage.lang);
   }, [selectedLanguage]);
@@ -38,12 +38,19 @@ const TopPanel = () => {
         <div className={css.box}>
           <div className={css.leftSide}>
             <div className={css.icons}>
-              <img src={youtube} alt="youtube" />
-              <img src={linkedIn} alt="linkedIn" />
+              <a
+                target="_blank"
+                href="https://www.youtube.com/@dolon.ecosystem"
+              >
+                <img src={youtube} alt="youtube" />
+              </a>
+              <a target="_blank" href="https://www.linkedin.com/company/dolon">
+                <img src={linkedIn} alt="linkedIn" />
+              </a>
             </div>
             <div className={css.telNumbers}>
-              <p>+996 700 173 295</p>
-              <p>+7 771 225 98 34</p>
+              <a href="tel:+996700173295">+996 700 173 295</a>
+              <a href="tel:+996700173295">+7 771 225 98 34</a>
             </div>
           </div>
           <div className={css.languagePart}>

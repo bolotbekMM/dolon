@@ -17,42 +17,42 @@ function Unigue() {
     {
       img: img1,
       title: t("Uniques.1"),
-      content: "",
+      content: t("UniquesDescription.1"),
     },
     {
       img: img2,
       title: t("Uniques.2"),
-      content: "",
+      content: t("UniquesDescription.2"),
     },
     {
       img: img3,
       title: t("Uniques.3"),
-      content: "",
+      content: t("UniquesDescription.3"),
     },
     {
       img: img4,
       title: t("Uniques.4"),
-      content: "",
+      content: t("UniquesDescription.4"),
     },
     {
       img: img5,
       title: t("Uniques.5"),
-      content: "",
+      content: t("UniquesDescription.5"),
     },
     {
       img: img6,
       title: t("Uniques.6"),
-      content: "",
+      content: t("UniquesDescription.6"),
     },
     {
       img: img7,
       title: t("Uniques.7"),
-      content: "",
+      content: t("UniquesDescription.7"),
     },
     {
       img: img8,
       title: t("Uniques.8"),
-      content: "",
+      content: t("UniquesDescription.8"),
     },
   ];
 

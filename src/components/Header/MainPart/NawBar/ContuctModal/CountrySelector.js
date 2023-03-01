@@ -3,8 +3,10 @@ import Select from "react-select";
 import Flag from "react-flagkit";
 import css from "./ContuctModal.module.scss";
 import file from "../../../../../utils/data/countries.json";
+import { useTranslation } from "react-i18next";
 
 function CountrySelector({ onChange }) {
+  const { t, i18n } = useTranslation();
   const [selectedOption, setSelectedOption] = useState(null);
 
   function handleChange(option) {
@@ -26,7 +28,7 @@ function CountrySelector({ onChange }) {
         </div>
       )}
       getOptionValue={(option) => option.dial_code}
-      placeholder="Код"
+      placeholder={t("form.countryCode")}
     />
   );
 }

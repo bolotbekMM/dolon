@@ -30,7 +30,7 @@ const NavBar = () => {
         setHovered(false);
         setHoveredContucts(false);
       }
-    }, 400);
+    }, 300);
   };
 
   const handleMouseLeave = () => {

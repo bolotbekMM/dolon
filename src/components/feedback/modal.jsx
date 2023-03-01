@@ -3,8 +3,10 @@ import { useState } from 'react';
 import classNames from "classnames";
 import { toast } from 'react-toastify';
 import UISelect from './../UISelect/index';
+import { useTranslation } from "react-i18next";
 
 function FeedbackModal({ close, subject="Monitoring" }) {
+    const { t, i18n } = useTranslation();
 
     const [form, setForm] = useState({
         fio: "",
@@ -60,46 +62,46 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                 <div className={classes.feedmodalContainer}>
                     <div className={classes.feedmodalTitle}>
                         <p className={classes.feedmodalTitleText}>
-                            поЖАЛуЙСТА, ЗАПОЛНИТЕ ФОРМУ
+                            {t("form.fillForm")}
                         </p>
                     </div>
                     <div className={classes.feedmodalForm}>
                         <div className={classes.formgroup}>
                             <label htmlFor="fio" className={classes.formgroupLabel}>
-                                Фамилия имя и отчество
+                                {t("form.nameSurname")}
                             </label>
-                            <input type="text" name="fio" onInput={onInput} value={form.fio} id="fio" placeholder="Введите ФИО*" className={classes.formgroupInput} />
+                            <input type="text" name="fio" onInput={onInput} value={form.fio} id="fio" placeholder={`${t("form.enter")} ${t("form.nameSurname")}*`} className={classes.formgroupInput} />
                         </div>
                         <div className={classNames(classes.formgroup, classes.formgroupPhone)}>
                             <label htmlFor="phone" className={classes.formgroupLabel}>
-                                Номер телефона
+                            {t("form.phone")}
                             </label>
                             <UISelect />
                             <input type="text" name="phone" onInput={onInput} value={form.phone} placeholder="(___) ___ ___ " id="phone" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="email" className={classes.formgroupLabel}>
-                                Электронная почта
+                            {t("form.email")}
                             </label>
-                            <input type="text" name="email" onInput={onInput} value={form.email} placeholder="Введите Email*" id="email" className={classes.formgroupInput} />
+                            <input type="text" name="email" onInput={onInput} value={form.email} placeholder={`${t("form.enter")} E-mail*`} id="email" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="company" className={classes.formgroupLabel}>
-                                Компания
+                            {t("form.company")}
                             </label>
-                            <input type="text" name="company" onInput={onInput} value={form.company} id="company" placeholder="Напишите название вашей компании*" className={classes.formgroupInput} />
+                            <input type="text" name="company" onInput={onInput} value={form.company} id="company" placeholder={t("form.enterCompany")} className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="post" className={classes.formgroupLabel}>
-                                Должность
+                                {t("form.position")}
                             </label>
-                            <input type="text" name="post" onInput={onInput} value={form.post} placeholder="Напишите название вашей должности" id="post" className={classes.formgroupInput} />
+                            <input type="text" name="post" onInput={onInput} value={form.post} placeholder={t("form.enterPosition")} id="post" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="note" className={classes.formgroupLabel}>
-                                Примечание
+                                {t("form.note")}
                             </label>
-                            <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder="Напишите примечание" rows={3} id="note" className={classes.formgroupTextarea} />
+                            <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder={t("form.enterNote")} rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
                         <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
                             if (window.Email) {
@@ -111,11 +113,11 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                                 }).finally((data) => {
                                     console.log(data);
                                     close(false)
-                                    toast.success("Мы свяжемся с вами в ближайшее время", "Спасибо!")
+                                    toast.success(t("form.success"), t("form.thanks"))
                                 })
                             }
                         }}>
-                            Отправить
+                            {t("form.send")}
                         </button>
                     </div>
                 </div>

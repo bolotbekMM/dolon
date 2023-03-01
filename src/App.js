@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage/MainPage";
@@ -14,8 +15,25 @@ import KernoSklad from "./pages/KernoSklad/KernoSklad";
 import FileManager from "./pages/FileManager/FileManager";
 import Geology from "./pages/Geology/Geology";
 import Marksheideriya from "./pages/Marksheideriya/Marksheideriya";
+import i18n from "i18next";
+
+function setLanguage() {
+  const userLanguage = navigator.language || navigator.userLanguage;
+
+  if (userLanguage.startsWith("ru")) {
+    i18n.changeLanguage("ru");
+  } else if (userLanguage.startsWith("en")) {
+    i18n.changeLanguage("en");
+  } else {
+    i18n.changeLanguage("en");
+  }
+}
 
 function App() {
+  useEffect(() => {
+    setLanguage();
+  }, []);
+
   return (
     <div className="app">
       <ToastContainer />

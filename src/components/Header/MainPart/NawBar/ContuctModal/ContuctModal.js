@@ -82,39 +82,42 @@ const ContuctModal = ({ handleMouseLeave }) => {
       <div className={css.box} onMouseLeave={handleMouseLeave}>
         <form onSubmit={submitHandler} className={css.form}>
           <div className={css.fio}>
-            <label htmlFor="fio">ФИО</label>
+            <label htmlFor="fio">{t("form.nameSurname")}</label>
             <input
+             autocomplete="off"
               type="text"
               name="fio"
               onInput={onInput}
               value={form.fio}
               id="fio"
-              placeholder="Введите ФИО"
+              placeholder={`${t("form.enter")} ${t("form.nameSurname")}*`}
             />
           </div>
           <div className={css.tel}>
-            <label htmlFor="phone">Номер телефона</label>
+            <label htmlFor="phone">{t("form.phone")}</label>
 
             <div className={css.telBox}>
               <CountrySelector onChange={onChangeCode} />
               <input
+              autocomplete="off"
                 type="number"
                 name="phone"
                 onInput={onInput}
                 value={form.phone}
                 className={css.phoneNum}
-                placeholder="Номер"
+                placeholder={t("form.phone")}
               />
             </div>
           </div>
           <div className={css.email}>
-            <label htmlFor="email">Email адрес</label>
+            <label htmlFor="email">{t("form.email")}</label>
             <input
+              autocomplete="off"
               type="email"
               name="email"
               onInput={onInput}
               value={form.email}
-              placeholder="Введите Email"
+              placeholder={`${t("form.enter")} E-mail*`}
             />
           </div>
           <div className={css.formBtn}>
@@ -126,7 +129,7 @@ const ContuctModal = ({ handleMouseLeave }) => {
                 correctForm() ? css.feedmodalBtnActive : ""
               )}
             >
-              Принять
+              {t("form.accept")}
             </button>
           </div>
         </form>
@@ -135,7 +138,9 @@ const ContuctModal = ({ handleMouseLeave }) => {
             {contactData.map((item, index) => {
               return (
                 <li key={index}>
-                  <p className={css.phone}>{item.phone}</p>
+                  <a className={css.phone} href={`tel:${item.phone}`}>
+                    {item.phone}
+                  </a>
                 </li>
               );
             })}

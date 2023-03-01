@@ -11,8 +11,12 @@ const BottomFooter = () => {
       <div className="container">
         <div className={css.box}>
           <div className={css.media}>
-            <img src={linkedIn} alt="linkedIn" />
-            <img src={youtube} alt="youtube" />
+            <a target="_blank" href="https://www.linkedin.com/company/dolon">
+              <img src={linkedIn} alt="linkedIn" />
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@dolon.ecosystem">
+              <img src={youtube} alt="youtube" />
+            </a>
           </div>
           <div className={css.dolon}>
             <img src={dolon} alt="youtube" />
