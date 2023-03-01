@@ -1,0 +1,243 @@
+.flag {
+  width: 21px;
+  height: 15px;
+}
+.flagBox {
+  width: 150px;
+  height: 20px;
+
+  gap: 30px;
+}
+.flagSelect {
+  width: 165px;
+  height: 33px;
+  border-radius: 8px;
+  outline: none;
+  outline: none !important;
+}
+
+.menuModal {
+  position: absolute;
+  width: 100%;
+  top: 133px;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10px;
+
+  .box {
+    width: 1440px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background: #f5f5f7;
+    padding: 80px 185px 80px 160px;
+
+    box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.1),
+      0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.04);
+
+    .form {
+      width: 550px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+
+      .fio {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        label {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.001em;
+          color: #535354;
+        }
+        input {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px 16px;
+          gap: 12px;
+
+          width: 100%;
+          height: 43px;
+
+          background: #ffffff;
+
+          border: 1px solid #dddddf;
+          border-radius: 8px;
+        }
+      }
+      .tel {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        label {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.001em;
+          color: #535354;
+        }
+        input {
+          padding: 12px 16px;
+          height: 43px;
+          background: #ffffff;
+          border: 1px solid #dddddf;
+          border-radius: 8px;
+        }
+        .telBox {
+          display: flex;
+          flex-direction: row;
+          gap: 4px;
+          .countryCode {
+            width: 165px;
+            padding: 12px 16px;
+            height: 43px;
+            background: #ffffff;
+            border: 1px solid #dddddf;
+            border-radius: 8px;
+          }
+          .phoneNum {
+            width: 381px;
+          }
+        }
+      }
+      .email {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        label {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.001em;
+          color: #535354;
+        }
+        input {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 0px 16px;
+          gap: 12px;
+
+          width: 100%;
+          height: 43px;
+
+          background: #ffffff;
+
+          border: 1px solid #dddddf;
+          border-radius: 8px;
+        }
+      }
+      .formBtn {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .feedmodalBtn {
+          border: 2px solid #898989;
+          border-radius: 8px;
+          background-color: #898989;
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.001em;
+
+          color: #ffffff;
+          cursor: pointer;
+          width: 100%;
+          height: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .feedmodalBtnActive {
+          background-color: #171717;
+        }
+      }
+    }
+    .contactBlock {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .phoneNumbers {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        li {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 130%;
+          /* identical to box height, or 23px */
+
+          display: flex;
+          align-items: center;
+
+          /* Almost black */
+
+          color: #171717;
+
+          opacity: 0.8;
+        }
+      }
+
+      .line {
+        border-bottom: 1px solid #000000;
+        transform: matrix(1, 0, 0, -1, 0, 0);
+      }
+      .contacts {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        li {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 130%;
+          /* identical to box height, or 18px */
+
+          letter-spacing: 0.001em;
+
+          /* Almost black */
+
+          color: #171717;
+
+          opacity: 0.8;
+          p {
+            margin-bottom: 8px;
+          }
+          .phone,
+          .email {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

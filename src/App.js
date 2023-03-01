@@ -12,6 +12,8 @@ import Laboratory from "./pages/Laboratory/Laboratory";
 import SearchingRoutes from "./pages/SearchingRoutes/SearchingRoutes";
 import KernoSklad from "./pages/KernoSklad/KernoSklad";
 import FileManager from "./pages/FileManager/FileManager";
+import Geology from "./pages/Geology/Geology";
+import Marksheideriya from "./pages/Marksheideriya/Marksheideriya";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="/searchRoutes" element={<SearchingRoutes />} />
           <Route path="/kernosklad" element={<KernoSklad />} />
           <Route path="/filemanager" element={<FileManager />} />
+          <Route path="/geology" element={<Geology />} />
+          <Route path="/marksheideria" element={<Marksheideriya />} />
         </Routes>
         <Footer />
       </Router>

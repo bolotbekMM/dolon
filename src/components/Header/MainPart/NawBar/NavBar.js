@@ -4,9 +4,11 @@ import MenuModal from "./MenuModal/MenuModal";
 import { NavLink } from "react-router-dom";
 import { navBarContent } from "../../../../utils/data/data";
 import { useTranslation } from "react-i18next";
+import ContuctModal from "./ContuctModal/ContuctModal";
 
 const NavBar = () => {
   const [hovered, setHovered] = useState(false);
+  const [hoveredContucts, setHoveredContucts] = useState(false);
   const [maxScrollSize, setMaxScrollSize] = useState(window.scrollY);
   const [minScrollSize, setMinScrollSize] = useState(window.scrollY);
 
@@ -16,18 +18,24 @@ const NavBar = () => {
 
   const handleMouseEnter = (item) => {
     timeout = setTimeout(function () {
-      if (item.text === "NavBar.eco" || item.text === "NavBar.contacts") {
+      if (item.text === "NavBar.eco") {
         setHovered(true);
+        setMaxScrollSize(window.scrollY + 600);
+        setMinScrollSize(window.scrollY - 600);
+      } else if (item.text === "NavBar.contacts") {
+        setHoveredContucts(true);
         setMaxScrollSize(window.scrollY + 600);
         setMinScrollSize(window.scrollY - 600);
       } else {
         setHovered(false);
+        setHoveredContucts(false);
       }
     }, 400);
   };
 
   const handleMouseLeave = () => {
     setHovered(false);
+    setHoveredContucts(false);
     clearTimeout(timeout);
   };
 
@@ -37,12 +45,15 @@ const NavBar = () => {
   }
 
   function iconShowFunc(params) {
-    if (params) {
+    if (params.icon) {
       return (
         <img
-          src={params}
+          id={params.text}
+          src={params.icon}
           alt="Icon"
-          style={hovered ? { transform: "rotate(180deg)" } : null}
+          style={
+            hovered || hoveredContucts ? { transform: "rotate(180deg)" } : null
+          }
         />
       );
     }
@@ -51,6 +62,7 @@ const NavBar = () => {
   const handleScrolll = () => {
     if (window.scrollY >= maxScrollSize || window.scrollY <= minScrollSize) {
       setHovered(false);
+      setHoveredContucts(false);
     }
   };
 
@@ -75,12 +87,13 @@ const NavBar = () => {
               onMouseLeave={() => endHover()}
             >
               <p>{t(item.text)}</p>
-              {iconShowFunc(item.icon)}
+              {iconShowFunc(item)}
             </NavLink>
           );
         })}
       </div>
       {hovered && <MenuModal handleMouseLeave={handleMouseLeave} />}
+      {hoveredContucts && <ContuctModal handleMouseLeave={handleMouseLeave} />}
     </>
   );
 };

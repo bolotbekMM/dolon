@@ -1,28 +1,40 @@
-.inface{
-    padding: 120px 0;
-    margin: 0 auto;
-    max-width: 1440px;
-    width: 100%;
+.inface {
+  padding: 120px 0;
+  margin: 0 auto;
+  max-width: 1440px;
+  width: 100%;
 }
-.infaceTitle{
-    padding: 0 188px;
-    padding-bottom: 80px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 96px;
-    line-height: 130%;
-    color: #171717;
-    @media screen and (max-width: 768px) {
-        font-size: 48px;
-        padding: 0 88px;
-        padding-bottom: 40px;
-    }
+.infaceTitle {
+  padding: 0 188px;
+  padding-bottom: 80px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 130%;
+  color: #171717;
+  text-transform: uppercase;
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+    padding: 0 88px;
+    padding-bottom: 40px;
+  }
 }
-.infaceImgWrap{
-    width: 100%;
+.infaceContentt {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #171717;
+  width: 649px;
+  margin: 0px 188px 175px 188px;
 }
-.infaceImg{
-    width: 100%;
-    height: auto;
+.infaceImgWrap {
+  width: 100%;
+}
+.infaceImg {
+  width: 100%;
+  height: auto;
 }
