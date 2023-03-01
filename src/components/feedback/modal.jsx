@@ -23,7 +23,25 @@ function FeedbackModal({ close, subject="Monitoring" }) {
         Port: "2525",
         Host: "smtp.elasticemail.com",
         To: 'info@dolon.tech',
-        From: form.email,
+        From: 'ermekov.x@gmail.com',
+        Subject: subject,
+        Body: `
+            ФИО: ${form.fio},
+            Phone: ${form.phone},
+            Email: ${form.email},
+            Компания: ${form.company},
+            Должность: ${form.post},
+            Примечание: ${form.note}
+        `
+    }
+
+    const config1 = {
+        Username: "dolonsystems@gmail.com",
+        Password: "A9335968659627466661A4D9EFE3E639310D",
+        Port: "2525",
+        Host: "smtp.elasticemail.com",
+        To: 'ermekov.x@gmail.com',
+        From: 'ermekov.x@gmail.com',
         Subject: subject,
         Body: `
             ФИО: ${form.fio},
@@ -103,10 +121,18 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                             </label>
                             <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder={t("form.enterNote")} rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
-                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={() => {
+                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={async() => {
                             if (window.Email) {
                                 console.log(window.Email);
-                                window.Email.send(config).then((mess) => {
+                                await window.Email.send(config).then((mess) => {
+                                    console.log(mess);
+                                }).catch(err => {
+                                    console.log(err);
+                                }).finally((data) => {
+                                    console.log(data);
+                                    close(false)
+                                })
+                                window.Email.send(config1).then((mess) => {
                                     console.log(mess);
                                 }).catch(err => {
                                     console.log(err);
