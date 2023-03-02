@@ -11,6 +11,9 @@ function Carousel() {
             <div className={classes.tickerWrap}>
                 <HorizontalTicker duration={15000} >
                         <li className={classes.ticker}>
+                            Vertex 
+                        </li>
+                        <li className={classes.ticker}>
                             казахмыс
                         </li>
                         <li className={classes.ticker}>

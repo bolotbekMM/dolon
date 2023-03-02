@@ -78,16 +78,22 @@
 .sliderItem{
     display: grid;
     max-width: 1200px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 50% 50%;
     height: 100%;
+    & > *:first-child{
+      padding-right: 40px;
+      @media screen and (max-width: 768px) {
+        padding: 0;
+      }
+    }
     @media screen and (max-width: 768px) {
       grid-template-columns: 1fr;
-      grid-template-rows: 1fr 1fr;
+      grid-template-rows: 50% 50%;
       height: 80%;
+      padding: 0;
     }
 }   
 .sliderContent{
-    padding-right: 60px;
     @media screen and (max-width: 768px) {
       padding-bottom: 40px;
       padding-right: 0;
@@ -100,7 +106,7 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 300;
-    font-size: 48px;
+    font-size: 38px;
     line-height: 130%;
     text-align: start;
     
@@ -129,6 +135,8 @@
 .sliderImg{
     border-radius: 16px;
     width: 602px;
+    overflow: hidden;
+    height: 100%;
 }
 .swiper-pagination-bullet-active{
     font-weight: 700;
