@@ -5,6 +5,8 @@ import slider1 from "../../../../assets/img/mainPage/slider1.jpg";
 import slider2 from "../../../../assets/img/mainPage/slider2.jpg";
 import slider3 from "../../../../assets/img/mainPage/slider3.jpg";
 import slider4 from "../../../../assets/img/mainPage/slider4.jpg";
+import slider from "../../../../assets/img/mainPage/slider11.png";
+
 
 // Import Swiper styles
 import "swiper/css";
@@ -26,7 +28,7 @@ export default function Slider() {
       Descriptions2: t("SlideBlockWebOrientDesc.2"),
       Descriptions3: t("SlideBlockWebOrientDesc.3"),
       Descriptions4: t("SlideBlockWebOrientDesc.4"),
-      img: slider1,
+      img: slider,
     },
     {
       title: t("SliderBlocks.2"),
@@ -79,7 +81,23 @@ export default function Slider() {
         className="mySwiper"
         allowTouchMove={true}
       >
-        {sliderData.map((elem) => {
+        {sliderData.map((elem, i) => {
+          if(i !== 1){
+            return <SwiperSlide key={elem.title}>
+              <div className="sliderItem">
+                <img src={elem.img} alt="" className="sliderImg" />
+                <div className="sliderContent">
+                  <p className="sliderTitle">{elem.title}</p>
+                  <div className="text">
+                    <p className="paragraph">{elem.Descriptions1}</p>
+                    <p className="paragraph">{elem.Descriptions2}</p>
+                    <p className="paragraph">{elem.Descriptions3}</p>
+                    <p className="paragraph">{elem.Descriptions4}</p>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+          }
           return (
             <SwiperSlide key={elem.title}>
               <div className="sliderItem">
