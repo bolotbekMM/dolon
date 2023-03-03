@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./FirstBlok.module.scss";
-import anime from "../../../assets/img/mainPage/anime.svg";
+import anime from "../../../assets/img/mainPage/Comp.lottie";
 import { useTranslation } from "react-i18next";
 
 const FirstBlok = () => {

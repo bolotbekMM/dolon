@@ -22,11 +22,7 @@ const Header = () => {
   }, []);
 
   return (
-    <header
-      // className={css.header}
-      className={`${isTop ? css.toUp : css.header}`}
-      // style={{ height: `${isTop ? "128px" : "72px"}` }}
-    >
+    <header className={`${isTop ? css.toUp : css.header}`}>
       <div className={css.mainPart}>
         <TopPanel />
         <MainPart />

@@ -11,12 +11,22 @@ import { useTranslation } from "react-i18next";
 
 const TopPanel = () => {
   const { t, i18n } = useTranslation();
+  const [showLanguageModal, setShowLanguageModal] = useState(false);
+  const userLanguage = navigator.language || navigator.userLanguage;
+
   const languages = [
     { name: "Русский", lang: "ru", icon: RU },
     { name: "English", lang: "en", icon: Eng },
   ];
-  const [showLanguageModal, setShowLanguageModal] = useState(false);
-  const [selectedLanguage, setSelectedLanguage] = useState(languages[0]);
+  let setLang;
+
+  if (userLanguage === "ru") {
+    setLang = languages.find((item) => item.lang === "ru");
+  } else {
+    setLang = languages.find((item) => item.lang === "en");
+  }
+
+  const [selectedLanguage, setSelectedLanguage] = useState(setLang);
 
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage.lang);
