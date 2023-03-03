@@ -5,12 +5,13 @@
 .flagBox {
   width: 150px;
   height: 20px;
-
-  gap: 30px;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
 }
 .flagSelect {
   width: 165px;
-  height: 33px;
   border-radius: 8px;
   outline: none;
   outline: none !important;
