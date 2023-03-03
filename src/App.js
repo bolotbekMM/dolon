@@ -19,7 +19,6 @@ import i18n from "i18next";
 
 function setLanguage() {
   const userLanguage = navigator.language || navigator.userLanguage;
-
   if (userLanguage.startsWith("ru")) {
     i18n.changeLanguage("ru");
   } else if (userLanguage.startsWith("en")) {

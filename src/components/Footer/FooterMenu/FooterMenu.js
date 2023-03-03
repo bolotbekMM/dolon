@@ -14,7 +14,7 @@ const FooterMenu = () => {
     <div className={css.menuFooter}>
       <div className="container">
         <div className={css.box}>
-          <div className={css.cont}>
+          <div className={css.cont} style={{ minWidth: "100px" }}>
             <ul className={css.navBar}>
               <Link to="/">
                 <h5>{t("Glob.Main")}</h5>
@@ -31,7 +31,7 @@ const FooterMenu = () => {
             </ul>
           </div>
 
-          <div className={css.cont}>
+          <div className={css.cont} style={{ minWidth: "360px" }}>
             <h4>{t("Modules.Modules")}</h4>
             <ul className={css.modules}>
               {moduleContent.map((item, index) => {
@@ -46,7 +46,7 @@ const FooterMenu = () => {
             </ul>
           </div>
 
-          <div className={css.cont}>
+          <div className={css.cont} style={{ minWidth: "600px" }}>
             <h4>{t("Glob.Contacts")}</h4>
             <ul className={css.contacts}>
               {contactData.map((item, index) => {
