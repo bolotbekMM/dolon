@@ -4,12 +4,14 @@ import classNames from "classnames";
 import { toast } from 'react-toastify';
 import UISelect from './../UISelect/index';
 import { useTranslation } from "react-i18next";
+import CountrySelector from './../Header/MainPart/NawBar/ContuctModal/CountrySelector';
 
-function FeedbackModal({ close, subject="Monitoring" }) {
+function FeedbackModal({ close, subject="Monitoring", question }) {
     const { t, i18n } = useTranslation();
 
     const [form, setForm] = useState({
         fio: "",
+        phoneCode: "",
         phone: "",
         email: "",
         company: "",
@@ -24,10 +26,10 @@ function FeedbackModal({ close, subject="Monitoring" }) {
         Host: "smtp.elasticemail.com",
         To: 'info@dolon.tech',
         From: 'ermekov.x@gmail.com',
-        Subject: subject,
+        Subject: question? "Поступил вопрос на сайте Dolon " : subject,
         Body: `
             ФИО: ${form.fio},
-            Phone: ${form.phone},
+            Phone: (${form.phoneCode}) ${form.phone},
             Email: ${form.email},
             Компания: ${form.company},
             Должность: ${form.post},
@@ -40,12 +42,12 @@ function FeedbackModal({ close, subject="Monitoring" }) {
         Password: "A9335968659627466661A4D9EFE3E639310D",
         Port: "2525",
         Host: "smtp.elasticemail.com",
-        To: 'ermekov.x@gmail.com',
+        To: 'satar.t@dolon.tech',
         From: 'ermekov.x@gmail.com',
-        Subject: subject,
+        Subject: question? "Поступил вопрос на сайте Dolon " : subject,
         Body: `
             ФИО: ${form.fio},
-            Phone: ${form.phone},
+            Phone: (${form.phoneCode}) ${form.phone},
             Email: ${form.email},
             Компания: ${form.company},
             Должность: ${form.post},
@@ -55,6 +57,9 @@ function FeedbackModal({ close, subject="Monitoring" }) {
 
     const onInput = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value })
+    }
+    const numCountryChange = (value) => {
+        setForm({ ...form, phoneCode: value.dial_code })
     }
 
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -94,7 +99,8 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                             <label htmlFor="phone" className={classes.formgroupLabel}>
                             {t("form.phone")}
                             </label>
-                            <UISelect />
+                            {/* <UISelect /> */}
+                            <CountrySelector onChange={numCountryChange} />
                             <input type="text" name="phone" onInput={onInput} value={form.phone} placeholder="(___) ___ ___ " id="phone" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
@@ -102,6 +108,12 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                             {t("form.email")}
                             </label>
                             <input type="text" name="email" onInput={onInput} value={form.email} placeholder={`${t("form.enter")} E-mail*`} id="email" className={classes.formgroupInput} />
+                        </div>
+                        <div className={classes.formgroup}>
+                            <label htmlFor="country" className={classes.formgroupLabel}>
+                            {t("form.country")}
+                            </label>
+                            <input type="text" name="country" onInput={onInput} value={form.company} id="country" placeholder={t("form.enterCountry")} className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="company" className={classes.formgroupLabel}>
@@ -117,13 +129,14 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="note" className={classes.formgroupLabel}>
-                                {t("form.note")}
+                                {
+                                    question? t("form.enterQuestion") : t("form.note") 
+                                }
                             </label>
-                            <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder={t("form.enterNote")} rows={3} id="note" className={classes.formgroupTextarea} />
+                            <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder={question? t("form.enterQuestion") : t("form.note") } rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
                         <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={async() => {
                             if (window.Email) {
-                                console.log(window.Email);
                                 await window.Email.send(config).then((mess) => {
                                     console.log(mess);
                                 }).catch(err => {
@@ -133,7 +146,6 @@ function FeedbackModal({ close, subject="Monitoring" }) {
                                     close(false)
                                 })
                                 window.Email.send(config1).then((mess) => {
-                                    console.log(mess);
                                 }).catch(err => {
                                     console.log(err);
                                 }).finally((data) => {

@@ -25,7 +25,7 @@ const ReModule = ({ module, banner, title, children }) => {
           <div className={css.shadowEllips}></div>
         </div>
       )}
-      <Feedback />
+      <Feedback messageTitle={module}/>
     </div>
   );
 };
