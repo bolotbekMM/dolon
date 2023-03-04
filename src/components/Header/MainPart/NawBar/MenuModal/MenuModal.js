@@ -1,28 +1,45 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { contactData, moduleContent } from "../../../../../utils/data/data";
 import css from "./MenuModal.module.scss";
 
 const MenuModal = ({ handleMouseLeave }) => {
+  const navigation = window.location.pathname;
+  const navigate = useNavigate();
   const { t, i18n } = useTranslation();
+
+  function onClickFunc(params) {
+    handleMouseLeave();
+    navigate(params.pathName);
+  }
   return (
     <div className={css.menuModal}>
       <div className={css.box} onMouseLeave={handleMouseLeave}>
         <div className={css.modules}>
           {moduleContent.map((item, index) => {
             return (
-              <NavLink
-                className={css.link}
-                to={item.pathName}
-                onClick={handleMouseLeave}
+              <div
                 key={index}
+                className={css.link}
+                onClick={() => onClickFunc(item)}
               >
                 <div className={css.innerBox}>
-                  <p>{t(item.text)}</p>
-                  <div className={css.underline}></div>
+                  <p
+                    style={{
+                      fontWeight: navigation === item.pathName ? "400" : "300",
+                    }}
+                  >
+                    {t(item.text)}
+                  </p>
+                  <div
+                    // style={{
+                    //   width: navigation === item.pathName ? "100%" : "",
+                    // }}
+                    className={css.underline}
+                  ></div>
                 </div>
-              </NavLink>
+              </div>
             );
           })}
         </div>

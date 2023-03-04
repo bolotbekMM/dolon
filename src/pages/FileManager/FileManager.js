@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./FileManager.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
-import banner from "../../assets/img/fileManager/fileManager.png";
+import banner from "../../assets/img/fileManager/fileManager1.png";
 import fileManagerImage from "../../assets/img/fileManager/fileManagerImage.svg";
 import { useTranslation } from "react-i18next";
 

@@ -3,7 +3,6 @@
   height: 100%;
 
   .box {
-    height: 702px;
     width: 100vw;
 
     position: relative;
@@ -12,30 +11,34 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    margin: 0 auto;
+    margin: auto;
 
     .contetnt {
-      // position: relative;
-      width: 50%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.5);
-      backdrop-filter: blur(87.5px);
-      // display: flex;
-      // align-items: center;
-      // justify-content: center;
-      padding: 160px 82px;
+      width: 100%;
+      height: 700px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 160px 2px;
+
       h2 {
+        text-align: left;
         font-family: "Inter";
         font-style: normal;
         font-weight: 300;
         font-size: 64px;
         line-height: 130%;
         color: #171717;
+        z-index: 2;
       }
     }
     .emptyBox {
+      position: absolute;
       width: 50%;
       height: 100%;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(87.5px);
     }
   }
 }

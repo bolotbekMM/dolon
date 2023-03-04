@@ -147,14 +147,10 @@
     "6": "So, if you want to give your geologists the tools they need to be successful and keep them safe in the field, we recommend you try the prospecting routes module."
   },
   "moduleLabaratoryTexts": {
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": "",
-    "5": "",
-    "6": "",
-    "7": "",
-    "8": ""
+    "1": "Our Lab module is designed to make sample preparation and analysis more efficient and effective. It includes several key features that help you simplify and optimize your processes.",
+    "2": "The Sample Acceptance function allows you to quickly and efficiently read data from barcodes and electronic scales, ensuring that all samples are properly accounted for. The Priority Ordering feature allows you to prioritize certain orders and ensure that they are completed on time.",
+    "3": "One of the most useful features of the Lab module is the Order Generation feature, which allows you to combine sample preparation orders and add control samples to them. This helps to optimize operations and ensure that all samples are processed efficiently and accurately.",
+    "4": "In addition to the sample preparation capabilities, the module includes an extensive worksheet for entering analysis results. This feature makes it easy and accurate to record and track test results, ensuring that all data is organized and accessible."
   },
   "moduleKernoSkladTexts": {
     "1": "Introducing the Core warehouse module, the ultimate tool for tracking and organizing samples in your core repository. Our module is designed to streamline your sample management processes so you can focus on research and analytics.",
@@ -163,10 +159,34 @@
     "4": "Analytical forms to display information about samples in specific core storage locations, allowing you to quickly and easily see which samples are in each row, rack or box, making it easy to plan studies and analyses."
   },
   "moduleGeologyTexts": {
-    "1": "",
-    "2": "",
-    "3": "",
-    "4": ""
+    "1": "If you need a comprehensive and robust tool for managing geologic data, check out the Geology module. Its intuitive interface and customizable features make it an ideal solution for organizing and analysing data from a variety of sources, such as D&B, RC, core drilling, furrow sampling, etc.",
+    "2": "Convenient data entry and editing forms with drop-down lists. The Geology module simplifies data entry and editing by using intuitive forms and drop-down lists to simplify the process, including the ability to use graphic input forms (e.g., core logging as a geologic column).",
+    "3": "The Geology module allows you to send samples to the lab with the added convenience of distributing control samples within an order. Interface customization of control sample distribution templates is available. And with fully customizable validation algorithms, you can be confident in the accuracy and reliability of your data.",
+    "components": {
+      "ditchLogging": {
+        "name": "Component:  Ditch logging",
+        "paragraph1": "The Geology module offers a solution that not only streamlines your workflow, but also improves your ability to analyse and use data. With Ditch logging, included in the module, you can easily transfer lithology and other data documentation into a digital format, allowing all documentation elements to be used later in a 3D environment. This approach allows you to use not only trench bottom sampling data, but also other data such as:",
+        "paragraph2": "The actual position of the lithology and bedding elements, both in section and in plan;",
+        "paragraph3": "Position of point samples;",
+        "paragraph4": "The amount of material excavated, based on a combination of surveying data and data of geological logging.",
+        "paragraph5": "No more wasting time with outdated, cumbersome systems. Use the Geology module and experience the power and convenience of modern data management tools."
+      },
+      "ddd": {
+        "name": "Component: 3D",
+        "paragraph1": "Our Geology Module offers a dynamic and immersive 3D experience that will change the way you monitor your drill holes. With our advanced 3D visualization tools, you'll get:",
+        "paragraph2": "View drill holes, furrows, ditches;",
+        "paragraph3": "Dynamic creation of furrows, ditches;",
+        "paragraph4": "View ore subsections and lithologic variances;",
+        "paragraph5": "Viewing of block and wireframe models, point clouds, and other objects;",
+        "paragraph6": "Developed functionality for editing polylines and points.",
+        "paragraph7": "Don't miss the opportunity to take your drill holes monitoring to the next level!"
+      },
+      "qaqc": {
+        "name": "Component: QA/QC",
+        "paragraph1": "Quality assurance is critical to any project, and QA/QC is a critical tool for success. By adhering to international standards and checking the quality of your work regularly, you can greatly improve the reliability and accuracy of your data. This is especially important when it comes to estimating resources, reserves and making financial decisions, as even small errors can have a huge impact on the success of your project.",
+        "paragraph2": "But QA/QC isn't just about identifying errors, it's also about saving time and money. By identifying and correcting errors early on, you can avoid costly delays and rework later on. In short, investing in QA/QC is a smart move that pays off in the long run. So don't underestimate the importance of these processes - be sure to include QA/QC in every stage of your exploration programs for maximum success."
+      }
+    }
   },
   "moduleMarksheideriyaTexts": {
     "1": "Pay attention to the 'Surveying' module offered by our system. It is a powerful set of tools and functions for calculating and analysing data, including wireframes volume calculations, Boolean operations, and reconciliation of design and actual volumes. These tools can help users accurately estimate the size and shape of resources as well as the impact of different scenarios on those resources.",
