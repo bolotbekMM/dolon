@@ -93,6 +93,7 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 1092.8px) {
   .container {
+    width: 100vw;
     padding: 0px 40px;
   }
 }

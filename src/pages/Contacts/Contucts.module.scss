@@ -3,10 +3,16 @@
   //   background: #e9e9eb;
 
   .box {
-    padding: 120px 0 200px 108px;
+    padding: 120px 108px 200px 108px;
     display: flex;
     flex-direction: column;
     gap: 120px;
+    @media screen and (max-width: 1170px) {
+      gap: 90px;
+    }
+    @media screen and (max-width: 998px) {
+      padding: 100px 10px 100px 10px;
+    }
     .title {
       font-family: "Inter";
       font-style: normal;
@@ -16,16 +22,23 @@
       text-transform: uppercase;
 
       color: #171717;
+      @media screen and (max-width: 768px) {
+        font-size: 48px;
+      }
     }
 
     .contactsUl {
       display: flex;
       flex-direction: row;
       gap: 150px;
-
-      //   @media screen and (max-width: 1160px) {
-      //     grid-column-gap: 0px;
-      //   }
+      @media screen and (max-width: 1170px) {
+        gap: unset;
+        justify-content: space-between;
+      }
+      @media screen and (max-width: 670px) {
+        flex-direction: column;
+        gap: 50px;
+      }
 
       li {
         display: flex;
@@ -44,6 +57,10 @@
 
         opacity: 0.8;
         z-index: 1;
+        @media screen and (max-width: 768px) {
+          font-size: 20px;
+          gap: 20px;
+        }
 
         .phone,
         .email {

@@ -9,9 +9,15 @@
     display: flex;
     flex-direction: column;
     gap: 80px;
-    padding: 80px 217px;
+    padding: 10% 15%;
 
     z-index: 2;
+    @media screen and (max-width: 998px) {
+      padding: 100px 40px;
+    }
+    @media screen and (max-width: 500px) {
+      padding: 40px 0px 40px 0px;
+    }
 
     p {
       font-family: "Roboto";
@@ -21,6 +27,9 @@
       line-height: 130%;
 
       color: #e9e9eb;
+      @media screen and (max-width: 765px) {
+        font-size: 16px;
+      }
     }
     img {
       background-size: cover;
@@ -56,6 +65,9 @@
     font-size: 56px;
     line-height: 130%;
     z-index: 4;
+    @media screen and (max-width: 765px) {
+      font-size: 48px;
+    }
   }
   p {
     font-family: "Roboto";
@@ -63,6 +75,9 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 130%;
+    @media screen and (max-width: 765px) {
+      font-size: 16px;
+    }
   }
   ul {
     display: flex;
@@ -86,6 +101,9 @@
     font-weight: 400;
     font-size: 16px;
     line-height: 130%;
+    @media screen and (max-width: 765px) {
+      font-size: 14px;
+    }
   }
 
   .doc {
@@ -95,10 +113,16 @@
     .box {
       height: 100%;
       width: 100%;
-      padding: 120px 188px;
+      padding: 10% 17%;
       display: flex;
       flex-direction: column;
       gap: 40px;
+      @media screen and (max-width: 998px) {
+        padding: 100px 40px;
+      }
+      @media screen and (max-width: 500px) {
+        padding: 40px 0px 40px 0px;
+      }
     }
   }
   .ddd {
@@ -108,6 +132,9 @@
     .box {
       display: flex;
       flex-direction: row;
+      @media screen and (max-width: 998px) {
+        flex-direction: column;
+      }
 
       .innerBox {
         height: 100%;
@@ -116,6 +143,18 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @media screen and (max-width: 1380px) {
+          width: 50%;
+          padding: 100px 0px 100px 50px;
+        }
+        @media screen and (max-width: 998px) {
+          width: 100%;
+          padding: 100px 40px;
+          padding-bottom: 0px;
+        }
+        @media screen and (max-width: 500px) {
+          padding: 40px 0px 40px 0px;
+        }
       }
       .boxImg {
         margin: 220px 0px 140px;
@@ -126,8 +165,16 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
+        @media screen and (max-width: 998px) {
+          width: 100%;
+          margin: 0;
+        }
+
         .imgDDD {
           position: relative;
+          @media screen and (max-width: 756px) {
+            width: 100%;
+          }
         }
       }
     }
@@ -140,9 +187,19 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      @media screen and (max-width: 998px) {
+        flex-direction: column-reverse;
+      }
       .imageBox {
         width: 50%;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (max-width: 998px) {
+          width: 100%;
+          margin-bottom: 40px;
+        }
 
         .shadowEllips {
           // top: -300px;
@@ -151,11 +208,33 @@
           background: linear-gradient(249.29deg, #7aa7ff -4.9%, #67d4b4 92.72%);
           filter: blur(87.5px);
           border-radius: 50%;
+          @media screen and (max-width: 1280px) {
+            width: 480px;
+            height: 380px;
+          }
+          @media screen and (max-width: 998px) {
+            width: 580px;
+            height: 450px;
+          }
         }
         img {
           position: absolute;
           top: -10px;
           left: 30px;
+          @media screen and (max-width: 1280px) {
+            top: 40px;
+            left: 100px;
+            width: 60%;
+          }
+          @media screen and (max-width: 998px) {
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+          @media screen and (max-width: 756px) {
+            height: 348px;
+            width: 350px;
+          }
         }
       }
       .innerBox {
@@ -165,6 +244,17 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        @media screen and (max-width: 1380px) {
+          width: 50%;
+          padding: 100px 40px 100px 0px;
+        }
+        @media screen and (max-width: 998px) {
+          width: 100%;
+          padding: 100px 40px 100px 40px;
+        }
+        @media screen and (max-width: 500px) {
+          padding: 40px 0px 40px 0px;
+        }
       }
     }
   }

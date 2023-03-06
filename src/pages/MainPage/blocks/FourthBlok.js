@@ -7,7 +7,7 @@ const FourthBlok = () => {
     <div className={css.fourthBlok}>
       <div className="container">
         <div className={css.box}>
-          <img src={pc} alt="pc" />
+          <img className={css.pcImage} src={pc} alt="pc" />
         </div>
       </div>
     </div>

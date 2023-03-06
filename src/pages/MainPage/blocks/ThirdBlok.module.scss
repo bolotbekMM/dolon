@@ -10,6 +10,9 @@
     height: 428px;
     background: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(87.5px);
+    @media screen and (max-width: 600px) {
+      height: 100%;
+    }
     .box {
       width: 846px;
       height: 100%;
@@ -20,6 +23,10 @@
       gap: 32px;
       padding-top: 60px;
       margin: 0 auto;
+      @media screen and (max-width: 900px) {
+        width: 100%;
+        padding-bottom: 60px;
+      }
 
       p {
         font-family: "Roboto";
@@ -28,6 +35,9 @@
         font-size: 18px;
         line-height: 130%;
         color: #e9e9eb;
+        @media screen and (max-width: 600px) {
+          font-size: 16px;
+        }
       }
     }
   }
