@@ -5,7 +5,7 @@ import banner from "../../assets/img/geology/geologyImage.svg";
 import image from "../../assets/img/geology/geologyImg.png";
 import imageEng from "../../assets/img/geology/geologyEng.png";
 import dddImg from "../../assets/img/geology/ddd.png";
-import inYan from "../../assets/img/geology/inyan.svg";
+import inYan from "../../assets/img/geology/inyan.png";
 import { useTranslation } from "react-i18next";
 
 const Geology = () => {

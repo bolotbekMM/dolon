@@ -6,7 +6,6 @@ import { useTranslation } from "react-i18next";
 
 const FourthBlok = () => {
   const { t, i18n } = useTranslation();
-  console.log(i18n.language, "21121212");
   return (
     <div className={css.fourthBlok}>
       <div className="container">

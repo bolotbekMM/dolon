@@ -76,6 +76,7 @@ const NavBar = ({ onCloseBurger }) => {
       } else {
         navigate(params.pathName);
         onCloseBurger();
+        setinMobileClickToNavBar(false);
       }
     }
   }
@@ -83,6 +84,7 @@ const NavBar = ({ onCloseBurger }) => {
   function onClickDropDownMenu() {
     onCloseBurger();
     handleMouseLeave();
+    setinMobileClickToNavBar(false);
   }
 
   return (
