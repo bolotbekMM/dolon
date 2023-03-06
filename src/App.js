@@ -16,6 +16,7 @@ import FileManager from "./pages/FileManager/FileManager";
 import Geology from "./pages/Geology/Geology";
 import Marksheideriya from "./pages/Marksheideriya/Marksheideriya";
 import i18n from "i18next";
+import AboutUs from './pages/about/index';
 import Contucts from "./pages/Contacts/Contucts";
 
 function setLanguage() {
@@ -51,6 +52,7 @@ function App() {
           <Route path="/filemanager" element={<FileManager />} />
           <Route path="/geology" element={<Geology />} />
           <Route path="/marksheideria" element={<Marksheideriya />} />
+          <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contacts" element={<Contucts />} />
         </Routes>
         <Footer />

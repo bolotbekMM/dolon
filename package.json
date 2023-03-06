@@ -20,6 +20,7 @@
     "react-infinite-ticker": "^2.1.1",
     "react-lottie": "^1.2.3",
     "react-responsive": "^9.0.2",
+    "react-responsive-modal": "^6.4.1",
     "react-router-dom": "^6.8.1",
     "react-scripts": "5.0.1",
     "react-select": "^5.7.0",
