@@ -21,6 +21,10 @@
       line-height: 130%;
       text-transform: uppercase;
       color: #fff;
+      @media screen and (max-width: 800px) {
+        font-size: 28px;
+        line-height: 130%;
+      }
     }
   }
 }

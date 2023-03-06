@@ -8,9 +8,9 @@ function Inface() {
     <>
       <div className={classes.inface}>
         <h2 className={classes.infaceTitle}>{t("ConvenientInterface")}</h2>
-        <p className={classes.infaceContentt}>
+        {/* <p className={classes.infaceContentt}>
         {t("ConvenientInterfaceDesc")}
-        </p>
+        </p> */}
         <div className={classes.infaceImgWrap}>
           <img
             src={interfaceImg}

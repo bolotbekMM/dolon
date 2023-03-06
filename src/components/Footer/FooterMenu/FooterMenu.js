@@ -11,27 +11,24 @@ import { useTranslation } from "react-i18next";
 const FooterMenu = () => {
   const { t, i18n } = useTranslation();
   return (
-    <div className={css.menuFooter}>
-      <div className="container">
-        <div className={css.box}>
-          <div className={css.cont} style={{ minWidth: "100px" }}>
-            <ul className={css.navBar}>
-              <Link to="/">
-                <h5>{t("Glob.Main")}</h5>
-              </Link>
-              {navBarContent.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <Link to={item.pathName}>
-                      <p>{t(item.text)}</p>
-                    </Link>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-
-          <div className={css.cont} style={{ minWidth: "360px" }}>
+    <div className="container">
+      <div className={css.menuFooter}>
+        <ul className={css.navBar}>
+          <Link to="/">
+            <h5>{t("Glob.Main")}</h5>
+          </Link>
+          {navBarContent.map((item, index) => {
+            return (
+              <li key={index}>
+                <Link to={item.pathName}>
+                  <p>{t(item.text)}</p>
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+        <div className={css.secondBox}>
+          <div className={css.contModule}>
             <h4>{t("Modules.Modules")}</h4>
             <ul className={css.modules}>
               {moduleContent.map((item, index) => {
@@ -46,7 +43,7 @@ const FooterMenu = () => {
             </ul>
           </div>
 
-          <div className={css.cont} style={{ minWidth: "600px" }}>
+          <div className={css.contCont}>
             <h4>{t("Glob.Contacts")}</h4>
             <ul className={css.contacts}>
               {contactData.map((item, index) => {

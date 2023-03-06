@@ -5,22 +5,33 @@
   flex-direction: row;
   gap: 128px;
   padding: 80px 2px 0px;
+  @media screen and (max-width: 1200px) {
+    gap: 60px;
+  }
+  @media screen and (max-width: 996px) {
+    flex-direction: column;
+    padding-bottom: 40px;
+  }
+
   .box1 {
     display: flex;
     flex-direction: column;
     gap: 55px;
     width: 520px;
+    @media screen and (max-width: 996px) {
+      width: 100%;
+    }
     p {
       font-family: "Roboto";
       font-style: normal;
       font-weight: 400;
       font-size: 18px;
       line-height: 130%;
-      /* or 23px */
-
-      /* Soft grey */
 
       color: #e9e9eb;
+      @media screen and (max-width: 765px) {
+        font-size: 16px;
+      }
     }
     .line {
       height: 4px;
@@ -31,6 +42,14 @@
   }
   .box2 {
     width: 520px;
+    @media screen and (max-width: 996px) {
+      width: 100%;
+      padding-left: 100px;
+    }
+    @media screen and (max-width: 765px) {
+      width: 100%;
+      padding-left: 50px;
+    }
     ul {
       display: flex;
       flex-direction: column;
@@ -41,6 +60,9 @@
         font-weight: 700;
         font-size: 18px;
         line-height: 130%;
+        @media screen and (max-width: 765px) {
+          font-size: 16px;
+        }
 
         color: #e9e9eb;
       }
