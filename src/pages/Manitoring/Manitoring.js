@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./Manitoring.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
-import banner from "../../assets/img/manitoring/manitoringBanner.png";
+import banner from "../../assets/img/manitoring/manitoringBanner2.png";
 import monitoringImg from "../../assets/img/manitoring/manitoringImage.svg";
 import { useTranslation } from "react-i18next";
 

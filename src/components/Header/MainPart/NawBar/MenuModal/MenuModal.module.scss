@@ -31,6 +31,7 @@
         height: 43.82px;
         width: 100%;
         display: inline-block;
+        cursor: pointer;
 
         .innerBox {
           display: flex;
@@ -48,12 +49,12 @@
             margin-bottom: 4px;
           }
 
-          .activeLink {
-            font-weight: 600;
-          }
           .underline {
-            width: 0%;
-            border-bottom: 2px solid black;
+            width: 0;
+            border-top: 1px solid #171717;
+            border-bottom: 1px solid #171717;
+            // background-color: #171717;
+            // border-radius: 15px;
 
             transition: width 0.3s ease-in-out;
             -webkit-transition: width 0.3s ease-in-out; /* Safari and Chrome */
@@ -63,12 +64,13 @@
           :after {
             content: "";
             width: 0;
+            // height: 2px;
           }
         }
         :hover {
           .underline {
             width: 100%;
-            // border-bottom: 2px solid black;
+            // height: 2px;
           }
         }
       }

@@ -17,6 +17,7 @@ import Geology from "./pages/Geology/Geology";
 import Marksheideriya from "./pages/Marksheideriya/Marksheideriya";
 import i18n from "i18next";
 import AboutUs from './pages/about/index';
+import Contucts from "./pages/Contacts/Contucts";
 
 function setLanguage() {
   const userLanguage = navigator.language || navigator.userLanguage;
@@ -36,7 +37,7 @@ function App() {
 
   return (
     <div className="app">
-      <ToastContainer />
+      <Router />
       <Router>
         <ScrollToTop />
         <Header />
@@ -52,6 +53,7 @@ function App() {
           <Route path="/geology" element={<Geology />} />
           <Route path="/marksheideria" element={<Marksheideriya />} />
           <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/contacts" element={<Contucts />} />
         </Routes>
         <Footer />
       </Router>

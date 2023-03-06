@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import css from "./NavBar.module.scss";
-import MenuModal from "./MenuModal/MenuModal";
 import { NavLink, useNavigate } from "react-router-dom";
+import MenuModal from "./MenuModal/MenuModal";
 import {
   contactData,
   moduleContent,
@@ -12,6 +12,7 @@ import ContuctModal from "./ContuctModal/ContuctModal";
 import { useMediaQuery } from "react-responsive";
 
 const NavBar = () => {
+  const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
   const [hoveredContucts, setHoveredContucts] = useState(false);
   const [inMobileClickToNavBar, setinMobileClickToNavBar] = useState(false);
@@ -20,7 +21,6 @@ const NavBar = () => {
   const isFormForMobile = useMediaQuery({ query: "(max-width: 992px)" });
 
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
 
   let timeout;
 
@@ -69,6 +69,7 @@ const NavBar = () => {
     if (!isFormForMobile) {
       navigate(params.pathName);
       setHovered(false);
+      setHoveredContucts(false);
     } else {
       setinMobileClickToNavBar((prev) => !prev);
     }
@@ -80,7 +81,7 @@ const NavBar = () => {
         {navBarContent.map((item, index) => {
           return (
             <div className={css.navBarBox} key={index}>
-              <NavLink
+              <div
                 className={css.link}
                 onClick={() => onClickNavBarFunction(item)}
                 onMouseEnter={() => handleMouseEnter(item)}
@@ -91,7 +92,7 @@ const NavBar = () => {
                   (!isFormForMobile || item.text !== "NavBar.contacts") && (
                     <img id={item.text} src={item.icon} alt="Icon" />
                   )}
-              </NavLink>
+              </div>
               {item.text === "NavBar.eco" &&
               isFormForMobile &&
               inMobileClickToNavBar ? (
@@ -155,105 +156,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-// import React, { useState, useEffect } from "react";
-// import css from "./NavBar.module.scss";
-// import MenuModal from "./MenuModal/MenuModal";
-// import { NavLink } from "react-router-dom";
-// import { navBarContent } from "../../../../utils/data/data";
-// import { useTranslation } from "react-i18next";
-// import ContuctModal from "./ContuctModal/ContuctModal";
-
-// const NavBar = () => {
-//   const [hovered, setHovered] = useState(false);
-//   const [hoveredContucts, setHoveredContucts] = useState(false);
-//   const [maxScrollSize, setMaxScrollSize] = useState(window.scrollY);
-//   const [minScrollSize, setMinScrollSize] = useState(window.scrollY);
-//   const [isBurgerActive, setIsBurgerActive] = useState(false);
-
-//   const { t, i18n } = useTranslation();
-
-//   let timeout;
-
-//   const handleMouseEnter = (item) => {
-//     timeout = setTimeout(function () {
-//       if (item.text === "NavBar.eco") {
-//         setHovered(true);
-//         setMaxScrollSize(window.scrollY + 600);
-//         setMinScrollSize(window.scrollY - 600);
-//       } else if (item.text === "NavBar.contacts") {
-//         setHoveredContucts(true);
-//         setMaxScrollSize(window.scrollY + 600);
-//         setMinScrollSize(window.scrollY - 600);
-//       } else {
-//         setHovered(false);
-//         setHoveredContucts(false);
-//       }
-//     }, 300);
-//   };
-
-//   const handleMouseLeave = () => {
-//     setHovered(false);
-//     setHoveredContucts(false);
-//     clearTimeout(timeout);
-//   };
-
-//   function endHover() {
-//     clearTimeout(timeout);
-//   }
-
-//   function iconShowFunc(params) {
-//     if (params.icon) {
-//       return (
-//         <img
-//           id={params.text}
-//           src={params.icon}
-//           alt="Icon"
-//           style={
-//             hovered || hoveredContucts ? { transform: "rotate(180deg)" } : null
-//           }
-//         />
-//       );
-//     }
-//   }
-
-//   const handleScrolll = () => {
-//     if (window.scrollY >= maxScrollSize || window.scrollY <= minScrollSize) {
-//       setHovered(false);
-//       setHoveredContucts(false);
-//     }
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("scroll", handleScrolll);
-//     return () => {
-//       window.removeEventListener("scroll", handleScrolll);
-//     };
-//   }, [window.scrollY]);
-
-//   return (
-//     <>
-//       <div className={css.navBar}>
-//         {navBarContent.map((item, index) => {
-//           return (
-//             <NavLink
-//               to={item.pathName}
-//               key={index}
-//               className={css.link}
-//               onClick={() => {
-//                 setHovered(false);
-//                 setIsBurgerActive(false);
-//               }}
-//               onMouseEnter={() => handleMouseEnter(item)}
-//               onMouseLeave={() => endHover()}
-//             >
-//               <p>{t(item.text)}</p>
-//               {iconShowFunc(item)}
-//             </NavLink>
-//           );
-//         })}
-//         <div
-//           className={css.burger}
-//           onClick={() => setIsBurgerActive(!isBurgerActive)}
-//         >
-//           <div className={`${css.line} ${isBurgerActive && css.active}`} />
-//           <div className={`${css.line} ${

@@ -11,19 +11,28 @@ function Carousel() {
             <div className={classes.tickerWrap}>
                 <HorizontalTicker duration={15000} >
                         <li className={classes.ticker}>
-                            Vertex 
+                            Kazakhmys 
                         </li>
                         <li className={classes.ticker}>
-                            казахмыс
+                            RCG
                         </li>
                         <li className={classes.ticker}>
-                            ертай
+                            Yer-Tai
                         </li>
                         <li className={classes.ticker}>
-                            казголдминерал
+                            QAZ GOLD MINERALS
                         </li>
                         <li className={classes.ticker}>
-                            тураниндастриал
+                            Vertex
+                        </li>
+                        <li className={classes.ticker}>
+                            Turan Industrial
+                        </li>
+                        <li className={classes.ticker}>
+                            Caravan Resources
+                        </li>
+                        <li className={classes.ticker}>
+                            GeoServicesKg
                         </li>
                 </HorizontalTicker>
             </div>
