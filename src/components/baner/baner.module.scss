@@ -1,10 +1,9 @@
 .baner{
     width: 100vw;
     height: calc(100vh - 136px);
-    position: relative;
     @media screen and (max-width: 768px) {
         margin-bottom: 80px;
-        height: calc(100vh - 162px);
+        height: auto;
     }
 }
 .banerContainer{
@@ -12,7 +11,6 @@
     margin: 0 auto;
 }
 .banerBg{
-    position: absolute;
     width: 100%;
     overflow: hidden;
     display: flex;
@@ -23,7 +21,6 @@
     width: 100%;
     height: auto;
     @media screen and (max-width: 768px) {
-        width: auto;
         height: 100%;
     }
 }

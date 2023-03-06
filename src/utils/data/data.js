@@ -6,7 +6,7 @@ import Eng from "../../assets/icons/headerIcons/EngFlag.svg";
 export const navBarContent = [
   { text: "NavBar.eco", icon: iconDown, pathName: "/ecosystems" },
   { text: "NavBar.news", icon: null, pathName: "/news" },
-  { text: "NavBar.about", icon: null, pathName: "/aboutUs" },
+  { text: "NavBar.about", icon: null, pathName: "/aboutus" },
   { text: "NavBar.contacts", icon: iconDown, pathName: "/contacts" },
 ];
 
