@@ -69,9 +69,7 @@ export default function Slider() {
   };
 
   useEffect(() => {
-    console.log("test");
-    setCount(count + 1);
-  }, [t]);
+  }, [t('news.title')]);
   return (
     <div className="slider">
       <Swiper

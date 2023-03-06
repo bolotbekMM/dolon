@@ -18,6 +18,8 @@ import Marksheideriya from "./pages/Marksheideriya/Marksheideriya";
 import i18n from "i18next";
 import AboutUs from './pages/about/index';
 import Contucts from "./pages/Contacts/Contucts";
+import News from './pages/news/index';
+import New from './pages/news/New';
 
 function setLanguage() {
   const userLanguage = navigator.language || navigator.userLanguage;
@@ -54,6 +56,8 @@ function App() {
           <Route path="/marksheideria" element={<Marksheideriya />} />
           <Route path="/aboutus" element={<AboutUs />} />
           <Route path="/contacts" element={<Contucts />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/news/:id" element={<New />} />
         </Routes>
         <Footer />
       </Router>

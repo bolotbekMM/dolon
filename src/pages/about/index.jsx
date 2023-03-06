@@ -15,7 +15,7 @@ import Years from './Years';
 
 
 function AboutUs() {
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
     return (
         <div className={css.about}>
             <Baner img={image} color="#F5F5F7"/>
