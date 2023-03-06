@@ -215,6 +215,7 @@
     "accept": "Accept",
     "enter": "Enter",
     "enterCompany": "Enter your company name",
+    "enterCountry": "Enter your country",
     "enterPosition": "Enter your position",
     "enterNote": "Enter your note",
     "enterQuestion": "Enter your question",
@@ -222,5 +223,9 @@
     "thanks": "Thank you!",
     "countryCode": "Country code",
     "fillForm": "PLEASE FILL OUT THE FORM"
+  },
+  "news": {
+    "title": "News",
+    "moreArticle": "More article"
   }
 }
