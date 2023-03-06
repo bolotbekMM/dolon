@@ -11,7 +11,7 @@ import { useTranslation } from "react-i18next";
 import ContuctModal from "./ContuctModal/ContuctModal";
 import { useMediaQuery } from "react-responsive";
 
-const NavBar = () => {
+const NavBar = ({ onCloseBurger }) => {
   const navigate = useNavigate();
   const [hovered, setHovered] = useState(false);
   const [hoveredContucts, setHoveredContucts] = useState(false);
@@ -71,8 +71,18 @@ const NavBar = () => {
       setHovered(false);
       setHoveredContucts(false);
     } else {
-      setinMobileClickToNavBar((prev) => !prev);
+      if (params.text === "NavBar.eco") {
+        setinMobileClickToNavBar((prev) => !prev);
+      } else {
+        navigate(params.pathName);
+        onCloseBurger();
+      }
     }
+  }
+
+  function onClickDropDownMenu() {
+    onCloseBurger();
+    handleMouseLeave();
   }
 
   return (
@@ -97,12 +107,19 @@ const NavBar = () => {
               isFormForMobile &&
               inMobileClickToNavBar ? (
                 <div className={css.dropDown}>
+                  <NavLink
+                    to="/ecosystems"
+                    onClick={onCloseBurger}
+                    className={css.mobileEcoBtn}
+                  >
+                    {t("NavBar.eco")}
+                  </NavLink>
                   {moduleContent.map((el, index) => {
                     return (
                       <NavLink
                         className={css.linkTo}
                         to={el.pathName}
-                        onClick={handleMouseLeave}
+                        onClick={onClickDropDownMenu}
                         key={index}
                       >
                         {t(el.text)}

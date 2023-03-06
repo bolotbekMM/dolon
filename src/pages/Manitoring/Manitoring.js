@@ -2,7 +2,9 @@ import React from "react";
 import css from "./Manitoring.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/manitoring/manitoringBanner2.png";
+import bannerEn from "../../assets/img/manitoring/manitoringBanner3.png";
 import monitoringImg from "../../assets/img/manitoring/manitoringImage.svg";
+import fileManagerImageEn from "../../assets/img/manitoring/fileManagerImgeng.png";
 import { useTranslation } from "react-i18next";
 
 const Manitoring = () => {
@@ -10,7 +12,7 @@ const Manitoring = () => {
   return (
     <ReModule
       module={"Manitoring"}
-      banner={banner}
+      banner={i18n.language === "ru" ? banner : bannerEn}
       title={t("Modules.monitoring")}
     >
       <div className="container">
@@ -22,7 +24,9 @@ const Manitoring = () => {
             <p>{t("moduleMonitoringTexts.4")}</p>
           </div>
           <div className={css.box2}>
-            <img src={monitoringImg} />
+            <img
+              src={i18n.language === "ru" ? monitoringImg : fileManagerImageEn}
+            />
           </div>
         </div>
       </div>
