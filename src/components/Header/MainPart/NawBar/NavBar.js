@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import css from "./NavBar.module.scss";
 import { NavLink, useNavigate } from "react-router-dom";
 import MenuModal from "./MenuModal/MenuModal";
@@ -13,6 +13,7 @@ import { useMediaQuery } from "react-responsive";
 
 const NavBar = ({ onCloseBurger }) => {
   const navigate = useNavigate();
+  const contuctModalRef = useRef(null);
   const [hovered, setHovered] = useState(false);
   const [hoveredContucts, setHoveredContucts] = useState(false);
   const [inMobileClickToNavBar, setinMobileClickToNavBar] = useState(false);
@@ -86,6 +87,21 @@ const NavBar = ({ onCloseBurger }) => {
     handleMouseLeave();
     setinMobileClickToNavBar(false);
   }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        contuctModalRef.current &&
+        !contuctModalRef.current.contains(event.target)
+      ) {
+        setHoveredContucts(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [contuctModalRef]);
 
   return (
     <>
@@ -168,7 +184,9 @@ const NavBar = ({ onCloseBurger }) => {
         <MenuModal handleMouseLeave={handleMouseLeave} />
       )}
       {hoveredContucts && !isFormForMobile && (
-        <ContuctModal handleMouseLeave={handleMouseLeave} />
+        <div ref={contuctModalRef}>
+          <ContuctModal />
+        </div>
       )}
     </>
   );

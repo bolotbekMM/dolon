@@ -79,7 +79,7 @@ const TopPanel = () => {
                 languages={languages}
                 selectedLanguage={selectedLanguage}
                 onLanguageChange={onLanguageChange}
-                onCloseModalFunc={onCloseModalFunc}
+                setShowLanguageModal={setShowLanguageModal}
               />
             )}
           </div>

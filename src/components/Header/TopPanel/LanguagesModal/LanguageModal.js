@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import css from "./LanguageModal.module.scss";
 
 const LanguageModal = ({
   languages,
   selectedLanguage,
   onLanguageChange,
-  onCloseModalFunc,
+  setShowLanguageModal,
 }) => {
   const [timer, setTimer] = useState(null);
+  const languageModalRef = useRef(null);
 
   useEffect(() => {
     return () => {
@@ -22,12 +23,29 @@ const LanguageModal = ({
   const handleMouseLeave = () => {
     setTimer(
       setTimeout(() => {
-        onCloseModalFunc();
+        setShowLanguageModal(false);
       }, 2000)
     );
   };
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        languageModalRef.current &&
+        !languageModalRef.current.contains(event.target)
+      ) {
+        setShowLanguageModal(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [languageModalRef]);
+
   return (
-    <div className={css.languageBtn}>
+    <div className={css.languageBtn} ref={languageModalRef}>
       <div
         className={css.box}
         onMouseEnter={handleMouseEnter}

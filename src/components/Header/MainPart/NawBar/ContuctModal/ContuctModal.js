@@ -1,14 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import css from "./ContuctModal.module.scss";
 import { useTranslation } from "react-i18next";
 import { contactData } from "../../../../../utils/data/data";
 import CountrySelector from "./CountrySelector";
 import classNames from "classnames";
 import { toast } from "react-toastify";
+import IconInput from "../../../../../assets/icons/headerIcons/chdown.svg";
+import Flag from "react-flagkit";
+import DialogueStatus from "../../../../DialogueStatus/DialogueStatus";
 
-const ContuctModal = ({ handleMouseLeave }) => {
+const ContuctModal = () => {
   const { t, i18n } = useTranslation();
-  const [countryCode, setCountryCode] = useState({ code: "", country: "" });
+  const [showCountryCodeModal, setshowCountryCodeModal] = useState(false);
+  const [successModal, setSuccessModal] = useState(false);
+  const [errorModal, seterrorModal] = useState(false);
+  const [codestate, setcodeState] = useState({
+    dial_code: "",
+    code: "",
+    name: "",
+  });
+
+  const countryCodeInputRef = useRef(null);
 
   const [form, setForm] = useState({
     fio: "",
@@ -16,28 +28,8 @@ const ContuctModal = ({ handleMouseLeave }) => {
     email: "",
   });
 
-  const config = {
-    Username: "dolonsystems@gmail.com",
-    Password: "A9335968659627466661A4D9EFE3E639310D",
-    Port: "2525",
-    Host: "smtp.elasticemail.com",
-    To: "info@dolon.tech",
-    From: form.email,
-    Subject: "Контакты Модалка",
-    Body: `
-        ФИО: ${form.fio},
-        Phone: ${form.phone},
-        Email: ${form.email},
-        Country: ${form.country},
-        Code: ${form.code},
-    `,
-  };
-
   const onInput = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
-  };
-  const onChangeCode = (option) => {
-    setForm({ ...form, code: option.dial_code, country: option.name });
   };
 
   const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
@@ -51,36 +43,99 @@ const ContuctModal = ({ handleMouseLeave }) => {
   };
   const correctForm = () => {
     if (
-      form.fio.length > 3 &&
-      form.phone.length > 7 &&
-      form.email.length > 7 &&
+      form.fio.length > 1 &&
+      form.phone.length > 6 &&
+      form.email.length > 4 &&
       validateEmail(form.email)
     )
       return true;
     return false;
+  };
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        countryCodeInputRef.current &&
+        !countryCodeInputRef.current.contains(event.target)
+      ) {
+        setshowCountryCodeModal(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [countryCodeInputRef]);
+
+  function handleChange(e) {
+    setcodeState({ dial_code: e.target.value });
+    setForm((form) => ({ ...form, code: e.target.value }));
+    setshowCountryCodeModal(true);
+    toast.success(t("form.success"), t("form.thanks"));
+  }
+  const config = {
+    Username: "dolonsystems@gmail.com",
+    Password: "A9335968659627466661A4D9EFE3E639310D",
+    Port: "2525",
+    Host: "smtp.elasticemail.com",
+    To: "bolotbek.muratov@gmail.com",
+    From: "ermekov.x@gmail.com",
+    Subject: "страница Контакты",
+    Body: `
+        ФИО: ${form.fio},
+        Phone: ${form.phone},
+        Email: ${form.email},
+        Country: ${codestate.name},
+        Code: ${codestate.dial_code},
+    `,
+  };
+  let messageSuccess = {
+    first: t("messageSuccess.first"),
+    second: t("messageSuccess.second"),
+    third: t("messageSuccess.third"),
+    icon: "ok",
+  };
+  let messageError = {
+    first: t("messageError.first"),
+    second: t("messageError.second"),
+    third: t("messageError.third"),
+    icon: "error",
   };
 
   function submitHandler(e) {
     e.preventDefault();
     if (window.Email) {
       window.Email.send(config)
-        .then((mess) => {
+        .then((res) => {
+          if (res === "OK") {
+            setSuccessModal(true);
+          } else {
+            seterrorModal(true);
+          }
         })
+        .then(() => {})
         .catch((err) => {
+          console.log(err);
+          seterrorModal(true);
         })
-        .finally((data) => {
-          toast.success("Мы свяжемся с вами в ближайшее время", "Спасибо!");
+        .finally(() => {
+          setTimeout(() => {
+            setSuccessModal(false);
+            seterrorModal(false);
+          }, 5000);
         });
     }
   }
   return (
     <div className={css.menuModal}>
-      <div className={css.box} onMouseLeave={handleMouseLeave}>
+      {successModal && <DialogueStatus message={messageSuccess} />}
+      {errorModal && <DialogueStatus message={messageError} />}
+      <div className={css.box}>
         <form onSubmit={submitHandler} className={css.form}>
           <div className={css.fio}>
             <label htmlFor="fio">{t("form.nameSurname")}</label>
             <input
-             autocomplete="off"
+              autoComplete="off"
               type="text"
               name="fio"
               onInput={onInput}
@@ -93,9 +148,51 @@ const ContuctModal = ({ handleMouseLeave }) => {
             <label htmlFor="phone">{t("form.phone")}</label>
 
             <div className={css.telBox}>
-              <CountrySelector onChange={onChangeCode} />
+              <div className={css.countryCodeBox} ref={countryCodeInputRef}>
+                <input
+                  autoComplete="off"
+                  type="text"
+                  placeholder={t("form.countryCode")}
+                  className={css.countryCode}
+                  name="contryCodeName"
+                  value={codestate.dial_code}
+                  onChange={handleChange}
+                  onClick={() => setshowCountryCodeModal(true)}
+                />
+                <div
+                  onClick={() =>
+                    setshowCountryCodeModal(
+                      (showCountryCodeModal) => !showCountryCodeModal
+                    )
+                  }
+                  className={css.iconInputBox}
+                >
+                  {codestate.code && <Flag country={codestate.code} />}
+                  {/* <div className={css.flagBox}>
+                  </div> */}
+                  <img
+                    src={IconInput}
+                    className={css.iconInput}
+                    alt="not found"
+                    style={{
+                      transform: `rotateX(${
+                        showCountryCodeModal ? "180deg" : "0"
+                      })`,
+                    }}
+                  />
+                </div>
+
+                {showCountryCodeModal && (
+                  <CountrySelector
+                    setcodeState={setcodeState}
+                    codestate={codestate}
+                    setshowCountryCodeModal={setshowCountryCodeModal}
+                  />
+                )}
+              </div>
+
               <input
-              autocomplete="off"
+                autoComplete="off"
                 type="number"
                 name="phone"
                 onInput={onInput}
@@ -108,7 +205,7 @@ const ContuctModal = ({ handleMouseLeave }) => {
           <div className={css.email}>
             <label htmlFor="email">{t("form.email")}</label>
             <input
-              autocomplete="off"
+              autoComplete="off"
               type="email"
               name="email"
               onInput={onInput}

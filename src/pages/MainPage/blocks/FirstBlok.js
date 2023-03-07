@@ -24,7 +24,9 @@ const FirstBlok = () => {
           <div className={css.title}>
             <h1>Geological and mining cloud ecosystem</h1>
           </div>
-          <Lottie options={defaultOptions} className={css.lottie} />
+          <div className={css.animation}>
+            <Lottie options={defaultOptions} className={css.lottie} />
+          </div>
         </div>
       </div>
     </div>
