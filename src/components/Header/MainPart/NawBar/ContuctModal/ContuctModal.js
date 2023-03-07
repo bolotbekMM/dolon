@@ -78,7 +78,7 @@ const ContuctModal = () => {
     Password: "A9335968659627466661A4D9EFE3E639310D",
     Port: "2525",
     Host: "smtp.elasticemail.com",
-    To: "bolotbek.muratov@gmail.com",
+    To: "info@dolon.tech",
     From: "ermekov.x@gmail.com",
     Subject: "страница Контакты",
     Body: `
