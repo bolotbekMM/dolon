@@ -2,7 +2,9 @@ import React from "react";
 import css from "./FileManager.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/fileManager/fileManager1.png";
+import bannerEn from "../../assets/img/fileManager/bannerEng.png";
 import fileManagerImage from "../../assets/img/fileManager/fileManagerImage.svg";
+import fileManagerImageEn from "../../assets/img/fileManager/fileManagerEng.png";
 import { useTranslation } from "react-i18next";
 
 const FileManager = () => {
@@ -10,7 +12,7 @@ const FileManager = () => {
   return (
     <ReModule
       module={"FileManager"}
-      banner={banner}
+      banner={i18n.language === "ru" ? banner : bannerEn}
       title={t("Modules.fileManager")}
     >
       <div className="container">
@@ -26,7 +28,11 @@ const FileManager = () => {
             </ul>
           </div>
           <div className={css.box2}>
-            <img src={fileManagerImage} />
+            <img
+              src={
+                i18n.language === "ru" ? fileManagerImage : fileManagerImageEn
+              }
+            />
           </div>
         </div>
       </div>

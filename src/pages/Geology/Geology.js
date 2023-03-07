@@ -3,8 +3,9 @@ import css from "./Geology.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/geology/geologyImage.svg";
 import image from "../../assets/img/geology/geologyImg.png";
+import imageEng from "../../assets/img/geology/geologyEng.png";
 import dddImg from "../../assets/img/geology/ddd.png";
-import inYan from "../../assets/img/geology/inyan.svg";
+import inYan from "../../assets/img/geology/inyan.png";
 import { useTranslation } from "react-i18next";
 
 const Geology = () => {
@@ -15,7 +16,10 @@ const Geology = () => {
         <div className="container" style={{ zIndex: "3" }}>
           <div className={css.module}>
             <p>{t("moduleGeologyTexts.1")}</p>
-            <img src={image} alt="not found" />
+            <img
+              src={i18n.language === "ru" ? image : imageEng}
+              alt="not found"
+            />
             <p>{t("moduleGeologyTexts.2")}</p>
             <p>{t("moduleGeologyTexts.3")}</p>
           </div>
