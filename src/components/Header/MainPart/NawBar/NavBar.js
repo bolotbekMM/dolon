@@ -111,7 +111,7 @@ const NavBar = ({ onCloseBurger }) => {
                 <div className={css.dropDown}>
                   <NavLink
                     to="/ecosystems"
-                    onClick={onCloseBurger}
+                    onClick={onClickDropDownMenu}
                     className={css.mobileEcoBtn}
                   >
                     {t("NavBar.eco")}
