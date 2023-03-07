@@ -9,6 +9,7 @@
     max-width: calc(100% - 24px);
     display: flex;
     gap: 60px;
+    position: relative;
 }
 .news_main{
     width: 739px;
@@ -128,6 +129,14 @@
     align-items: center;
     gap: 40px;
 }
+.news_back{
+    cursor: pointer;
+    position: absolute;
+}
+.news_back_icon{
+    transform: rotate(180deg);
+    margin-right: 20px;
+}
 .newsitem_btn{
     display: flex;
     align-items: center;
@@ -135,7 +144,6 @@
     cursor: pointer;
     padding: 6px 22px;
     border-radius: 12px;
-    
 }
 .newsitem_btn_icon{
 

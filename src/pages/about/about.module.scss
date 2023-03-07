@@ -244,12 +244,12 @@ $distanceBlock: 180px;
     z-index: 100;
     display: flex;
     background: #29292C;
-    min-height: 100vh;
+    // min-height: 100vh;
     margin-bottom: $distanceBlock;
-    padding: 40px 12px;
+    padding: 120px 12px;
 }
 .mission_container{
-    width: 846px;
+    width: 1144px;
 }
 .mission_title{
     font-family: 'Inter';
@@ -268,6 +268,16 @@ $distanceBlock: 180px;
         font-size: 32px;
     }
 }
+.mission_content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @media screen and (max-width: 768px) {
+        grid-template-columns: 1fr;
+    }
+}
+.mission_right{
+
+}
 .mission_text{
     font-family: 'Roboto';
     font-style: normal;
@@ -283,6 +293,9 @@ $distanceBlock: 180px;
     @media screen and (max-width: 768px) {
         font-size: 14px;
     }
+}
+.mission_left{
+
 }
 .mission_quote{
     max-width: 70%;

@@ -250,7 +250,7 @@
       "ruslan": {
         "name": "Ruslan Ibragimov.",
         "post": "Solution architect.",
-        "desc": "Creating the core architecture of the web backend. 15 years of experience in developing large corporate information systems.",
+        "desc": "Creating the core architecture of the platform. 15 years of experience in developing large corporate information systems.",
         "quote": "We put the most innovative ideas and technology into Dolon, which gives our customers maximum freedom and us, as developers, maximum efficiency in developing and expanding the product."
       },
       "timur": {
@@ -293,6 +293,7 @@
   },
   "news": {
     "title": "News",
-    "moreArticle": "More article"
+    "moreArticle": "More article",
+    "back": "Go back"
   }
 }
