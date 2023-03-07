@@ -1,17 +1,9 @@
 import news1 from "../../assets/img/news/img1.png"
 import news2 from "../../assets/img/news/news2.png"
 import news3 from "../../assets/img/news/new3.png"
-import news4 from "../../assets/img/news/news4.png"
 
 export const news = [
-    {
-        title: "Colorpicker) it would be necessary to come up with some kind of color template in order to open various kinds of ores and minerals. But it is possible to install your own light at a distance, etc.).",
-        text: [
-            "Colorpicker) it would be necessary to come up with some kind of color template in order to open various kinds of ores and minerals. But it is possible to install your own light at a distance, etc.).",
-        ],
-        img: news1,
-        id: 1
-    },
+    
     {
         title: "Demonstrating the triangulation of a point cloud on a tablet. You must agree that this sounds incredible!",
         text: [
@@ -19,7 +11,7 @@ export const news = [
             "Presented tool set covers all basic point cloud processing and triangulation operations.",
             "Welcome to Industry 4.0.",
         ],
-        img: news2,
+        img: news1,
         id: 2
     },
     {
@@ -38,21 +30,13 @@ export const news = [
 
 export const newsRu = [
     {
-        title: "Есть возможность пользователю самому задать свет объекта, плоскости и т.д.",
-        text: [
-            "Colorpicker) надо бы подумать какими шаблонами цвета обозначать разного рода руды и минералы. Но есть возможность пользователю самому задать свет объекта, плоскости и т.д.).",
-        ],
-        img: news1,
-        id: 1
-    },
-    {
         title: "Демонстрация триангуляции облака точек на планшете. Согласитесь, это звучит невероятно!",
         text: [
             "Возможность проведения операций на планшете дает полнейшую свободу промысловикам, геологам и маркшейдерам. Для того, чтобы качественно работать с облаком точек в полевых условиях, достаточно будет взять с собой планшет.",
             "Представленный набор инструментов охватывает все основные операции обработки облака точек и триангуляции.",
             "Добро пожаловать в индустрию 4.0.",
         ],
-        img: news2,
+        img: news1,
         id: 2
     },
     {

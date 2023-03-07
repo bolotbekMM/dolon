@@ -7,30 +7,36 @@ function Mission() {
     return ( 
         <div className={css.mission}>
             <div className={css.mission_container}>
-                <div className={css.mission_title}>
-                    {
-                        t("about.mission.title")
-                    }
-                </div>
-                <div className={css.mission_text}>
-                    {
-                        t("about.mission.text1")
-                    }
-                </div>
-                <div className={css.mission_text}>
-                    {
-                        t("about.mission.text2")
-                    }
-                </div>
-                <div className={css.mission_text}>
-                    {
-                        t("about.mission.text3")
-                    }
-                </div>
-                <div className={classNames(css.mission_text, css.mission_quote)}>
-                    {
-                        t("about.mission.text4")
-                    }
+                <div className={css.mission_content}>
+                    <div className={css.mission_left}>
+                        <div className={css.mission_title}>
+                            {
+                                t("about.mission.title")
+                            }
+                        </div>
+                        <div className={classNames(css.mission_text, css.mission_quote)}>
+                            {
+                                t("about.mission.text4")
+                            }
+                        </div>
+                    </div>
+                    <div className={css.mission_right}>
+                        <div className={css.mission_text}>
+                            {
+                                t("about.mission.text1")
+                            }
+                        </div>
+                        <div className={css.mission_text}>
+                            {
+                                t("about.mission.text2")
+                            }
+                        </div>
+                        <div className={css.mission_text}>
+                            {
+                                t("about.mission.text3")
+                            }
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

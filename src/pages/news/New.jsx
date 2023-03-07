@@ -3,13 +3,19 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { news, newsRu } from "./data";
 import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
+import back from "../../assets/img/news/back.png"
+
+// ...
+
+
 
 function New(
 
 ) {
     const { t } = useTranslation();
     const { id } = useParams();
-    
+    const navigate = useNavigate();
     const [currentNews, setCurrentNews] = useState(news)
     const  newElem = currentNews.find(elem => elem.id == id)
     useEffect(() => {
@@ -24,7 +30,15 @@ function New(
         <div className={css.news}>
             <div className={css.news_container}>
                 <div className={css.news_main}>
-                    <div className={css.news_title}>
+                    <div className={css.news_back} onClick={() => {
+                            navigate(-1);
+                        }}>
+                        <img src={back} alt="" className={css.news_back_icon}/>
+                        {
+                            t("news.back")
+                        }
+                    </div>
+                    <div className={css.news_title} >
                         {
                             t("news.title")
                         } 

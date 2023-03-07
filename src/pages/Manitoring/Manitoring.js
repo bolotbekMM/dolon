@@ -11,7 +11,7 @@ const Manitoring = () => {
   const { t, i18n } = useTranslation();
   return (
     <ReModule
-      module={"Manitoring"}
+      module={"Monitoring"}
       banner={i18n.language === "ru" ? banner : bannerEn}
       title={t("Modules.monitoring")}
     >

@@ -32,6 +32,7 @@ function Feedback({ text, question, block = false, messageTitle }) {
               onClick={(e) => {
                 e.stopPropagation();
                 setModal(!modal);
+                setQuestion(false)
               }}
             >
               {t("contuctUs.onlinePresentation")}

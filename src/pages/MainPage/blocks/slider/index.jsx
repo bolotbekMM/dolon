@@ -28,14 +28,14 @@ export default function Slider() {
       Descriptions2: t("SlideBlockWebOrientDesc.2"),
       Descriptions3: t("SlideBlockWebOrientDesc.3"),
       Descriptions4: t("SlideBlockWebOrientDesc.4"),
-      img: slider,
+      img: slider2,
     },
     {
       title: t("SliderBlocks.2"),
       Descriptions1: t("SlideBlockFlexDesc.1"),
       Descriptions2: t("SlideBlockFlexDesc.2"),
 
-      img: slider2,
+      img: slider3,
     },
     {
       title: t("SliderBlocks.3"),
@@ -43,7 +43,7 @@ export default function Slider() {
       Descriptions2: t("SlideBlockSingleDesc.2"),
       Descriptions3: t("SlideBlockSingleDesc.3"),
       Descriptions4: t("SlideBlockSingleDesc.4"),
-      img: slider3,
+      img: slider,
     },
     {
       title: t("SliderBlocks.4"),

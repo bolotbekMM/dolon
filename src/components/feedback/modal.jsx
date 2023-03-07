@@ -14,6 +14,7 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
         phoneCode: "",
         phone: "",
         email: "",
+        country: "",
         company: "",
         post: "",
         note: ""
@@ -113,7 +114,7 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
                             <label htmlFor="country" className={classes.formgroupLabel}>
                             {t("form.country")}
                             </label>
-                            <input type="text" name="country" onInput={onInput} value={form.company} id="country" placeholder={t("form.enterCountry")} className={classes.formgroupInput} />
+                            <input type="text" name="country" onInput={onInput} value={form.country} id="country" placeholder={t("form.enterCountry")} className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="company" className={classes.formgroupLabel}>
