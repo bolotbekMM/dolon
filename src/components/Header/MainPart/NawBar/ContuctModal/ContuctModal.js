@@ -63,16 +63,12 @@ const ContuctModal = ({ handleMouseLeave }) => {
   function submitHandler(e) {
     e.preventDefault();
     if (window.Email) {
-      console.log(window.Email);
       window.Email.send(config)
         .then((mess) => {
-          console.log(mess);
         })
         .catch((err) => {
-          console.log(err);
         })
         .finally((data) => {
-          console.log(data);
           toast.success("Мы свяжемся с вами в ближайшее время", "Спасибо!");
         });
     }

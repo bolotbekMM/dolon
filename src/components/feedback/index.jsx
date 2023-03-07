@@ -16,7 +16,6 @@ function Feedback({ text, question, block = false, messageTitle }) {
       setModal(false);
     };
   }, []);
-  console.log(questionstate);
   if (block) {
     return (
       <>

@@ -41,6 +41,9 @@
     text-align: center;
     text-transform: uppercase;
     color: #171717;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 .text{
     text-align: left;

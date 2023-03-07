@@ -224,6 +224,73 @@
     "countryCode": "Country code",
     "fillForm": "PLEASE FILL OUT THE FORM"
   },
+  "about": {
+    "excourse": {
+      "title": "Excursus",
+      "text1": "Ore mining begins with several exploration steps, including geologic exploration. The main focus, in collecting data on mineralogy and lithology, location, and analysis of metal content in samples. The goal is to estimate ore occurrence, volume and production potential.  ",
+      "text2": "Major work areas include surveying, exploration, laboratory studies, analysis, estimation and drilling. Each phase relies on data collected in previous phases and requires specific skills such as surveying, drilling and laboratory work. The effectiveness of the E&P process depends on the speed and accuracy of information transfer.",
+      "text3": "Ensuring that information is communicated and interoperable is critical to successful process logistics and exploration infrastructure. Without proper organization, information moves linearly in paper or file form, resulting in different versions and interpretations that can distort raw data. Human error, such as employee inattention, can also introduce false information that can go undetected for weeks or even months. ",
+      "text4": "The overall team faces data delays and workloads due to multiple tools and systems, resulting in downtime and financial losses. Incorrect information can lead to poor decisions being made, which in turn can lead to lost profits or inefficient costs. To prevent such adverse effects, it is critical to ensure a seamless communication process."
+    
+    }, 
+    "cloud": {
+      "title": "Our solution is the Dolon geological cloud system.",
+      "text1": "Dolon streamlines data flow and processing, reduces human error, and facilitates more correct decisions in an operational environment. It is the world's only fully cloud-based geological data management system that provides a better organization and online approach to collecting, analyzing and reporting.",
+      "text2": "The traditional mining industry relies on Excel files and limited desktop solutions, but Dolon's cloud-based, web-based system works on all devices, including mobile devices, and integrates 3D features to increase efficiency. ",
+      "text3": "Built-in tools for 3D data interpretation and reserve estimation significantly improve data efficiency. In addition, cloud systems can enable seamless integration of machine learning and artificial intelligence, which will lead to significant improvements in the accuracy of production forecasts in the future.",
+      "text4": "AI and machine learning will play a crucial role in improving the accuracy of reserve estimates. The cloud and big data will be fertile ground for machine learning to flourish. We believe that combining human experience with artificial intelligence will lead to enhanced estimates of metal reserves, including rare metals."
+    },
+    "team": {
+      "satar": {
+        "name": "Satar Tursunkul.",
+        "post": "CEO.",
+        "desc": "Elaboration of the strategic plan of the company. Elaboration of the main terms of cooperation with partners. 15 years of experience in business management. ",
+        "quote": "Dolon and its leadership is based on the use of cutting-edge technology and expert communities striving to improve efficiency in the mining industry and environmental sustainability"
+      },
+      "ruslan": {
+        "name": "Ruslan Ibragimov.",
+        "post": "Solution architect.",
+        "desc": "Creating the core architecture of the web backend. 15 years of experience in developing large corporate information systems.",
+        "quote": "We put the most innovative ideas and technology into Dolon, which gives our customers maximum freedom and us, as developers, maximum efficiency in developing and expanding the product."
+      },
+      "timur": {
+        "name": "Timur Uzbekov",
+        "post": "Architect and team lead of data management subsystems.",
+        "desc": "He has more than 15 years of experience developing DBMS for the mining industry.",
+        "quote": "Dolon is a cloud-based solution for geologists and other professionals that provides more accurate and faster access to geological information as well as 3D visualization capabilities. It is an innovative tool that helps improve processes in the geological industry and make decision-making more informed and efficient."
+      },
+      "sabyr": {
+        "name": "Sabyr Altybaev",
+        "post": "Architect and team lead of the 3D module.",
+        "desc": "Total experience in commercial software development is more than 20 years, in which more than 12 years dedicated developing 3D systems.",
+        "quote": "Dolon was created at the intersection of mining and geological information systems and cloud technologies, where complex and innovative 3D modeling solutions, DBMS and file data management are harmoniously integrated into one cloud platform."
+      },
+      "alex": {
+        "name": "Alexander Morozov",
+        "post": "Product Manager.",
+        "desc": "Strategic product development. Experience in resource/reserve estimation project development for over 8 years, overall experience in geology for over 15 years.",
+        "quote": "Dolon, in the long-term, in a growing wave, will enable the possibility of including approaches/ practices/methods previously impossible due to technological limitations and methodological compromises. Dolon is the synergy of technology and the power of thought, for the benefit of the harmonious development of the industry and of humanity."
+      }
+    },
+    "mission": {
+      "title": "Mission",
+      "text1": "The global community has made a commitment to transition to a green economy through various international agreements and initiatives, such as the Paris Agreement on Climate Change and the UN Sustainable Development Goals.",
+      "text2": "Accordingly, we are talking about unprecedentedly large-scale measures, where one of the main components is the supply and extraction of rare earth metals such as lithium, cobalt, graphite, indium, vanadium, nickel, and others. Already, an uninterrupted supply of these metals for industries such as energy and transportation is key to the success of global transformation.",
+      "text3": "But the significant problem is that the accuracy of mineral reserve estimates currently fluctuates around 60%. The mining industry remains hugely inefficient, entailing huge financial costs, in the hundreds of billions of dollars annually, and negative impacts on the natural landscape.",
+      "text4": "«Supporting the global trend toward a green economy and a carbon neutral footprint, we are focused on providing flexible, cost-effective solutions, for mining companies. A family of cloud-based solutions integrated into a unified ecosystem that delivers Industry 4.0 and lean mining technology capabilities.»"
+    },
+    "years": {
+      "text": "Общая команда сталкивается с задержкой данных и нагрузкой из-за множества инструментов и систем, что приводит к простоям и финансовым потерям. Неверная информация может привести к тому, что будут приняты неправильные решения, которые в свою очередь могут привести к недополученной прибыли или неэффективным тратам. Чтобы предотвратить подобные неблагоприятные последствия, крайне важно обеспечить бесперебойный процесс информационного взаимодействия.",
+      "text1": "Project launch, year of experiments: technology, architecture, approaches tomarket entry, MVP.",
+      "text2": "Agreements with companies to implement Dolon in Kyrgyzstan and Kazakhstan.",
+      "text3": "Striving for a stable release.",
+      "text4": "Release. Scaling up, dynamic coverage of Kazakhstan market.",
+      "text5": "Improvement of 3D tools, attraction of investments.",
+      "text6": "Launch of \"Resource Assessment\" in Dolon ecosystem, Dolon-online."
+    },
+    "countryCode": "Код страны",
+    "fillForm": "ПОЖАЛУЙСТА, ЗАПОЛНИТЕ ФОРМУ"
+  },
   "news": {
     "title": "News",
     "moreArticle": "More article"

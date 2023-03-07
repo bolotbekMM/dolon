@@ -56,7 +56,6 @@ export default function Slider() {
   const pagination = {
     clickable: true,
     renderBullet: function (index, className) {
-      console.log(className);
       return (
         '<span class="' +
         className +

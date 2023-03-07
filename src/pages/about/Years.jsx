@@ -8,11 +8,11 @@ function Years() {
     return ( 
         <div className={css.years}>
             <div className={css.years_container}>
-                <div className={css.years_text}>
+                {/* <div className={css.years_text}>
                     {
                         t("about.years.text")
                     }
-                </div>
+                </div> */}
                 <Yearsitem year={2018} text={t("about.years.text1")}/>
                 <Yearsitem year={2019} text={t("about.years.text2")}/>
                 <Yearsitem year={2020} text={t("about.years.text3")}/>

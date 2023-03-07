@@ -3,7 +3,6 @@ import Feedback from "../feedback";
 import css from "./ReModules.module.scss";
 
 const ReModule = ({ module, banner, title, children }) => {
-  console.log(module);
   return (
     <div className={css.reModule}>
       <div

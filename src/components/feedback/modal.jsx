@@ -138,18 +138,13 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
                         <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={async() => {
                             if (window.Email) {
                                 await window.Email.send(config).then((mess) => {
-                                    console.log(mess);
                                 }).catch(err => {
-                                    console.log(err);
                                 }).finally((data) => {
-                                    console.log(data);
                                     close(false)
                                 })
                                 window.Email.send(config1).then((mess) => {
                                 }).catch(err => {
-                                    console.log(err);
                                 }).finally((data) => {
-                                    console.log(data);
                                     close(false)
                                     toast.success(t("form.success"), t("form.thanks"))
                                 })

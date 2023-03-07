@@ -38,14 +38,9 @@ export const news = [
 
 export const newsRu = [
     {
-        title: "Colorpicker) надо бы подумать какими шаблонами цвета обозначать разного рода руды и минералы. Но есть возможность пользователю самому задать свет объекта, плоскости и т.д.).",
+        title: "Есть возможность пользователю самому задать свет объекта, плоскости и т.д.",
         text: [
-            "Artificial intelligence boggles the mind.We at Dolon have been dabbling with the power of artificial intelligence a lot lately. And here's a piece entirely created by AI on \"Write a piece for Linkedin on how artificial intelligence will affect the mining industry\" That's powerful!",
-            "Improved efficiency: AI can help to optimize various aspects of the mining process, from exploration and resource assessment to production and logistics. For example, AI-powered analytics can help to identify the most promising areas for exploration, while machine learning algorithms can be used to optimize production and logistics processes.",
-            "Enhanced safety: AI can be used to monitor equipment and identify potential safety hazards, helping to prevent accidents and injuries. For example, machine learning algorithms can be trained to recognize patterns in equipment failure data, allowing for timely maintenance and repairs.",
-            "Increased automation: AI can be used to automate various tasks in the mining industry, including drilling, blasting, and haulage. This can help to improve efficiency and reduce the need for manual labor, potentially leading to cost savings.",
-            "Improved decision-making: AI can help to analyze large amounts of data and provide insights that can inform business decisions. For example, machine learning algorithms can be used to analyze market trends and help to optimize pricing and sales strategies.",
-            "Overall, the integration of AI into the mining industry has the potential to improve efficiency, enhance safety, and support decision-making. As AI technology continues to advance, it will likely play an increasingly important role in the mining industry."
+            "Colorpicker) надо бы подумать какими шаблонами цвета обозначать разного рода руды и минералы. Но есть возможность пользователю самому задать свет объекта, плоскости и т.д.).",
         ],
         img: news1,
         id: 1
