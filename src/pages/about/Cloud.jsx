@@ -19,17 +19,17 @@ function Cloud() {
                 </div>
                 <div className={css.cloud_text}>
                     {
-                        t('about.cloud.text1')
+                        t('about.cloud.text2')
                     }
                 </div>
                 <div className={css.cloud_text}>
                     {
-                        t('about.cloud.text1')
+                        t('about.cloud.text3')
                     }
                 </div>
                 <div className={css.cloud_text}>
                     {
-                        t('about.cloud.text1')
+                        t('about.cloud.text4')
                     }
                 </div>
             </div>

@@ -1,7 +1,10 @@
 .slider{
   height: 83vh;
   max-height: 900px;
-  overflow: hidden;
+  @media screen and (max-width: 568px) {
+    overflow: hidden;
+  }
+  
 }
 
 .swiper {

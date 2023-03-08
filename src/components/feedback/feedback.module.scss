@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-
+  max-width: calc(100% - 10px);
   align-items: center;
   height: 560px;
 }
@@ -13,11 +13,13 @@
   margin: 120px 0;
   background-color: #f5f5f7;
 }
-.feedbackContainer{
-    display: flex;
-    flex-direction: column;
-    max-width: calc(100% - 24px);
+
+.feedbackContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(100% - 24px);
 }
+
 .feedbackTitle {
   font-family: "Inter";
   font-style: normal;
@@ -32,72 +34,80 @@
 
   /* Almost black */
 
-    color: #171717;
-    @media screen and (max-width: 768px) {
-        font-size: 28px;
-    }
-}
-.feedbackBtn{
-    padding: 32px 40px;
-    gap: 10px;
-    font-size: 32px;
-    line-height: 130%;
-    /* Gray blue */
-    font-weight: 300;
-    background: #29292C;
-    border-radius: 16px;
-    text-transform: uppercase;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 32px;
-    line-height: 130%;
-    /* identical to box height, or 42px */
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-transform: uppercase;
-    
-    /* Grey */
-    
-    color: #DDDDDF;
-    /* Grey */
-    cursor: pointer;
-    color: #DDDDDF;
+  color: #171717;
 
-    @media screen and (max-width: 768px) {
-        font-size: 18px;
-        padding: 18px 40px;
-    }
-
+  @media screen and (max-width: 768px) {
+    font-size: 28px;
+  }
 }
 
-.feedmodal{
-    display: flex;
-    justify-content: center;
-    background: #FFFFFF;
-    /* Shadow 2 */
-    width: 680px;
-    box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.1), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.04);
-    border-radius: 16px;
-    position: absolute;
-    z-index: 99;
-    @media screen and (max-width: 768px) {
-        width: 100vw;
-        max-width: calc(100vw - 24px);
-    }
+.feedbackBtn {
+  padding: 32px 40px;
+  gap: 10px;
+  font-size: 32px;
+  line-height: 130%;
+  /* Gray blue */
+  font-weight: 300;
+  background: #29292C;
+  border-radius: 16px;
+  text-transform: uppercase;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 130%;
+  /* identical to box height, or 42px */
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+
+  /* Grey */
+
+  color: #DDDDDF;
+  /* Grey */
+  cursor: pointer;
+  color: #DDDDDF;
+
+  @media screen and (max-width: 768px) {
+    font-size: 18px;
+    padding: 18px 40px;
+  }
+
 }
-.feedmodalContainer{
-    padding: 24px;
-    @media screen and (max-width: 768px) {
-        padding: 24px 12px;
-        width: 100%;
-    }
+
+.feedmodal {
+  
+  display: flex;
+  justify-content: center;
+  background: #FFFFFF;
+  /* Shadow 2 */
+  width: 680px;
+  box-shadow: 0px 11px 15px rgba(0, 0, 0, 0.1), 0px 9px 46px rgba(0, 0, 0, 0.06), 0px 24px 38px rgba(0, 0, 0, 0.04);
+  border-radius: 16px;
+  position: absolute;
+  z-index: 99;
+
+  @media screen and (max-width: 768px) {
+    width: 100vw;
+    max-width: calc(100vw - 24px);
+  }
 }
+
+.feedmodalContainer {
+  padding: 24px;
+
+  @media screen and (max-width: 768px) {
+    padding: 24px 12px;
+    width: 100%;
+  }
+}
+
 .feedmodalTitle {
   margin-bottom: 80px;
 }
+
 .feedmodalTitleText {
   font-family: "Inter";
   font-style: normal;
@@ -106,59 +116,71 @@
   line-height: 130%;
   /* identical to box height, or 42px */
 
-    text-transform: uppercase;
-    @media screen and (max-width: 768px) {
-        font-size: 22px;
-    }
+  text-transform: uppercase;
+
+  @media screen and (max-width: 768px) {
+    font-size: 22px;
+  }
 }
-.feedmodalForm{
+
+.feedmodalForm {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  @media screen and (max-width: 768px) {
+    width: calc(100% - 24px);
+    gap: 12px 0;
+  }
+}
+
+.formgroup {
+  display: grid;
+  // width: 100%;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.formgroupPhone {
+  grid-template-columns: 3fr 3fr;
+
+  @media screen and (max-width: 768px) {
+
     display: flex;
-    flex-direction: column;
-    gap: 40px;
-    @media screen and (max-width: 768px) {
-        width: calc(100% - 24px);
-        gap: 12px 0;
-    }
+    flex-wrap: wrap;
+  }
 }
-.formgroup{
-    display: grid;
-    // width: 100%;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    @media screen and (max-width: 768px) {
-        grid-template-columns: 1fr;
-        width: 100%;
-    }
+
+.formgroupLabel {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 130%;
+
+  @media screen and (max-width: 768px) {
+    margin-right: 12px;
+  }
 }
-.formgroupPhone{
-    grid-template-columns: 3fr 1fr 3fr;
-    @media screen and (max-width: 768px) {
-        
-        display: flex;
-        flex-wrap: wrap;
-    }
+
+.formgroupInput {
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid #DDDDDF;
+  border-radius: 8px;
+  padding: 8px 18px;
+  height: 43px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin-top: 8px;
+  }
 }
-.formgroupLabel{
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 130%;
-    @media screen and (max-width: 768px) {
-        margin-right: 12px;
-    }
-}
-.formgroupInput{
-    background: rgba(255, 255, 255, 0.75);
-    border: 1px solid #DDDDDF;
-    border-radius: 8px;
-    padding: 8px 18px;
-    height: 43px;
-    @media screen and (max-width: 768px) {
-        width: 100%;
-        margin-top: 8px;
-    }
-}
+
 .formgroupTextarea {
   border: 1px solid #dddddf;
   border-radius: 4px;
@@ -166,11 +188,13 @@
   font-family: "Roboto";
   font-style: normal;
 }
+
 .feedmodalWrap {
   position: absolute;
   background-color: #64647e;
   left: 20%;
 }
+
 .feedmodalBtn {
   border: 2px solid #898989;
   border-radius: 8px;
@@ -188,6 +212,7 @@
 .feedmodalBtnActive {
   background-color: #171717;
 }
+
 .feedbackBtnQuestion {
   background: #ffffff;
   /* Almost black */
@@ -197,6 +222,7 @@
   justify-content: center;
   color: #171717;
 }
+
 .feedbackText {
   font-family: "Inter";
   font-style: normal;
@@ -211,4 +237,82 @@
   /* Almost black */
   max-width: 740px;
   color: #171717;
+}
+
+.tel {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.001em;
+    color: #535354;
+  }
+
+  input {
+    padding: 12px 16px;
+    height: 43px;
+    background: #ffffff;
+    border: 1px solid #dddddf;
+    border-radius: 8px;
+  }
+
+  .telBox {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+
+    @media screen and (max-width: 612px) {
+
+      flex-direction: column;
+    }
+
+    .countryCodeBox {
+      position: relative;
+      width: 165px;
+      padding: 5px 0px 5px 16px;
+      height: 43px;
+      background: #ffffff;
+      border: 1px solid #dddddf;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+
+      .countryCode {
+        height: 100%;
+        width: 70%;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .iconInputBox {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 10px;
+        padding-right: 10px;
+        cursor: pointer;
+
+        .flagBox {
+          width: 24px;
+          height: 24px;
+        }
+
+        img {
+          float: right;
+        }
+      }
+    }
+
+    .phoneNum {}
+  }
 }

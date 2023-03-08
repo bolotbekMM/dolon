@@ -1,13 +1,22 @@
 import classes from "./feedback.module.scss"
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import classNames from "classnames";
+import IconInput from "../../assets/icons/headerIcons/chdown.svg";
+import Flag from "react-flagkit";
 import { toast } from 'react-toastify';
 import UISelect from './../UISelect/index';
 import { useTranslation } from "react-i18next";
 import CountrySelector from './../Header/MainPart/NawBar/ContuctModal/CountrySelector';
 
-function FeedbackModal({ close, subject="Monitoring", question }) {
+function FeedbackModal({ close, subject = "Monitoring", question }) {
     const { t, i18n } = useTranslation();
+    const countryCodeInputRef = useRef(null);
+    const [showCountryCodeModal, setshowCountryCodeModal] = useState(false);
+    const [codestate, setcodeState] = useState({
+        dial_code: "",
+        code: "",
+        name: "",
+    });
 
     const [form, setForm] = useState({
         fio: "",
@@ -27,7 +36,7 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
         Host: "smtp.elasticemail.com",
         To: 'info@dolon.tech',
         From: 'ermekov.x@gmail.com',
-        Subject: question? "Поступил вопрос на сайте Dolon " : subject,
+        Subject: question ? "Поступил вопрос на сайте Dolon " : subject,
         Body: `
             ФИО: ${form.fio},
             Phone: (${form.phoneCode}) ${form.phone},
@@ -45,7 +54,7 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
         Host: "smtp.elasticemail.com",
         To: 'satar.t@dolon.tech',
         From: 'ermekov.x@gmail.com',
-        Subject: question? "Поступил вопрос на сайте Dolon " : subject,
+        Subject: question ? "Поступил вопрос на сайте Dolon " : subject,
         Body: `
             ФИО: ${form.fio},
             Phone: (${form.phoneCode}) ${form.phone},
@@ -61,21 +70,28 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
     }
     const numCountryChange = (value) => {
         setForm({ ...form, phoneCode: value.dial_code })
+        // setcodeState({ dial_code: e.target.value });
     }
 
     const isValidEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g;
 
     const validateEmail = (value) => {
-    if(value && value.match(isValidEmail)){
-        return true;
-    }else{
-        return false;
-    }
+        if (value && value.match(isValidEmail)) {
+            return true;
+        } else {
+            return false;
+        }
     }
     const correctForm = () => {
-        if(form.fio.length > 3 && form.phone.length > 7 && form.email.length > 7 && validateEmail(form.email) && form.country.length > 3) return true;
+        if (form.fio.length > 3 && form.phone.length > 7 && form.email.length > 7 && validateEmail(form.email) && form.country.length > 3) return true;
         return false
     }
+
+    function handleChange(e) {
+        setcodeState({ dial_code: e.target.value });
+        setForm((form) => ({ ...form, code: e.target.value }));
+        setshowCountryCodeModal(true);
+      }
 
 
     return (
@@ -98,27 +114,80 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
                         </div>
                         <div className={classNames(classes.formgroup, classes.formgroupPhone)}>
                             <label htmlFor="phone" className={classes.formgroupLabel}>
-                            {t("form.phone")}
+                                {t("form.phone")}
                             </label>
                             {/* <UISelect /> */}
-                            <CountrySelector onChange={numCountryChange} />
-                            <input type="text" name="phone" onInput={onInput} value={form.phone} placeholder="(___) ___ ___ " id="phone" className={classes.formgroupInput} />
+                            <div className={classes.tel}>
+                                <div className={classes.telBox}>
+                                    <div className={classes.countryCodeBox} ref={countryCodeInputRef}>
+                                        <input
+                                            autoComplete="off"
+                                            type="text"
+                                            placeholder={t("form.countryCode")}
+                                            className={classes.countryCode}
+                                            name="contryCodeName"
+                                            value={codestate.dial_code}
+                                            onChange={handleChange}
+                                            onClick={() => setshowCountryCodeModal(true)}
+                                        />
+                                        <div
+                                            onClick={() =>
+                                                setshowCountryCodeModal(
+                                                    (showCountryCodeModal) => !showCountryCodeModal
+                                                )
+                                            }
+                                            className={classes.iconInputBox}
+                                        >
+                                            {codestate.code && <Flag country={codestate.code} />}
+                                            {/* <div className={classes.flagBox}>
+                  </div> */}
+                                            <img
+                                                src={IconInput}
+                                                className={classes.iconInput}
+                                                alt="not found"
+                                                style={{
+                                                    transform: `rotateX(${showCountryCodeModal ? "180deg" : "0"
+                                                        })`,
+                                                }}
+                                            />
+                                        </div>
+
+                                        {showCountryCodeModal && (
+                                            <CountrySelector
+                                                setcodeState={setcodeState}
+                                                codestate={codestate}
+                                                setshowCountryCodeModal={setshowCountryCodeModal}
+                                            />
+                                        )}
+                                    </div>
+
+                                    <input
+                                        autoComplete="off"
+                                        type="number"
+                                        name="phone"
+                                        onInput={onInput}
+                                        value={form.phone}
+                                        className={classes.phoneNum}
+                                        placeholder={t("form.phone")}
+                                    />
+                                </div>
+                            </div>
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="email" className={classes.formgroupLabel}>
-                            {t("form.email")}
+                                {t("form.email")}
                             </label>
                             <input type="text" name="email" onInput={onInput} value={form.email} placeholder={`${t("form.enter")} E-mail*`} id="email" className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="country" className={classes.formgroupLabel}>
-                            {t("form.country")}
+                                {t("form.country")}
                             </label>
                             <input type="text" name="country" onInput={onInput} value={form.country} id="country" placeholder={t("form.enterCountry")} className={classes.formgroupInput} />
                         </div>
                         <div className={classes.formgroup}>
                             <label htmlFor="company" className={classes.formgroupLabel}>
-                            {t("form.company")}
+                                {t("form.company")}
                             </label>
                             <input type="text" name="company" onInput={onInput} value={form.company} id="company" placeholder={t("form.enterCompany")} className={classes.formgroupInput} />
                         </div>
@@ -131,12 +200,12 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
                         <div className={classes.formgroup}>
                             <label htmlFor="note" className={classes.formgroupLabel}>
                                 {
-                                    question? t("form.enterQuestion") : t("form.note") 
+                                    question ? t("form.enterQuestion") : t("form.note")
                                 }
                             </label>
-                            <textarea type="text"name="note" onChange={onInput} value={form.note} placeholder={question? t("form.enterQuestion") : t("form.note") } rows={3} id="note" className={classes.formgroupTextarea} />
+                            <textarea type="text" name="note" onChange={onInput} value={form.note} placeholder={question ? t("form.enterQuestion") : t("form.note")} rows={3} id="note" className={classes.formgroupTextarea} />
                         </div>
-                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={async() => {
+                        <button disabled={!correctForm()} className={classNames(classes.feedmodalBtn, correctForm() ? classes.feedmodalBtnActive : "")} onClick={async () => {
                             if (window.Email) {
                                 await window.Email.send(config).then((mess) => {
                                 }).catch(err => {

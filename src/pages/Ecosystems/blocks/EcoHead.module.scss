@@ -29,8 +29,9 @@
       }
       @media screen and (max-width: 555px) {
         align-items: center;
-        justify-content: center;
-        // padding: 0px auto auto;
+        justify-content: flex-start;
+        padding: 60px 2px;
+        text-align: center;
       }
 
       h2 {

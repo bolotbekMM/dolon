@@ -20,7 +20,6 @@ import { useTranslation } from "react-i18next";
 
 export default function Slider() {
   const { t, i18n } = useTranslation();
-  const [count, setCount] = useState(0);
   let sliderData = [
     {
       title: t("SliderBlocks.1"),
@@ -43,6 +42,8 @@ export default function Slider() {
       Descriptions2: t("SlideBlockSingleDesc.2"),
       Descriptions3: t("SlideBlockSingleDesc.3"),
       Descriptions4: t("SlideBlockSingleDesc.4"),
+      Descriptions5: t("SlideBlockSingleDesc.5"),
+      Descriptions6: t("SlideBlockSingleDesc.6"),
       img: slider,
     },
     {
@@ -90,6 +91,8 @@ export default function Slider() {
                     <p className="paragraph">{elem.Descriptions2}</p>
                     <p className="paragraph">{elem.Descriptions3}</p>
                     <p className="paragraph">{elem.Descriptions4}</p>
+                    <p className="paragraph">{elem.Descriptions5}</p>
+                    <p className="paragraph">{elem.Descriptions6}</p>
                   </div>
                 </div>
               </div>
@@ -105,6 +108,8 @@ export default function Slider() {
                     <p className="paragraph">{elem.Descriptions2}</p>
                     <p className="paragraph">{elem.Descriptions3}</p>
                     <p className="paragraph">{elem.Descriptions4}</p>
+                    <p className="paragraph">{elem.Descriptions5}</p>
+                    <p className="paragraph">{elem.Descriptions6}</p>
                   </div>
                 </div>
                 <img src={elem.img} alt="" className="sliderImg" />

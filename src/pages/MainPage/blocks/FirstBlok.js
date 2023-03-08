@@ -4,7 +4,6 @@ import css from "./FirstBlok.module.scss";
 import { useTranslation } from "react-i18next";
 import Lottie from "react-lottie";
 import animationData from "../../../assets/LottieFiles/Comp 1/animations/animation_1.json";
-import Lottie from "react-lottie";
 
 const FirstBlok = () => {
   const { t, i18n } = useTranslation();
