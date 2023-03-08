@@ -4,6 +4,7 @@ import css from "./FirstBlok.module.scss";
 import { useTranslation } from "react-i18next";
 import Lottie from "react-lottie";
 import animationData from "../../../assets/LottieFiles/Comp 1/animations/animation_1.json";
+import Lottie from "react-lottie";
 
 const FirstBlok = () => {
   const { t, i18n } = useTranslation();
@@ -24,7 +25,9 @@ const FirstBlok = () => {
           <div className={css.title}>
             <h1>Geological and mining cloud ecosystem</h1>
           </div>
-          <Lottie options={defaultOptions} className={css.lottie} />
+          <div className={css.animation}>
+            <Lottie options={defaultOptions} className={css.lottie} />
+          </div>
         </div>
       </div>
     </div>

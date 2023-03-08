@@ -222,7 +222,8 @@
     "success": "We will contact you shortly.",
     "thanks": "Thank you!",
     "countryCode": "Country code",
-    "fillForm": "PLEASE FILL OUT THE FORM"
+    "fillForm": "PLEASE FILL OUT THE FORM",
+    "Error": "Code not found"
   },
   "about": {
     "excourse": {
@@ -231,8 +232,7 @@
       "text2": "Major work areas include surveying, exploration, laboratory studies, analysis, estimation and drilling. Each phase relies on data collected in previous phases and requires specific skills such as surveying, drilling and laboratory work. The effectiveness of the E&P process depends on the speed and accuracy of information transfer.",
       "text3": "Ensuring that information is communicated and interoperable is critical to successful process logistics and exploration infrastructure. Without proper organization, information moves linearly in paper or file form, resulting in different versions and interpretations that can distort raw data. Human error, such as employee inattention, can also introduce false information that can go undetected for weeks or even months. ",
       "text4": "The overall team faces data delays and workloads due to multiple tools and systems, resulting in downtime and financial losses. Incorrect information can lead to poor decisions being made, which in turn can lead to lost profits or inefficient costs. To prevent such adverse effects, it is critical to ensure a seamless communication process."
-    
-    }, 
+    },
     "cloud": {
       "title": "Our solution is the Dolon geological cloud system.",
       "text1": "Dolon streamlines data flow and processing, reduces human error, and facilitates more correct decisions in an operational environment. It is the world's only fully cloud-based geological data management system that provides a better organization and online approach to collecting, analyzing and reporting.",
@@ -295,5 +295,15 @@
     "title": "News",
     "moreArticle": "More article",
     "back": "Go back"
+  },
+  "messageSuccess": {
+    "first": "Your application has been successfully received.",
+    "second": "Thank you!",
+    "third": "We will contact you shortly."
+  },
+  "messageError": {
+    "first": "Something went wrong.",
+    "second": "Sorry!",
+    "third": "Please try again"
   }
 }

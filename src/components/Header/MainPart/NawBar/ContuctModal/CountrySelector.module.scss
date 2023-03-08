@@ -1,0 +1,42 @@
+.modal {
+  position: absolute;
+  padding: 12px 4px;
+  width: 166px;
+  max-height: 250px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(87.5px);
+  border-radius: 8px;
+  top: 45px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: scroll;
+
+  // position: absolute;
+
+  .countries {
+    width: 99.5%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 8px;
+    gap: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  :hover {
+    background-color: #f5f5f7;
+  }
+  .Error {
+    margin: 5px 10px;
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+    letter-spacing: 0.001em;
+    color: #e66f2a;
+  }
+}
