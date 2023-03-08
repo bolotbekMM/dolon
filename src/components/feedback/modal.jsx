@@ -73,7 +73,7 @@ function FeedbackModal({ close, subject="Monitoring", question }) {
     }
     }
     const correctForm = () => {
-        if(form.fio.length > 3 && form.phone.length > 7 && form.email.length > 7 && validateEmail(form.email)) return true;
+        if(form.fio.length > 3 && form.phone.length > 7 && form.email.length > 7 && validateEmail(form.email) && form.country.length > 3) return true;
         return false
     }
 

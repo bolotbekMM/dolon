@@ -31,10 +31,13 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 130%;
-
+  padding: 20px 188px;
+  max-width: calc(100% - 24px);
+  margin: 0 auto;
   color: #171717;
-  width: 649px;
-  margin: 0px 188px 175px 188px;
+  @media screen and (max-width: 560px) {
+    padding: 20px 0;
+  }
 }
 .infaceImgWrap {
   width: 100%;

@@ -39,6 +39,7 @@ function App() {
 
   return (
     <div className="app">
+      <ToastContainer />
       <ScrollToTop />
       <Header />
       <Routes>
