@@ -28,21 +28,21 @@ const LanguageModal = ({
     );
   };
 
-  useEffect(() => {
-    function handleClickOutside(event) {
-      if (
-        languageModalRef.current &&
-        !languageModalRef.current.contains(event.target)
-      ) {
-        setShowLanguageModal(false);
-      }
-    }
+  // useEffect(() => {
+  //   function handleClickOutside(event) {
+  //     if (
+  //       languageModalRef.current &&
+  //       !languageModalRef.current.contains(event.target)
+  //     ) {
+  //       setShowLanguageModal(false);
+  //     }
+  //   }
 
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [languageModalRef]);
+  //   document.addEventListener("mousedown", handleClickOutside);
+  //   return () => {
+  //     document.removeEventListener("mousedown", handleClickOutside);
+  //   };
+  // }, [languageModalRef]);
 
   return (
     <div className={css.languageBtn} ref={languageModalRef}>

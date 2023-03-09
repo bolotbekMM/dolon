@@ -6,6 +6,8 @@ import { SampleMap } from "./Map/SampleMap";
 
 const Contucts = () => {
   const { t, i18n } = useTranslation();
+  const bishkek = [42.843686, 74.590648];
+  const almaty = [43.216977, 76.905598];
   return (
     <div className={css.contucts}>
       <div className="container">
@@ -23,12 +25,14 @@ const Contucts = () => {
                   <a className={css.email} href={`mailto:${item.email}`}>
                     {item.email}
                   </a>
+                  <SampleMap city={item.coordinates} />
                 </li>
               );
             })}
           </ul>
         </div>
-        {/* <SampleMap /> */}
+        <div className={css.locations}></div>
+
         <div className={css.shadowEllipsBox}>
           <div className={css.shadowEllips}></div>
         </div>

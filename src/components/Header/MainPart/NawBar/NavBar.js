@@ -11,15 +11,13 @@ import { useTranslation } from "react-i18next";
 import ContuctModal from "./ContuctModal/ContuctModal";
 import { useMediaQuery } from "react-responsive";
 
-const NavBar = ({ onCloseBurger }) => {
+const NavBar = () => {
   const navigate = useNavigate();
   const contuctModalRef = useRef(null);
   const [hovered, setHovered] = useState(false);
   const [hoveredContucts, setHoveredContucts] = useState(false);
-  const [inMobileClickToNavBar, setinMobileClickToNavBar] = useState(false);
   const [maxScrollSize, setMaxScrollSize] = useState(window.scrollY);
   const [minScrollSize, setMinScrollSize] = useState(window.scrollY);
-  const isFormForMobile = useMediaQuery({ query: "(max-width: 992px)" });
 
   const { t, i18n } = useTranslation();
 
@@ -39,7 +37,7 @@ const NavBar = ({ onCloseBurger }) => {
         setHovered(false);
         setHoveredContucts(false);
       }
-    }, 300);
+    }, 500);
   };
 
   const handleMouseLeave = () => {
@@ -67,26 +65,11 @@ const NavBar = ({ onCloseBurger }) => {
   }, [window.scrollY]);
 
   function onClickNavBarFunction(params) {
-    if (!isFormForMobile) {
-      navigate(params.pathName);
-      setHovered(false);
-      setHoveredContucts(false);
-    } else {
-      if (params.text === "NavBar.eco") {
-        setinMobileClickToNavBar((prev) => !prev);
-      } else {
-        navigate(params.pathName);
-        onCloseBurger();
-        setinMobileClickToNavBar(false);
-      }
-    }
+    navigate(params.pathName);
+    setHovered(false);
+    setHoveredContucts(false);
   }
 
-  function onClickDropDownMenu() {
-    onCloseBurger();
-    handleMouseLeave();
-    setinMobileClickToNavBar(false);
-  }
   useEffect(() => {
     function handleClickOutside(event) {
       if (
@@ -116,74 +99,14 @@ const NavBar = ({ onCloseBurger }) => {
                 onMouseLeave={() => endHover()}
               >
                 {t(item.text)}
-                {item.icon &&
-                  (!isFormForMobile || item.text !== "NavBar.contacts") && (
-                    <img id={item.text} src={item.icon} alt="Icon" />
-                  )}
+                {item.icon && <img src={item.icon} alt="Icon" />}
               </div>
-              {item.text === "NavBar.eco" &&
-              isFormForMobile &&
-              inMobileClickToNavBar ? (
-                <div className={css.dropDown}>
-                  <NavLink
-                    to="/ecosystems"
-                    onClick={onClickDropDownMenu}
-                    className={css.mobileEcoBtn}
-                  >
-                    {t("NavBar.eco")}
-                  </NavLink>
-                  {moduleContent.map((el, index) => {
-                    return (
-                      <NavLink
-                        className={css.linkTo}
-                        to={el.pathName}
-                        onClick={onClickDropDownMenu}
-                        key={index}
-                      >
-                        {t(el.text)}
-                      </NavLink>
-                    );
-                  })}
-                </div>
-              ) : (
-                ""
-              )}
             </div>
           );
         })}
-        {isFormForMobile && (
-          <div className={css.contactBlock}>
-            <ul className={css.phoneNumbers}>
-              {contactData.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <a className={css.phone} href={`tel:${item.phone}`}>
-                      {item.phone}
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
-            <div className={css.line}></div>
-            <ul className={css.contacts}>
-              {contactData.map((item, index) => {
-                return (
-                  <li key={index}>
-                    <p>{t(item.country)}</p>
-                    <p>{t(item.adress)}</p>
-                    <p className={css.phone}>{item.phone}</p>
-                    <p className={css.email}>{item.email}</p>
-                  </li>
-                );
-              })}
-            </ul>
-          </div>
-        )}
       </div>
-      {hovered && !isFormForMobile && (
-        <MenuModal handleMouseLeave={handleMouseLeave} />
-      )}
-      {hoveredContucts && !isFormForMobile && (
+      {hovered && <MenuModal handleMouseLeave={handleMouseLeave} />}
+      {hoveredContucts && (
         <div ref={contuctModalRef}>
           <ContuctModal />
         </div>

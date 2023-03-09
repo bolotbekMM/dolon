@@ -1,38 +1,28 @@
 import React from "react";
-
+import { Map, YMaps, Placemark } from "react-yandex-maps";
 import css from "./SampleMap.module.scss";
 
-// import { ReactComponent as Map } from "../../../assets/icons/pin.svg";
-
-export const SampleMap = () => {
+export const SampleMap = ({ city }) => {
   const defaultProps = {
-    center: {
-      lat: 42.8889619,
-      lng: 74.6048946,
-    },
+    center: city,
     zoom: 13,
-    borderRadius: "8px",
+    options: {
+      mapTypeControl: {
+        showInLangSelector: true,
+      },
+      language: "en_US",
+    },
   };
 
+  const markerCoords = city;
+
   return (
-    <div id="map" className={css.map}>
-      {/* <YMaps>
-        <div>
-          <Map defaultState={{ center: [55.75, 37.57], zoom: 9 }} />
-        </div>
-      </YMaps> */}
+    <div className={css.mapBox}>
+      <YMaps>
+        <Map state={defaultProps} width="100%" height="100%">
+          <Placemark geometry={markerCoords} />
+        </Map>
+      </YMaps>
     </div>
   );
 };
-
-{
-  /* <GoogleMapReact
-        bootstrapURLKeys={{ key: "AIzaSyAsllPfRxCggGPIm-SYbAZPoZKTxH6XHV8" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-        {coordinates.map((el, idx) => (
-          <MapIcon key={idx} lat={el[0]} lng={el[1]} />
-        ))}
-      </GoogleMapReact> */
-}

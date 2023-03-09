@@ -3,6 +3,7 @@
   //   background: #e9e9eb;
 
   .box {
+    width: 100%;
     padding: 120px 108px 200px 108px;
     display: flex;
     flex-direction: column;
@@ -28,19 +29,23 @@
     }
 
     .contactsUl {
+      width: 100%;
       display: flex;
       flex-direction: row;
-      gap: 150px;
+      justify-content: space-between;
       @media screen and (max-width: 1170px) {
         gap: unset;
-        justify-content: space-between;
       }
-      @media screen and (max-width: 670px) {
+      @media screen and (max-width: 900px) {
         flex-direction: column;
         gap: 50px;
       }
+      @media screen and (max-width: 670px) {
+        flex-direction: column;
+      }
 
       li {
+        width: 49%;
         display: flex;
         flex-direction: column;
         gap: 32px;
@@ -57,6 +62,9 @@
 
         opacity: 0.8;
         z-index: 1;
+        @media screen and (max-width: 900px) {
+          width: 100%;
+        }
         @media screen and (max-width: 768px) {
           font-size: 20px;
           gap: 20px;
@@ -69,6 +77,13 @@
         }
       }
     }
+  }
+  .locations {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
   }
   .shadowEllipsBox {
     position: relative;

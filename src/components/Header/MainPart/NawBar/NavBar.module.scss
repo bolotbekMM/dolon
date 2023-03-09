@@ -7,26 +7,10 @@
   overflow: auto;
 
   .navBarBox {
-    // height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
     gap: 40px;
-
-    @media (max-width: 992px) {
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
-      gap: 24px;
-      top: 35px;
-      right: 0px;
-      background: #f5f5f7;
-    }
-    // @media (max-width: 450px) {
-    //   height: 100vh;
-    //   width: 105vw;
-    //   justify-content: flex-start;
-    // }
   }
 
   .link {
@@ -46,124 +30,10 @@
     img {
       transition: transform 0.5s ease;
     }
-
-    @media (max-width: 992px) {
-      justify-content: left;
-      margin-left: 14px;
-      margin-right: auto;
-      width: 360;
-    }
   }
   :hover {
     img {
       transform: rotate(180deg);
     }
-  }
-  .dropDown {
-    margin-left: 40px;
-    margin-bottom: 20px;
-    margin-right: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-
-    .mobileEcoBtn {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 300;
-      font-size: 17px;
-      line-height: 24px;
-      color: #171717;
-      cursor: pointer;
-    }
-
-    .linkTo {
-      font-family: "Inter";
-      font-style: normal;
-      font-weight: 300;
-      font-size: 16px;
-      line-height: 24px;
-      color: #171717;
-    }
-    :hover {
-      font-weight: 500;
-    }
-  }
-
-  .contactBlock {
-    display: flex;
-    flex-direction: column;
-    margin: 50px auto auto 16px;
-    gap: 24px;
-    color: #171717;
-
-    .phoneNumbers {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      li {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 130%;
-
-        display: flex;
-        align-items: center;
-
-        .phone {
-          color: #171717;
-        }
-      }
-    }
-
-    .line {
-      border-bottom: 1px solid #000000;
-      transform: matrix(1, 0, 0, -1, 0, 0);
-    }
-    .contacts {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-
-      li {
-        font-family: "Inter";
-        font-style: normal;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 130%;
-
-        letter-spacing: 0.001em;
-
-        p {
-          margin-bottom: 8px;
-        }
-        .phone,
-        .email {
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  @media (max-width: 992px) {
-    position: absolute;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding-top: 24px;
-    gap: 20px;
-
-    width: 400px;
-    height: 1500px;
-
-    top: 35px;
-    right: -10px;
-    background: #f5f5f7;
-  }
-  @media (max-width: 450px) {
-    width: 350px;
-  }
-  @media (max-width: 340px) {
-    width: 320px;
   }
 }

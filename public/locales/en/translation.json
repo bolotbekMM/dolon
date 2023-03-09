@@ -294,7 +294,8 @@
   "news": {
     "title": "News",
     "moreArticle": "More article",
-    "back": "Go back"
+    "back": "Go back",
+    "readMore": "read more"
   },
   "messageSuccess": {
     "first": "Your application has been successfully received.",

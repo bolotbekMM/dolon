@@ -75,12 +75,14 @@ export const contactData = [
     adress: "ContactsKazahstan.adress",
     phone: "+7 771 225 98 34",
     email: "alexandr.m@dolon.tech",
+    coordinates: [43.216977, 76.905598],
   },
   {
     country: "ContactsKyrgyzstan.country",
     adress: "ContactsKyrgyzstan.adress",
     phone: "+996 700 173 295",
     email: "satar.t@dolon.tech",
+    coordinates: [42.843686, 74.590648],
   },
 ];
 

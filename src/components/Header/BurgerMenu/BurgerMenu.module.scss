@@ -1,0 +1,120 @@
+.burgerMenu {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: start;
+  .navBar {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .navBarBox {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      .link {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        margin-left: 24px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+
+        letter-spacing: 0.1px;
+        text-transform: uppercase;
+
+        color: #000000;
+      }
+      .dropDown {
+        display: flex;
+        flex-direction: column;
+        margin: 12px auto 0px 40px;
+        gap: 24px;
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 24px;
+
+        letter-spacing: 0.1px;
+
+        color: #171717;
+        .mobileEcoBtn {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 300;
+          font-size: 17px;
+          line-height: 24px;
+          color: #171717;
+          cursor: pointer;
+        }
+
+        .linkTo {
+          color: #171717;
+        }
+        :hover {
+          font-weight: 500;
+        }
+      }
+    }
+  }
+  .contactBlock {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto 50px 16px;
+    gap: 24px;
+    color: #171717;
+
+    .phoneNumbers {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      li {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 130%;
+
+        display: flex;
+        align-items: center;
+
+        .phone {
+          color: #171717;
+        }
+      }
+    }
+
+    .line {
+      border-bottom: 1px solid #000000;
+      transform: matrix(1, 0, 0, -1, 0, 0);
+    }
+    .contacts {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+
+      li {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+
+        letter-spacing: 0.001em;
+
+        p {
+          margin-bottom: 8px;
+        }
+        .phone,
+        .email {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

@@ -21,21 +21,22 @@ import Contucts from "./pages/Contacts/Contucts";
 import News from "./pages/news/index";
 import New from "./pages/news/New";
 
-// function setLanguage() {
-//   const userLanguage = navigator.language || navigator.userLanguage;
-//   if (userLanguage.startsWith("ru")) {
-//     i18n.changeLanguage("ru");
-//   } else if (userLanguage.startsWith("en")) {
-//     i18n.changeLanguage("en");
-//   } else {
-//     i18n.changeLanguage("en");
-//   }
-// }
-
 function App() {
-  //   useEffect(() => {
-  //     setLanguage();
-  //   }, []);
+  function setLanguage() {
+    i18n.changeLanguage("en");
+    // const userLanguage = navigator.language || navigator.userLanguage;
+
+    // if (userLanguage.startsWith("ru")) {
+    //   i18n.changeLanguage("ru");
+    // } else if (userLanguage.startsWith("en")) {
+    //   i18n.changeLanguage("en");
+    // } else {
+    //   i18n.changeLanguage("en");
+    // }
+  }
+  useEffect(() => {
+    setLanguage();
+  }, []);
 
   return (
     <div className="app">
