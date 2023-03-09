@@ -10,17 +10,18 @@
 
 .modal {
   width: 400px;
-  height: 100vh;
-  position: absolute;
+  height: 100%;
+  position: fixed;
   overflow: scroll;
   right: 0;
   top: 0;
-  bottom: 0;
+  padding-bottom: 50px;
   background-color: #fff;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.664);
   z-index: 606;
   animation-duration: 0.5s;
   animation-name: slide-left;
+  box-sizing: border-box;
 
   @media (max-width: 547px) {
     width: 350px;

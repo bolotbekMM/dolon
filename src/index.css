@@ -170,3 +170,26 @@ input::-webkit-inner-spin-button {
   height: 33px;
   padding-top: 15px;
 }
+.loadingIcoonn {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.loadinIcoonnSvg {
+  width: 100px;
+  height: 100px;
+  animation-name: rotate;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(-360deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

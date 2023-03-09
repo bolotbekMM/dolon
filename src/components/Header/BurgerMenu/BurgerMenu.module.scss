@@ -1,4 +1,6 @@
 .burgerMenu {
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -32,7 +34,7 @@
       .dropDown {
         display: flex;
         flex-direction: column;
-        margin: 12px auto 0px 40px;
+        margin: 0px auto 0px 40px;
         gap: 24px;
         font-family: "Inter";
         font-style: normal;
@@ -65,7 +67,7 @@
   .contactBlock {
     display: flex;
     flex-direction: column;
-    margin: 50px auto 50px 16px;
+    margin: 50px auto 150px 16px;
     gap: 24px;
     color: #171717;
 

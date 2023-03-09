@@ -19,8 +19,8 @@ const MainPart = () => {
   }, [isFormForMobile]);
   console.log(document);
 
-  // if (openBurger) document.body.style.overflow = "hidden";
-  // else document.body.style.overflow = "overlay";
+  if (openBurger) document.body.style.overflow = "hidden";
+  else document.body.style.overflow = "overlay";
 
   return (
     <div className={css.mainPart}>

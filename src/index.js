@@ -4,10 +4,17 @@ import "./index.css";
 import App from "./App";
 import "./i-18next";
 import { BrowserRouter } from "react-router-dom";
+import loading from "./assets/icons/loading.svg";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <Suspense fallback={<div>LOADING...</div>}>
+  <Suspense
+    fallback={
+      <div className="loadingIcoonn">
+        <img className="loadinIcoonnSvg" src={loading} alt="loading" />
+      </div>
+    }
+  >
     <BrowserRouter>
       <App />
     </BrowserRouter>
