@@ -71,7 +71,6 @@ const ContuctModal = () => {
     setcodeState({ dial_code: e.target.value });
     setForm((form) => ({ ...form, code: e.target.value }));
     setshowCountryCodeModal(true);
-    toast.success(t("form.success"), t("form.thanks"));
   }
   const config = {
     Username: "dolonsystems@gmail.com",

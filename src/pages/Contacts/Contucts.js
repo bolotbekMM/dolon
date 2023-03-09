@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { contactData } from "../../utils/data/data";
 import css from "./Contucts.module.scss";
+import { SampleMap } from "./Map/SampleMap";
 
 const Contucts = () => {
   const { t, i18n } = useTranslation();
@@ -27,6 +28,7 @@ const Contucts = () => {
             })}
           </ul>
         </div>
+        {/* <SampleMap /> */}
         <div className={css.shadowEllipsBox}>
           <div className={css.shadowEllips}></div>
         </div>

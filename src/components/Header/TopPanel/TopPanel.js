@@ -26,7 +26,7 @@ const TopPanel = () => {
     setLang = languages.find((item) => item.lang === "en");
   }
 
-  const [selectedLanguage, setSelectedLanguage] = useState(setLang);
+  const [selectedLanguage, setSelectedLanguage] = useState(languages[1]);
 
   useEffect(() => {
     i18n.changeLanguage(selectedLanguage.lang);

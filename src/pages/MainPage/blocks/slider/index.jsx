@@ -7,7 +7,6 @@ import slider3 from "../../../../assets/img/mainPage/slider3.jpg";
 import slider4 from "../../../../assets/img/mainPage/slider4.jpg";
 import slider from "../../../../assets/img/mainPage/slider11.png";
 
-
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -68,8 +67,7 @@ export default function Slider() {
     },
   };
 
-  useEffect(() => {
-  }, [t('news.title')]);
+  useEffect(() => {}, [t("news.title")]);
   return (
     <div className="slider">
       <Swiper
@@ -80,23 +78,25 @@ export default function Slider() {
         allowTouchMove={true}
       >
         {sliderData.map((elem, i) => {
-          if(i !== 1){
-            return <SwiperSlide key={elem.title}>
-              <div className="sliderItem">
-                <img src={elem.img} alt="" className="sliderImg" />
-                <div className="sliderContent">
-                  <p className="sliderTitle">{elem.title}</p>
-                  <div className="text">
-                    <p className="paragraph">{elem.Descriptions1}</p>
-                    <p className="paragraph">{elem.Descriptions2}</p>
-                    <p className="paragraph">{elem.Descriptions3}</p>
-                    <p className="paragraph">{elem.Descriptions4}</p>
-                    <p className="paragraph">{elem.Descriptions5}</p>
-                    <p className="paragraph">{elem.Descriptions6}</p>
+          if (i !== 1) {
+            return (
+              <SwiperSlide key={elem.title}>
+                <div className="sliderItem">
+                  <img src={elem.img} alt="" className="sliderImg" />
+                  <div className="sliderContent">
+                    <p className="sliderTitle">{elem.title}</p>
+                    <div className="text">
+                      <p className="paragraph">{elem.Descriptions1}</p>
+                      <p className="paragraph">{elem.Descriptions2}</p>
+                      <p className="paragraph">{elem.Descriptions3}</p>
+                      <p className="paragraph">{elem.Descriptions4}</p>
+                      <p className="paragraph">{elem.Descriptions5}</p>
+                      <p className="paragraph">{elem.Descriptions6}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            );
           }
           return (
             <SwiperSlide key={elem.title}>
