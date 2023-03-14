@@ -6,11 +6,13 @@ export const SampleMap = ({ city }) => {
   const defaultProps = {
     center: city,
     zoom: 13,
+    lang: "en-RU",
     options: {
       mapTypeControl: {
         showInLangSelector: true,
       },
-      language: "en_US",
+      lang: "en-RU",
+      language: "en",
     },
   };
 

@@ -180,16 +180,16 @@ input::-webkit-inner-spin-button {
 .loadinIcoonnSvg {
   width: 100px;
   height: 100px;
-  animation-name: rotate;
-  animation-duration: 1.5s;
+  /* animation-name: rotate; */
+  /* animation-duration: 1.5s;
   animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation-timing-function: linear; */
 }
-@keyframes rotate {
+/* @keyframes rotate {
   from {
     transform: rotate(-360deg);
   }
   to {
     transform: rotate(360deg);
   }
-}
+} */

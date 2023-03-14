@@ -3,7 +3,7 @@ import css from "./Manitoring.module.scss";
 import ReModule from "../../components/ReModules/ReModule";
 import banner from "../../assets/img/manitoring/manitoringBanner2.png";
 import bannerEn from "../../assets/img/manitoring/manitoringBanner3.png";
-import monitoringImg from "../../assets/img/manitoring/manitoringImage.svg";
+import monitoringImg from "../../assets/img/manitoring/manitoringImage.png";
 import fileManagerImageEn from "../../assets/img/manitoring/fileManagerImgeng.png";
 import { useTranslation } from "react-i18next";
 

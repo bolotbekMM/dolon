@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import "./i-18next";
 import { BrowserRouter } from "react-router-dom";
-import loading from "./assets/icons/loading.svg";
+import loading from "./assets/icons/Loading.gif";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
