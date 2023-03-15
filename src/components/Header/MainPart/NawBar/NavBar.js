@@ -1,15 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
 import css from "./NavBar.module.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MenuModal from "./MenuModal/MenuModal";
-import {
-  contactData,
-  moduleContent,
-  navBarContent,
-} from "../../../../utils/data/data";
+import { navBarContent } from "../../../../utils/data/data";
 import { useTranslation } from "react-i18next";
 import ContuctModal from "./ContuctModal/ContuctModal";
-import { useMediaQuery } from "react-responsive";
 
 const NavBar = () => {
   const navigate = useNavigate();
@@ -27,17 +22,19 @@ const NavBar = () => {
     timeout = setTimeout(function () {
       if (item.text === "NavBar.eco") {
         setHovered(true);
+        setHoveredContucts(false);
         setMaxScrollSize(window.scrollY + 600);
         setMinScrollSize(window.scrollY - 600);
       } else if (item.text === "NavBar.contacts") {
         setHoveredContucts(true);
+        setHovered(false);
         setMaxScrollSize(window.scrollY + 600);
         setMinScrollSize(window.scrollY - 600);
       } else {
         setHovered(false);
         setHoveredContucts(false);
       }
-    }, 500);
+    }, 400);
   };
 
   const handleMouseLeave = () => {
@@ -108,7 +105,7 @@ const NavBar = () => {
       {hovered && <MenuModal handleMouseLeave={handleMouseLeave} />}
       {hoveredContucts && (
         <div ref={contuctModalRef}>
-          <ContuctModal />
+          <ContuctModal handleMouseLeave={handleMouseLeave} />
         </div>
       )}
     </>

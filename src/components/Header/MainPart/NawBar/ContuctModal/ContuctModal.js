@@ -9,11 +9,12 @@ import IconInput from "../../../../../assets/icons/headerIcons/chdown.svg";
 import Flag from "react-flagkit";
 import DialogueStatus from "../../../../DialogueStatus/DialogueStatus";
 
-const ContuctModal = () => {
+const ContuctModal = ({ handleMouseLeave }) => {
   const { t, i18n } = useTranslation();
   const [showCountryCodeModal, setshowCountryCodeModal] = useState(false);
   const [successModal, setSuccessModal] = useState(false);
   const [errorModal, seterrorModal] = useState(false);
+  const [inInput, setinInput] = useState(false);
   const [codestate, setcodeState] = useState({
     dial_code: "",
     code: "",
@@ -68,10 +69,15 @@ const ContuctModal = () => {
   }, [countryCodeInputRef]);
 
   function handleChange(e) {
+    setinInput(true);
     setcodeState({ dial_code: e.target.value });
     setForm((form) => ({ ...form, code: e.target.value }));
     setshowCountryCodeModal(true);
   }
+  useEffect(() => {
+    console.log(inInput, "212121");
+  }, [inInput]);
+
   const config = {
     Username: "dolonsystems@gmail.com",
     Password: "A9335968659627466661A4D9EFE3E639310D",
@@ -121,135 +127,152 @@ const ContuctModal = () => {
           setTimeout(() => {
             setSuccessModal(false);
             seterrorModal(false);
+            handleMouseLeave();
           }, 5000);
         });
+    }
+  }
+
+  function handleMouseLeaveFunc() {
+    if (!inInput) {
+      handleMouseLeave();
     }
   }
   return (
     <div className={css.menuModal}>
       {successModal && <DialogueStatus message={messageSuccess} />}
       {errorModal && <DialogueStatus message={messageError} />}
-      <div className={css.box}>
-        <form onSubmit={submitHandler} className={css.form}>
-          <div className={css.fio}>
-            <label htmlFor="fio">{t("form.nameSurname")}</label>
-            <input
-              autoComplete="off"
-              type="text"
-              name="fio"
-              onInput={onInput}
-              value={form.fio}
-              id="fio"
-              placeholder={`${t("form.enter")} ${t("form.nameSurname")}*`}
-            />
-          </div>
-          <div className={css.tel}>
-            <label htmlFor="phone">{t("form.phone")}</label>
-
-            <div className={css.telBox}>
-              <div className={css.countryCodeBox} ref={countryCodeInputRef}>
-                <input
-                  autoComplete="off"
-                  type="text"
-                  placeholder={t("form.countryCode")}
-                  className={css.countryCode}
-                  name="contryCodeName"
-                  value={codestate.dial_code}
-                  onChange={handleChange}
-                  onClick={() => setshowCountryCodeModal(true)}
-                />
-                <div
-                  onClick={() =>
-                    setshowCountryCodeModal(
-                      (showCountryCodeModal) => !showCountryCodeModal
-                    )
-                  }
-                  className={css.iconInputBox}
-                >
-                  {codestate.code && <Flag country={codestate.code} />}
-                  {/* <div className={css.flagBox}>
-                  </div> */}
-                  <img
-                    src={IconInput}
-                    className={css.iconInput}
-                    alt="not found"
-                    style={{
-                      transform: `rotateX(${
-                        showCountryCodeModal ? "180deg" : "0"
-                      })`,
-                    }}
-                  />
-                </div>
-
-                {showCountryCodeModal && (
-                  <CountrySelector
-                    setcodeState={setcodeState}
-                    codestate={codestate}
-                    setshowCountryCodeModal={setshowCountryCodeModal}
-                  />
-                )}
-              </div>
-
+      <div className="container">
+        <div className={css.box} onMouseLeave={handleMouseLeaveFunc}>
+          <form onSubmit={submitHandler} className={css.form}>
+            <div className={css.fio}>
+              <label htmlFor="fio">{t("form.nameSurname")}</label>
               <input
                 autoComplete="off"
-                type="number"
-                name="phone"
+                type="text"
+                name="fio"
                 onInput={onInput}
-                value={form.phone}
-                className={css.phoneNum}
-                placeholder={t("form.phone")}
+                onFocus={() => setinInput(true)}
+                onBlur={() => setinInput(false)}
+                value={form.fio}
+                id="fio"
+                placeholder={`${t("form.enter")} ${t("form.nameSurname")}*`}
               />
             </div>
+            <div className={css.tel}>
+              <label htmlFor="phone">{t("form.phone")}</label>
+
+              <div className={css.telBox}>
+                <div className={css.countryCodeBox} ref={countryCodeInputRef}>
+                  <input
+                    autoComplete="off"
+                    type="text"
+                    placeholder={t("form.countryCode")}
+                    className={css.countryCode}
+                    name="contryCodeName"
+                    value={codestate.dial_code}
+                    onChange={handleChange}
+                    onClick={() => setshowCountryCodeModal(true)}
+                    onFocus={() => setinInput(true)}
+                    onBlur={() => setinInput(false)}
+                  />
+                  <div
+                    onClick={() =>
+                      setshowCountryCodeModal(
+                        (showCountryCodeModal) => !showCountryCodeModal
+                      )
+                    }
+                    className={css.iconInputBox}
+                  >
+                    {codestate.code && <Flag country={codestate.code} />}
+                    {/* <div className={css.flagBox}>
+                  </div> */}
+                    <img
+                      src={IconInput}
+                      className={css.iconInput}
+                      alt="not found"
+                      style={{
+                        transform: `rotateX(${
+                          showCountryCodeModal ? "180deg" : "0"
+                        })`,
+                      }}
+                    />
+                  </div>
+
+                  {showCountryCodeModal && (
+                    <CountrySelector
+                      setcodeState={setcodeState}
+                      codestate={codestate}
+                      setshowCountryCodeModal={setshowCountryCodeModal}
+                    />
+                  )}
+                </div>
+
+                <input
+                  autoComplete="off"
+                  type="number"
+                  name="phone"
+                  onInput={onInput}
+                  value={form.phone}
+                  className={css.phoneNum}
+                  placeholder={t("form.phone")}
+                  onFocus={() => setinInput(true)}
+                  onBlur={() => setinInput(false)}
+                />
+              </div>
+            </div>
+            <div className={css.email}>
+              <label htmlFor="email">{t("form.email")}</label>
+              <input
+                autoComplete="off"
+                type="email"
+                name="email"
+                onInput={onInput}
+                value={form.email}
+                placeholder={`${t("form.enter")} E-mail*`}
+                onFocus={() => setinInput(true)}
+                onBlur={() => setinInput(false)}
+              />
+            </div>
+            <div className={css.formBtn}>
+              <button
+                type="submit"
+                disabled={!correctForm()}
+                className={classNames(
+                  css.feedmodalBtn,
+                  correctForm() ? css.feedmodalBtnActive : ""
+                )}
+              >
+                {t("form.accept")}
+              </button>
+            </div>
+          </form>
+          <div className={css.contactBlock}>
+            <ul className={css.phoneNumbers}>
+              {contactData.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <a className={css.phone} href={`tel:${item.phone}`}>
+                      {item.phone}
+                    </a>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className={css.line}></div>
+            <ul className={css.contacts}>
+              {contactData.map((item, index) => {
+                return (
+                  <li key={index}>
+                    <p>{t(item.country)}</p>
+                    <p>{t(item.adress)}</p>
+                    <p className={css.phone}>{item.phone}</p>
+                    <p className={css.email}>{item.email}</p>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
-          <div className={css.email}>
-            <label htmlFor="email">{t("form.email")}</label>
-            <input
-              autoComplete="off"
-              type="email"
-              name="email"
-              onInput={onInput}
-              value={form.email}
-              placeholder={`${t("form.enter")} E-mail*`}
-            />
-          </div>
-          <div className={css.formBtn}>
-            <button
-              type="submit"
-              disabled={!correctForm()}
-              className={classNames(
-                css.feedmodalBtn,
-                correctForm() ? css.feedmodalBtnActive : ""
-              )}
-            >
-              {t("form.accept")}
-            </button>
-          </div>
-        </form>
-        <div className={css.contactBlock}>
-          <ul className={css.phoneNumbers}>
-            {contactData.map((item, index) => {
-              return (
-                <li key={index}>
-                  <a className={css.phone} href={`tel:${item.phone}`}>
-                    {item.phone}
-                  </a>
-                </li>
-              );
-            })}
-          </ul>
-          <div className={css.line}></div>
-          <ul className={css.contacts}>
-            {contactData.map((item, index) => {
-              return (
-                <li key={index}>
-                  <p>{t(item.country)}</p>
-                  <p>{t(item.adress)}</p>
-                  <p className={css.phone}>{item.phone}</p>
-                  <p className={css.email}>{item.email}</p>
-                </li>
-              );
-            })}
-          </ul>
         </div>
       </div>
     </div>
