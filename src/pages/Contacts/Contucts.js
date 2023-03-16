@@ -5,9 +5,8 @@ import css from "./Contucts.module.scss";
 import { SampleMap } from "./Map/SampleMap";
 
 const Contucts = () => {
-  const { t, i18n } = useTranslation();
-  const bishkek = [42.843686, 74.590648];
-  const almaty = [43.216977, 76.905598];
+  const { t } = useTranslation();
+
   return (
     <div className={css.contucts}>
       <div className="container">

@@ -74,9 +74,6 @@ const ContuctModal = ({ handleMouseLeave }) => {
     setForm((form) => ({ ...form, code: e.target.value }));
     setshowCountryCodeModal(true);
   }
-  useEffect(() => {
-    console.log(inInput, "212121");
-  }, [inInput]);
 
   const config = {
     Username: "dolonsystems@gmail.com",
