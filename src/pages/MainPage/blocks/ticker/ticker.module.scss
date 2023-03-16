@@ -21,3 +21,19 @@
   }
   
 }
+.tickerWrap_title{
+  margin-top: 120px;
+  padding: 0 3rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 96px;
+  line-height: 130%;
+  color: #171717;
+  @media screen and (max-width: 768px) {
+    font-size: 48px;
+  }
+  @media screen and (max-width: 480px) {
+    font-size: 36px;
+  }
+}

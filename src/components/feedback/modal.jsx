@@ -39,7 +39,7 @@ function FeedbackModal({ close, subject = "Monitoring", question }) {
     Subject: question ? "Поступил вопрос на сайте Dolon " : subject,
     Body: `
             ФИО: ${form.fio},
-            Phone: (${form.phoneCode}) ${form.phone},
+            Phone: (${codestate.code}) ${form.phone},
             Email: ${form.email},
             Страна: ${form.country},
             Компания: ${form.company},
@@ -58,7 +58,7 @@ function FeedbackModal({ close, subject = "Monitoring", question }) {
     Subject: question ? "Поступил вопрос на сайте Dolon " : subject,
     Body: `
             ФИО: ${form.fio},
-            Phone: (${form.phoneCode}) ${form.phone},
+            Phone: (${codestate.code}) ${form.phone},
             Email: ${form.email},
             Страна: ${form.country},
             Компания: ${form.company},
@@ -145,7 +145,7 @@ function FeedbackModal({ close, subject = "Monitoring", question }) {
                       className={classes.countryCode}
                       name="contryCodeName"
                       value={codestate.dial_code}
-                      onChange={handleChange}
+                      onInput={handleChange}
                       onClick={() => setshowCountryCodeModal(true)}
                     />
                     <div
@@ -272,6 +272,7 @@ function FeedbackModal({ close, subject = "Monitoring", question }) {
                 correctForm() ? classes.feedmodalBtnActive : ""
               )}
               onClick={async () => {
+                console.log(form);
                 if (window.Email) {
                   await window.Email.send(config)
                     .then((mess) => {})

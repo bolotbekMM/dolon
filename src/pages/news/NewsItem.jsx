@@ -40,9 +40,12 @@ export function NewsSubItem({ img, title, item }) {
       <div className={css.subitem}>
         <div className={css.subitem_container}>
           <div className={css.subnew}>
-            <div className={css.subitem_title}>
-              {title.split(" ").slice(0, 7).join(" ")}...
-            </div>
+            {
+              !!title &&
+              <div className={css.subitem_title}>
+                {title.split(" ").slice(0, 7).join(" ")}...
+              </div>
+            }
             <div className={css.subitem_img_wrap}>
               <img src={img} alt="" className={css.subitem_img} />
             </div>

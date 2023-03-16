@@ -9,6 +9,7 @@
     "Main": "Home",
     "Contacts": "Contacts"
   },
+  "trackerTitle": "DOLON USES",
   "Modules": {
     "Modules": "Modules",
     "monitoring": "Monitoring",

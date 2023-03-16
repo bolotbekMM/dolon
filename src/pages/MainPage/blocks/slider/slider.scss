@@ -1,17 +1,20 @@
 .slider{
-  height: 83vh;
+  // height: 83vh;
   max-height: 900px;
   @media screen and (max-width: 568px) {
     overflow: hidden;
+    height: 83vh;
   }
   
 }
 
 .swiper {
     width: calc(100% - 48px);
-    height: calc(100vh - 100px);
     z-index: 1;
     box-sizing: border-box;
+    @media screen and (max-width: 768px) {
+      height: calc(100vh - 100px);
+    }
   }
   
   .swiper-slide {
