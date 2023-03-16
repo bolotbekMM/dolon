@@ -1,9 +1,8 @@
 import React from "react";
 import css from "./FirstBlok.module.scss";
-// import anime from "../../../assets/img/mainPage/anime.svg";
 import { useTranslation } from "react-i18next";
 import Lottie from "react-lottie";
-import animationData from "../../../assets/LottieFiles/Comp 1/animations/animation_1.json";
+import animationData from "../../../assets/LottieFiles2/animations/animation_1.json";
 
 const FirstBlok = () => {
   const { t, i18n } = useTranslation();

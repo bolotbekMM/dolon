@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./FourthBlok.module.scss";
-import pc from "../../../assets/img/mainPage/pc.svg";
+import pc from "../../../assets/img/mainPage/pc.png";
 import pcEn from "../../../assets/img/mainPage/pcEn.png";
 import { useTranslation } from "react-i18next";
 

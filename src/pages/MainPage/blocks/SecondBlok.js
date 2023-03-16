@@ -1,6 +1,6 @@
 import React from "react";
 import Parallax from "../../../components/Parallax/Parallax";
-import bgImage from "../../../assets/img/mainPage/prallax1.svg";
+import bgImage from "../../../assets/img/mainPage/parallax.jpg";
 import { useTranslation } from "react-i18next";
 
 const SecondBlok = () => {
