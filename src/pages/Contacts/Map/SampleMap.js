@@ -6,20 +6,23 @@ export const SampleMap = ({ city }) => {
   const defaultProps = {
     center: city,
     zoom: 13,
-    options: {
-      mapTypeControl: {
-        showInLangSelector: true,
-      },
-    },
   };
-
-  const markerCoords = city;
+  const apiKey = "a7031374-99ea-465c-a189-62507eb3f61a";
+  const mapOptions = {
+    suppressMapOpenBlock: true,
+    lang: "en_US",
+  };
 
   return (
     <div className={css.mapBox}>
-      <YMaps>
-        <Map state={defaultProps} width="100%" height="100%">
-          <Placemark geometry={markerCoords} />
+      <YMaps query={{ apikey: apiKey }}>
+        <Map
+          defaultState={defaultProps}
+          options={mapOptions}
+          width="100%"
+          height="100%"
+        >
+          <Placemark geometry={city} />
         </Map>
       </YMaps>
     </div>
