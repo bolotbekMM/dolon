@@ -272,7 +272,6 @@ function FeedbackModal({ close, subject = "Monitoring", question }) {
                 correctForm() ? classes.feedmodalBtnActive : ""
               )}
               onClick={async () => {
-                console.log(form);
                 if (window.Email) {
                   await window.Email.send(config)
                     .then((mess) => {})
