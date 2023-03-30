@@ -1,11 +1,27 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { contactData } from "../../utils/data/data";
 import css from "./Contucts.module.scss";
 import { SampleMap } from "./Map/SampleMap";
 
 const Contucts = () => {
   const { t } = useTranslation();
+  
+  const contactData = [
+    {
+      country: "ContactsKazahstan.country",
+      adress: "ContactsKazahstan.adress",
+      phone: "+7 771 225 98 34",
+      email: "alexandr.m@dolon.tech",
+      coordinates: [43.216977, 76.905598],
+    },
+    {
+      country: "ContactsKyrgyzstan.country",
+      adress: "ContactsKyrgyzstan.adress",
+      phone: "+996 700 173 295",
+      email: "satar.t@dolon.tech",
+      coordinates: [42.843686, 74.590648],
+    },
+  ];
 
   return (
     <div className={css.contucts}>
