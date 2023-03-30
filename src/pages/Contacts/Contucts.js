@@ -1,26 +1,11 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import css from "./Contucts.module.scss";
-import { Map, YMaps, Placemark } from "react-yandex-maps";
-
-// import { SampleMap } from "./Map/SampleMap";
+import MapKg from "./Map/MapKg";
+import MapKz from "./Map/MapKz";
 
 const Contucts = () => {
   const { t } = useTranslation();
-
-  const defaultPropsKz = {
-    center: [43.216977, 76.905598],
-    zoom: 13,
-  };
-  const defaultPropsKg = {
-    center: [42.843686, 74.590648],
-    zoom: 13,
-  };
-  const apiKey = "a7031374-99ea-465c-a189-62507eb3f61a";
-  const mapOptions = {
-    suppressMapOpenBlock: true,
-    lang: "en_US",
-  };
 
   let kz = {
     country: "ContactsKazahstan.country",
@@ -52,19 +37,7 @@ const Contucts = () => {
               <a className={css.email} href={`mailto:${kz.email}`}>
                 {kz.email}
               </a>
-              <div className={css.mapBox}>
-                <YMaps query={{ apikey: apiKey }}>
-                  <Map
-                    defaultState={defaultPropsKz}
-                    options={mapOptions}
-                    width="100%"
-                    height="100%"
-                  >
-                    <Placemark geometry={[43.216977, 76.905598]} />
-                  </Map>
-                </YMaps>
-              </div>
-              {/* <SampleMap city={kz.coordinates} /> */}
+              <MapKz />
             </li>
             <li>
               <p>{t(kg.country)}</p>
@@ -75,19 +48,7 @@ const Contucts = () => {
               <a className={css.email} href={`mailto:${kg.email}`}>
                 {kg.email}
               </a>
-              <div className={css.mapBox}>
-                <YMaps query={{ apikey: apiKey }}>
-                  <Map
-                    defaultState={defaultPropsKg}
-                    options={mapOptions}
-                    width="100%"
-                    height="100%"
-                  >
-                    <Placemark geometry={[42.843686, 74.590648]} />
-                  </Map>
-                </YMaps>
-              </div>
-              {/* <SampleMap city={kg.coordinates} /> */}
+              <MapKg />
             </li>
           </ul>
         </div>
@@ -102,3 +63,56 @@ const Contucts = () => {
 };
 
 export default Contucts;
+
+// import { Map, YMaps, Placemark } from "react-yandex-maps";
+// import { SampleMap } from "./Map/SampleMap";
+
+// const defaultPropsKz = {
+//   center: [43.216977, 76.905598],
+//   zoom: 13,
+// };
+// const defaultPropsKg = {
+//   center: [42.843686, 74.590648],
+//   zoom: 13,
+// };
+// const apiKey = "a7031374-99ea-465c-a189-62507eb3f61a";
+// const mapOptions = {
+//   suppressMapOpenBlock: true,
+//   lang: "en_US",
+// };
+
+{
+  /* <div className={css.mapBox}>
+                <YMaps query={{ apikey: apiKey }}>
+                  <Map
+                    defaultState={defaultPropsKz}
+                    options={mapOptions}
+                    width="100%"
+                    height="100%"
+                  >
+                    <Placemark geometry={[43.216977, 76.905598]} />
+                  </Map>
+                </YMaps>
+              </div> */
+}
+{
+  /* <SampleMap city={kz.coordinates} /> */
+}
+
+{
+  /* <div className={css.mapBox}>
+                <YMaps query={{ apikey: apiKey }}>
+                  <Map
+                    defaultState={defaultPropsKg}
+                    options={mapOptions}
+                    width="100%"
+                    height="100%"
+                  >
+                    <Placemark geometry={[42.843686, 74.590648]} />
+                  </Map>
+                </YMaps>
+              </div> */
+}
+{
+  /* <SampleMap city={kg.coordinates} /> */
+}
